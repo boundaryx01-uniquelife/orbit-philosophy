@@ -42,6 +42,7 @@
 - [x] `C0005_Every_Choice_Carries_Its_Reasons.md` 작성
 - [x] `templates/Choice_Record.md` 작성
 - [x] `CR-0001`로 근거 기반 선택 기록 첫 적용 및 사용자 판단 요청
+- [x] 사용자 선택으로 `CR-0001` 3번 방식 확정
 - [x] `C0000` v0.7 및 `Genesis.md` 골격 v0.6 반영
 
 ## 다음 작업
@@ -51,7 +52,7 @@
 - [x] 목표와 의미의 최종 판단 주체 정의
 - [ ] 문제 제기자의 판단을 돕는 검증 항목 정의
 - [x] 선택·판단·합의되지 않은 반론을 보존하는 형식 정의
-- [ ] `CR-0001` 기록 방식에 대한 사용자 최종 판단
+- [x] `CR-0001` 기록 방식에 대한 사용자 최종 판단
 - [ ] `CR-0002`로 Genesis 서술형 초안 진행 여부 판단
 - [ ] 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
@@ -69,7 +70,7 @@
 | `chronicle/C0004_A_Partner_Is_Not_A_Tool.md` | ✅ v0.1 | 판단권과 파트너 관계의 균형 검증 |
 | `chronicle/C0005_Every_Choice_Carries_Its_Reasons.md` | ✅ v0.1 | 실제 선택 기록에서 원칙 검증 |
 | `templates/Choice_Record.md` | ✅ v0.1 | 다음 의미 있는 선택에 적용 |
-| `decisions/CR-0001_Adopt_Evidence_Backed_Choice_Records.md` | 🔵 OPEN | 사용자의 최종 판단 대기 |
+| `decisions/CR-0001_Adopt_Evidence_Backed_Choice_Records.md` | ✅ DECIDED | 실제 사용 후 기록 부담 검토 |
 | `Genesis.md` | 🟡 골격 v0.6 | 선택 근거 기록과 탄생 해석 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
