@@ -54,6 +54,7 @@
 - [x] 선택·판단·합의되지 않은 반론을 보존하는 형식 정의
 - [x] `CR-0001` 기록 방식에 대한 사용자 최종 판단
 - [ ] `CR-0002`로 Genesis 서술형 초안 진행 여부 판단
+- [ ] `CR-0002`의 A/B/C 중 집필 시작 방식 사용자 선택
 - [ ] 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
@@ -71,6 +72,7 @@
 | `chronicle/C0005_Every_Choice_Carries_Its_Reasons.md` | ✅ v0.1 | 실제 선택 기록에서 원칙 검증 |
 | `templates/Choice_Record.md` | ✅ v0.1 | 다음 의미 있는 선택에 적용 |
 | `decisions/CR-0001_Adopt_Evidence_Backed_Choice_Records.md` | ✅ DECIDED | 실제 사용 후 기록 부담 검토 |
+| `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md` | 🔵 OPEN | 사용자의 집필 시작 방식 선택 대기 |
 | `Genesis.md` | 🟡 골격 v0.6 | 선택 근거 기록과 탄생 해석 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
@@ -90,7 +92,7 @@
 
 ## 다음 시작점
 
-`Genesis.md` 골격을 서술형 초안으로 발전시킬지 `Choice Record`를 처음 적용해 판단한다.
+`CR-0002`의 세 선택지를 검토하고 `Genesis.md` 서술형 초안의 시작 범위를 결정한다.
 
 ## 재개 체크포인트
 
@@ -99,5 +101,5 @@
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
 2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
 3. `Genesis.md`의 장면 0~11과 근거 지도를 확인한다.
-4. `templates/Choice_Record.md`를 사용해 Genesis 서술형 초안 진행 여부를 판단한다.
+4. `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md`의 A/B/C 중 하나를 선택한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
