@@ -7,7 +7,7 @@
 
 ## 지금 어디에 있는가
 
-`Genesis.md` 검토를 통해 ‘인스턴트적 사고’의 의미를 확인했다. 이는 생성 속도에 대한 비판이 아니라 **프롬프트 뒤의 첫 결과나 MVP를 완성으로 착각하는 조기 종료에 대한 경고**다. 현재는 첫 결과 이후 서로의 목표와 의미를 맞춰 가는 대화를 LLM 작업의 기본자세로 반영한 v0.3을 검토하는 단계다.
+`Genesis.md` 검토를 통해 ‘인스턴트적 사고’와 완료 판단의 의미를 확인했다. 첫 결과와 MVP는 대화의 시작점이며, 검증은 상호 수행할 수 있지만 문제가 충분히 해결되었는지에 대한 최종 결론은 **문제의 시발점을 발견하고 제기한 사람**에게 있다. 현재는 이 원칙을 반영한 v0.4를 검토하는 단계다.
 
 ## 완료
 
@@ -31,12 +31,16 @@
 - [x] ‘인스턴트적 사고’와 MVP의 의미 사용자 확인
 - [x] `C0002_The_First_Output_Is_Not_The_End.md` 작성
 - [x] `C0000` v0.4 및 `Genesis.md` 골격 v0.3 반영
+- [x] 상호 검증과 최종 판단권의 차이 사용자 확인
+- [x] `C0003_The_Originator_Decides_When_It_Is_Enough.md` 작성
+- [x] `C0000` v0.5 및 `Genesis.md` 골격 v0.4 반영
 
 ## 다음 작업
 
 - [ ] `Genesis.md`의 12개 장면 구성 검토
 - [x] 대화 깔때기·통역의 기본 순환 정의
-- [ ] 목표와 의미가 충분히 맞춰졌다고 판단할 기준 정의
+- [x] 목표와 의미의 최종 판단 주체 정의
+- [ ] 문제 제기자의 판단을 돕는 검증 항목 정의
 - [ ] 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
@@ -46,10 +50,11 @@
 | 문서 | 상태 | 다음 작업 |
 |---|:---:|---|
 | `RULES.md` | ✅ v0.1 | 실제 작업에서 규칙 검증 |
-| `chronicle/C0000_Before_ORBIT_Became_A_Project.md` | 🟡 v0.4 | 당시의 구체적인 작업과 이름의 기원 보강 |
+| `chronicle/C0000_Before_ORBIT_Became_A_Project.md` | 🟡 v0.5 | 당시의 구체적인 작업과 이름의 기원 보강 |
 | `chronicle/C0001_Correcting_the_Central_Question.md` | ✅ v0.1 | 실제 운영 규칙에서 교정 내용 검증 |
 | `chronicle/C0002_The_First_Output_Is_Not_The_End.md` | ✅ v0.1 | 첫 결과 이후의 완료 판단 기준으로 확장 |
-| `Genesis.md` | 🟡 골격 v0.3 | 시작–대화–완성 구조와 탄생 해석 검토 |
+| `chronicle/C0003_The_Originator_Decides_When_It_Is_Enough.md` | ✅ v0.1 | 실제 완료 판단에서 원칙 검증 |
+| `Genesis.md` | 🟡 골격 v0.4 | 문제 제기자의 최종 판단권과 탄생 해석 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
@@ -58,7 +63,7 @@
 
 다음 세 질문에 답한 뒤 `Genesis.md`를 서술형 초안으로 발전시킨다.
 
-1. 첫 결과 이후 서로의 목표와 의미가 충분히 맞춰졌다고 판단할 기준은 무엇인가?
+1. 문제 제기자가 최종 판단을 내릴 수 있도록 어떤 검증 자료를 제공해야 하는가?
 2. ‘인스턴트적 사고’라는 말이 나온 당시의 구체적인 작업은 무엇인가?
 3. 교정된 ‘철학적 탄생’과 ‘프로젝트적 탄생’ 해석이 사용자의 경험과 일치하는가?
 
@@ -68,14 +73,14 @@
 
 ## 다음 시작점
 
-첫 결과 이후 목표와 의미가 충분히 맞춰졌다고 판단할 기준을 정의하고 `Genesis.md` 골격 v0.3을 검토한다.
+문제 제기자의 최종 판단을 돕는 검증 항목을 정의하고 `Genesis.md` 골격 v0.4를 검토한다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
-2. `chronicle/C0001_Correcting_the_Central_Question.md`와 `C0002_The_First_Output_Is_Not_The_End.md`를 확인한다.
+2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0003_The_Originator_Decides_When_It_Is_Enough.md`까지 확인한다.
 3. `Genesis.md`의 장면 0~11과 근거 지도를 확인한다.
-4. 첫 결과 이후의 완료 판단 기준 정의부터 재개한다.
+4. 문제 제기자의 판단을 돕는 검증 항목 정의부터 재개한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
