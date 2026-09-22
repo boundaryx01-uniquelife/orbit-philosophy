@@ -53,8 +53,9 @@
 - [ ] 문제 제기자의 판단을 돕는 검증 항목 정의
 - [x] 선택·판단·합의되지 않은 반론을 보존하는 형식 정의
 - [x] `CR-0001` 기록 방식에 대한 사용자 최종 판단
-- [ ] `CR-0002`로 Genesis 서술형 초안 진행 여부 판단
-- [ ] `CR-0002`의 A/B/C 중 집필 시작 방식 사용자 선택
+- [x] `CR-0002`로 Genesis 서술형 초안 진행 여부 판단
+- [x] 사용자 선택으로 3번—장면 1~4 부분 서술—확정
+- [x] `drafts/Genesis_Scenes_01-04_v0.1.md` 작성
 - [ ] 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
@@ -72,7 +73,8 @@
 | `chronicle/C0005_Every_Choice_Carries_Its_Reasons.md` | ✅ v0.1 | 실제 선택 기록에서 원칙 검증 |
 | `templates/Choice_Record.md` | ✅ v0.1 | 다음 의미 있는 선택에 적용 |
 | `decisions/CR-0001_Adopt_Evidence_Backed_Choice_Records.md` | ✅ DECIDED | 실제 사용 후 기록 부담 검토 |
-| `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md` | 🔵 OPEN | 사용자의 집필 시작 방식 선택 대기 |
+| `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md` | ✅ DECIDED | 장면 1~4 초안 결과 검토 |
+| `drafts/Genesis_Scenes_01-04_v0.1.md` | 🟡 USER REVIEW | 의미·문체·밀도 사용자 검토 |
 | `Genesis.md` | 🟡 골격 v0.6 | 선택 근거 기록과 탄생 해석 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
@@ -82,9 +84,9 @@
 
 다음 세 질문에 답한 뒤 `Genesis.md`를 서술형 초안으로 발전시킨다.
 
-1. 현재 Genesis 골격을 서술형 초안으로 발전시킬 것인가?
-2. ‘인스턴트적 사고’라는 말이 나온 당시의 구체적인 작업은 무엇인가?
-3. 교정된 ‘철학적 탄생’과 ‘프로젝트적 탄생’ 해석이 사용자의 경험과 일치하는가?
+1. 장면 1~4의 ‘우리’ 시점과 문체가 ORBIT에 맞는가?
+2. 사용자의 문제의식이 축소되거나 AI의 해석이 덧씌워진 부분은 없는가?
+3. 이 밀도로 장면 5~11을 이어갈 것인가?
 
 ## 막힌 부분
 
@@ -92,7 +94,7 @@
 
 ## 다음 시작점
 
-`CR-0002`의 세 선택지를 검토하고 `Genesis.md` 서술형 초안의 시작 범위를 결정한다.
+`drafts/Genesis_Scenes_01-04_v0.1.md`를 사용자가 검토하고, 의미·문체·밀도를 교정한다.
 
 ## 재개 체크포인트
 
@@ -101,5 +103,5 @@
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
 2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
 3. `Genesis.md`의 장면 0~11과 근거 지도를 확인한다.
-4. `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md`의 A/B/C 중 하나를 선택한다.
+4. `drafts/Genesis_Scenes_01-04_v0.1.md`의 사용자 검토 지점 1~5에 답한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
