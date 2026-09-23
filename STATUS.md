@@ -7,7 +7,7 @@
 
 ## 지금 어디에 있는가
 
-사용자는 상호 의미 확인과 조율의 충분성을 2번—서로의 뜻과 남은 차이를 정확히 설명할 수 있는가—로 판단하기로 했다. 같은 결론, 관계의 조율, 결과물의 목표 충족을 서로 다른 상태로 구분했다. 현재는 이 관계와 조율 과정을 기록하지 않을 때 무엇을 가장 먼저 잃는지 판단하는 단계다.
+사용자는 관계와 조율 과정을 기록하지 않을 때 가장 먼저 잃는 것으로 2번—대화를 거치며 쌓인 관계의 기억—을 선택했다. 선택과 판단의 이유는 관계의 기억을 구성하는 내용으로, 어긋남을 바로잡는 능력은 그 기억을 사용할 때 생기는 결과로 배치했다. 현재는 `drafts/WHY_Prose_v0.1.md`의 중심 의미와 문체를 검토하는 단계다.
 
 ## 완료
 
@@ -83,6 +83,9 @@
 - [x] `CR-0006_Define_Mutual_Meaning_Alignment.md` 작성
 - [x] 조율의 충분성 기준을 상호 설명과 확인으로 확정
 - [x] `CR-0007_Judge_Alignment_by_Mutual_Explanation.md` 작성
+- [x] 관계의 기억을 ORBIT의 지속 이유로 확정
+- [x] `CR-0008_Preserve_Relational_Memory.md` 작성
+- [x] `drafts/WHY_Prose_v0.1.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -112,17 +115,19 @@
 | `decisions/CR-0005_Prioritize_the_Human_LLM_Relationship.md` | ✅ DECIDED | 관계 중심 접근을 실제 작업에서 검증 |
 | `decisions/CR-0006_Define_Mutual_Meaning_Alignment.md` | ✅ DECIDED | 충분한 조율의 판단 기준 정의 |
 | `decisions/CR-0007_Judge_Alignment_by_Mutual_Explanation.md` | ✅ DECIDED | 실제 대화에서 충분성 기준 검증 |
-| `WHY.md` | 🔵 DISCOVERY v0.4 | 기록하지 않을 때 가장 먼저 잃는 것 선택 |
+| `decisions/CR-0008_Preserve_Relational_Memory.md` | ✅ DECIDED | 관계의 기억을 실제 재개 과정에서 검증 |
+| `WHY.md` | 🔵 DISCOVERY v0.5 | 서술형 MVP와 대조 검토 |
+| `drafts/WHY_Prose_v0.1.md` | 🟡 USER REVIEW | 중심 의미·문체·관계의 기억 표현 검토 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-관계와 조율 과정을 기록하지 않을 때 가장 먼저 잃는 것을 판단한다.
+`WHY.md` 서술형 MVP가 존재 이유·문제의식·지속할 이유를 정확히 연결하는지 검토한다.
 
-1. 선택과 판단이 만들어진 이유
-2. 대화를 거치며 쌓인 관계의 기억
-3. 어긋남을 발견하고 바로잡는 능력
+1. 관계 중심의 존재 이유가 선명한가?
+2. 상호 의미 확인과 조율의 의미가 정확한가?
+3. 관계의 기억이 자동 기억이나 감정적 기억으로 오해되지 않는가?
 
 ## 막힌 부분
 
@@ -130,7 +135,7 @@
 
 ## 다음 시작점
 
-사용자가 기록이 없을 때 가장 먼저 사라지는 것을 선택하고, `WHY.md`의 지속 이유로 연결한다.
+사용자가 `drafts/WHY_Prose_v0.1.md`의 중심 의미와 문체를 검토한다.
 
 ## 재개 체크포인트
 
