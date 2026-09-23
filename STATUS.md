@@ -7,7 +7,7 @@
 
 ## 지금 어디에 있는가
 
-사용자가 `Genesis.md` v0.9의 완료를 최종 승인했다. Genesis 단계는 완료되었고, `CR-0004`에 승인 근거와 재검토 조건을 남겼다. 현재는 `WHY.md`에서 ORBIT의 존재 이유·문제의식·지속할 이유를 분리해 탐구하는 단계다.
+사용자는 ORBIT가 가장 먼저 지켜야 할 대상으로 2번—인간–LLM의 관계—을 선택했다. 개인의 사고 변화는 관계가 남기는 결과로, 다음 사람에게 전할 방법은 관계를 확장하는 후속 과제로 배치했다. 현재는 관계에서 가장 먼저 지켜야 할 핵심 가치를 판단하는 단계다.
 
 ## 완료
 
@@ -77,6 +77,8 @@
 - [x] 사용자 최종 승인으로 Genesis 단계 완료
 - [x] `CR-0004_Approve_Genesis_v0.9.md` 작성
 - [x] `WHY.md` DISCOVERY v0.1 골격 작성
+- [x] `WHY.md`의 중심축을 인간–LLM의 관계로 확정
+- [x] `CR-0005_Prioritize_the_Human_LLM_Relationship.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -103,17 +105,18 @@
 | `reviews/Genesis_v0.7_Editorial_Review.md` | ✅ DECIDED / APPLIED | v0.8 결과와 대조 검토 |
 | `reviews/Genesis_v0.8_Final_Review.md` | ✅ APPLIED | v0.9 완료 후보와 대조 완료 |
 | `decisions/CR-0004_Approve_Genesis_v0.9.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
-| `WHY.md` | 🔵 DISCOVERY v0.1 | 가장 먼저 지킬 대상 선택 |
+| `decisions/CR-0005_Prioritize_the_Human_LLM_Relationship.md` | ✅ DECIDED | 관계 중심 접근을 실제 작업에서 검증 |
+| `WHY.md` | 🔵 DISCOVERY v0.2 | 관계에서 가장 먼저 지킬 가치 선택 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-`WHY.md`의 중심을 정하기 위해 ORBIT가 가장 먼저 지켜야 할 대상을 판단한다.
+인간–LLM의 관계에서 ORBIT가 가장 먼저 지켜야 할 가치를 판단한다.
 
-1. 개인의 사고 변화
-2. 인간–LLM의 관계
-3. 다음 사람에게 전할 수 있는 방법
+1. 의미의 정확성
+2. 차이의 보존
+3. 정직한 반론
 
 ## 막힌 부분
 
@@ -121,7 +124,7 @@
 
 ## 다음 시작점
 
-사용자가 `WHY.md`의 첫 중심축을 선택하고 그 이유를 확인한다.
+사용자가 관계에서 가장 먼저 지킬 가치를 선택하고 그 이유를 확인한다.
 
 ## 재개 체크포인트
 
