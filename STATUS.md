@@ -7,7 +7,7 @@
 
 ## 지금 어디에 있는가
 
-사용자는 관계와 조율 과정을 기록하지 않을 때 가장 먼저 잃는 것으로 2번—대화를 거치며 쌓인 관계의 기억—을 선택했다. 선택과 판단의 이유는 관계의 기억을 구성하는 내용으로, 어긋남을 바로잡는 능력은 그 기억을 사용할 때 생기는 결과로 배치했다. 현재는 `drafts/WHY_Prose_v0.1.md`의 중심 의미와 문체를 검토하는 단계다.
+사용자는 `drafts/WHY_Prose_v0.1.md`의 중심 의미와 문체를 승인했다. 승인된 서술은 `WHY.md` PROSE DRAFT v0.6으로 통합되었으며, 현재는 Genesis·원자료·`CR-0005`~`CR-0009`와의 교차검토를 준비하는 단계다.
 
 ## 완료
 
@@ -86,6 +86,9 @@
 - [x] 관계의 기억을 ORBIT의 지속 이유로 확정
 - [x] `CR-0008_Preserve_Relational_Memory.md` 작성
 - [x] `drafts/WHY_Prose_v0.1.md` 작성
+- [x] WHY 서술형 MVP 중심 의미와 문체 사용자 승인
+- [x] `CR-0009_Approve_WHY_Prose_Direction.md` 작성
+- [x] `WHY.md` PROSE DRAFT v0.6 통합
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -116,18 +119,19 @@
 | `decisions/CR-0006_Define_Mutual_Meaning_Alignment.md` | ✅ DECIDED | 충분한 조율의 판단 기준 정의 |
 | `decisions/CR-0007_Judge_Alignment_by_Mutual_Explanation.md` | ✅ DECIDED | 실제 대화에서 충분성 기준 검증 |
 | `decisions/CR-0008_Preserve_Relational_Memory.md` | ✅ DECIDED | 관계의 기억을 실제 재개 과정에서 검증 |
-| `WHY.md` | 🔵 DISCOVERY v0.5 | 서술형 MVP와 대조 검토 |
-| `drafts/WHY_Prose_v0.1.md` | 🟡 USER REVIEW | 중심 의미·문체·관계의 기억 표현 검토 |
+| `decisions/CR-0009_Approve_WHY_Prose_Direction.md` | ✅ DECIDED | 통합 교차검토 결과와 대조 |
+| `WHY.md` | 🟡 PROSE DRAFT v0.6 | Genesis·원자료·선택 기록 교차검토 |
+| `drafts/WHY_Prose_v0.1.md` | ✅ DIRECTION APPROVED / MERGED | WHY 집필 이력으로 보존 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-`WHY.md` 서술형 MVP가 존재 이유·문제의식·지속할 이유를 정확히 연결하는지 검토한다.
+통합된 `WHY.md`가 Genesis를 반복하거나 승인된 선택을 왜곡하지 않는지 교차검토한다.
 
-1. 관계 중심의 존재 이유가 선명한가?
-2. 상호 의미 확인과 조율의 의미가 정확한가?
-3. 관계의 기억이 자동 기억이나 감정적 기억으로 오해되지 않는가?
+1. Genesis와 중복되는 설명을 줄일 수 있는가?
+2. `CR-0005`~`CR-0009`의 선택이 빠짐없이 반영되었는가?
+3. 존재 이유·문제의식·지속할 이유가 서로 구분되는가?
 
 ## 막힌 부분
 
@@ -135,7 +139,7 @@
 
 ## 다음 시작점
 
-사용자가 `drafts/WHY_Prose_v0.1.md`의 중심 의미와 문체를 검토한다.
+`WHY.md` PROSE DRAFT v0.6을 원자료와 교차검토하고 완료 후보에 필요한 수정을 제안한다.
 
 ## 재개 체크포인트
 

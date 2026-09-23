@@ -1,9 +1,10 @@
 # WHY — 서술형 MVP v0.1
 
-> Status: DRAFT / USER REVIEW
+> Status: DIRECTION APPROVED / MERGED
 > Date: 2026-09-23
 > Source: `WHY.md` DISCOVERY v0.5, `Genesis.md` APPROVED v0.9
 > Purpose: 존재 이유·문제의식·지속할 이유를 하나의 짧은 흐름으로 검증한다.
+> Review result: 중심 의미와 문체 사용자 승인, `WHY.md` PROSE DRAFT v0.6에 통합
 
 ## 관계를 지키기 위해
 
