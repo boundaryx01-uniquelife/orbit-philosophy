@@ -1,6 +1,6 @@
 # Genesis v0.8 — 전체 교차검토
 
-> Status: REVIEW COMPLETE / USER DECISION REQUIRED
+> Status: REVIEW COMPLETE / RECOMMENDATION APPLIED
 > Date: 2026-09-23
 > Target: `Genesis.md` PROSE DRAFT v0.8
 > Compared with: `C0000`~`C0005`, `RULES.md`, `CR-0001`~`CR-0003`
@@ -122,10 +122,17 @@ Genesis의 직접 인용 6개를 Chronicle 원문과 대조했다.
 
 ### 선택지
 
-1. **수정 3건을 적용해 v0.9 완료 후보 작성** — `권장`
+1. **수정 3건을 적용해 v0.9 완료 후보 작성** — `선택·적용`
 2. **v0.8을 그대로 승인** — 내용상 가능하지만 문서 역할과 상태 표기가 덜 정리됨
 3. **특정 장면을 추가 보강** — 사용자가 약해진 의미를 발견했을 때 선택
 
 ## 최종 판단의 경계
 
 이 검토는 사실성, 구조, 반복과 균형을 확인했다. 그러나 Genesis가 사용자의 문제의식을 충분히 담았는지, 이 단계가 완료되었는지는 사용자가 최종 판단한다.
+
+## 적용 결과
+
+- 사용자 선택: 1번
+- 결과: `Genesis.md` PROSE CANDIDATE v0.9 작성
+- 적용 항목: 장면 2 연결어 정리, 본문 검토 목록 이동, 완료 후보 상태 전환
+- 남은 판단: Genesis 단계 최종 완료 여부

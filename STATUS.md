@@ -7,7 +7,7 @@
 
 ## 지금 어디에 있는가
 
-사용자는 v0.8을 바로 승인하지 않고 전체 교차검토를 선택했다. `C0000`~`C0005`, `RULES.md`, `CR-0001`~`CR-0003`과 대조한 결과 핵심 의미 보존은 PASS이며, 완료 후보 전 경미한 수정 3건이 남았다.
+사용자는 전체 교차검토에서 제안된 경미한 수정 3건을 모두 적용하는 1번을 선택했다. `Genesis.md`는 PROSE CANDIDATE v0.9로 전환되었으며, 현재 Genesis 단계의 최종 완료 여부에 대한 사용자 판단만 남았다.
 
 ## 완료
 
@@ -72,6 +72,8 @@
 - [x] `Genesis.md` PROSE DRAFT v0.8 작성
 - [x] v0.8 직접 인용·핵심 원칙·장면 구조·인간–LLM 균형 교차검토
 - [x] `reviews/Genesis_v0.8_Final_Review.md` 작성
+- [x] 사용자 선택으로 경미한 수정 3건 적용
+- [x] `Genesis.md` PROSE CANDIDATE v0.9 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
@@ -94,20 +96,20 @@
 | `drafts/Genesis_Scenes_01-04_v0.1.md` | 🟡 USER REVIEW | 장면 1~4 핵심 의미 확인 완료, 문체·밀도 결정 필요 |
 | `drafts/Genesis_Scenes_05-08_v0.1.md` | ✅ STYLE APPROVED | 전체 합본에서 반복 점검 |
 | `drafts/Genesis_Scenes_09-11_v0.1.md` | 🟡 USER REVIEW | 에픽테토스·기록 전환 표현 세부 검토 |
-| `Genesis.md` | 🟡 통합 초안 v0.8 | 압축 후 의미·전환 최종 검토 |
+| `Genesis.md` | 🟡 완료 후보 v0.9 | Genesis 단계 최종 사용자 판단 |
 | `reviews/Genesis_v0.7_Editorial_Review.md` | ✅ DECIDED / APPLIED | v0.8 결과와 대조 검토 |
-| `reviews/Genesis_v0.8_Final_Review.md` | 🟡 USER DECISION | v0.9 경미한 수정 3건 적용 여부 판단 |
+| `reviews/Genesis_v0.8_Final_Review.md` | ✅ APPLIED | v0.9 완료 후보와 대조 완료 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-교차검토에서 제안된 경미한 수정 3건을 적용해 v0.9 완료 후보를 만들지 판단한다.
+`Genesis.md` v0.9가 사용자의 문제의식을 충분히 담았는지 최종 판단한다.
 
-1. 장면 2의 연결어 중복을 제거할 것인가?
-2. 본문 끝의 검토 목록을 `STATUS.md`로 이동할 것인가?
-3. v0.9를 `CANDIDATE / FINAL USER REVIEW` 상태로 만들 것인가?
+1. Genesis 단계의 완료를 승인할 것인가?
+2. 완료 전에 보강해야 할 장면이나 의미가 남아 있는가?
+3. 승인할 경우 다음 단계인 `WHY.md` 작성으로 이동할 것인가?
 
 ## 막힌 부분
 
@@ -115,7 +117,7 @@
 
 ## 다음 시작점
 
-사용자가 1번을 선택하면 경미한 수정 3건을 적용한 `Genesis.md` v0.9 완료 후보를 작성한다.
+사용자가 완료를 승인하면 Genesis 단계를 완료 처리하고 `WHY.md` 작성으로 이동한다.
 
 ## 재개 체크포인트
 
