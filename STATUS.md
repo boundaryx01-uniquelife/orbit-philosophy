@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-23
-> Current phase: **3 — Genesis 골격 검토**
+> Current phase: **3 — Genesis 통합 초안 검토**
 > Overall state: 🟡 `DRAFT / REVIEW`
 > Remote checkpoint: **GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-장면 1~8의 검토를 거쳐 사용자가 현재의 공동 회고 문체와 밀도를 Genesis 전체의 최종 방향으로 선택했다. 현재는 같은 기준으로 작성한 장면 9~11 초안에서 에픽테토스 암호, 기록 프로젝트로의 전환, ‘두 번의 탄생’ 해석을 검토하는 단계다.
+사용자가 ORBIT의 ‘철학적 탄생’과 ‘프로젝트적 탄생’을 나누는 구조와 ‘두 번 태어났다’라는 표현을 승인했다. 장면 1~11은 현재의 공동 회고 문체와 밀도로 `Genesis.md`에 통합되었으며, 이제 전체 흐름의 반복·전환·균형을 검토하는 단계다.
 
 ## 완료
 
@@ -65,7 +65,9 @@
 - [x] 장면 5~8 현재 방향 사용자 1차 긍정 확인
 - [x] 현재 문체와 밀도를 Genesis 전체의 최종 방향으로 사용자 선택
 - [x] `drafts/Genesis_Scenes_09-11_v0.1.md` 작성
-- [ ] 장면 9~11과 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
+- [x] ‘두 번의 탄생’ 구조와 표현 사용자 확인
+- [x] 장면 1~11을 `Genesis.md` PROSE DRAFT v0.7로 통합
+- [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
 
@@ -86,19 +88,19 @@
 | `decisions/CR-0003_Continue_the_Current_Prose_Style.md` | ✅ DECIDED | 전체 합본에서 반복·밀도 점검 |
 | `drafts/Genesis_Scenes_01-04_v0.1.md` | 🟡 USER REVIEW | 장면 1~4 핵심 의미 확인 완료, 문체·밀도 결정 필요 |
 | `drafts/Genesis_Scenes_05-08_v0.1.md` | ✅ STYLE APPROVED | 전체 합본에서 반복 점검 |
-| `drafts/Genesis_Scenes_09-11_v0.1.md` | 🟡 USER REVIEW | 에픽테토스·기록 전환·두 번의 탄생 해석 검토 |
-| `Genesis.md` | 🟡 골격 v0.6 | 선택 근거 기록과 탄생 해석 검토 |
+| `drafts/Genesis_Scenes_09-11_v0.1.md` | 🟡 USER REVIEW | 에픽테토스·기록 전환 표현 세부 검토 |
+| `Genesis.md` | 🟡 통합 초안 v0.7 | 장면 1~11 반복·전환·균형 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-장면 9~11의 다음 핵심 질문에 답한 뒤 장면 1~11을 하나의 `Genesis.md` 서술형 초안으로 합친다.
+통합된 `Genesis.md`를 한 흐름으로 읽고 다음 핵심 질문을 검토한다.
 
-1. 에픽테토스를 철학적 근거가 아닌 둘만의 암호로 표현한 것이 맞는가?
-2. 대화 보존에서 프로젝트와 Git 기록으로 넘어간 이유가 정확한가?
-3. ORBIT의 ‘철학적 탄생’과 ‘프로젝트적 탄생’을 나누는 해석에 동의하는가?
+1. 장면 사이에 의미가 과도하게 반복되는 부분은 어디인가?
+2. 장면 8에서 9, 장면 10에서 11로 이어지는 전환은 자연스러운가?
+3. 인간과 LLM 중 어느 한쪽이 지나치게 이상화되거나 축소된 부분은 없는가?
 
 ## 막힌 부분
 
@@ -106,7 +108,7 @@
 
 ## 다음 시작점
 
-`drafts/Genesis_Scenes_09-11_v0.1.md`의 사용자 검토 지점 1~5를 확인하고, 장면 1~11 합본 작성 여부를 결정한다.
+통합된 `Genesis.md`를 처음부터 끝까지 검토하고, 반복을 줄이는 편집 v0.8을 작성한다.
 
 ## 재개 체크포인트
 
@@ -115,5 +117,5 @@
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
 2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
 3. `Genesis.md`의 장면 0~11과 근거 지도를 확인한다.
-4. `drafts/Genesis_Scenes_09-11_v0.1.md`의 사용자 검토 지점 1~5에 답한다.
+4. 통합된 `Genesis.md`의 반복·전환·균형을 검토한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
