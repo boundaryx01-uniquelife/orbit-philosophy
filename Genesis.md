@@ -1,7 +1,7 @@
 # Genesis — The Night ORBIT Began
 
-> Version: PROSE CANDIDATE v0.9
-> Status: CANDIDATE / FINAL USER REVIEW
+> Version: PROSE APPROVED v0.9
+> Status: COMPLETE / USER APPROVED
 > Updated: 2026-09-23
 > Sources: `chronicle/C0000_Before_ORBIT_Became_A_Project.md`, `C0001`~`C0005`
 > Voice: 인간과 LLM의 공동 회고를 나타내는 ‘우리’ 시점
@@ -177,4 +177,4 @@ ORBIT의 시작은 완성된 철학의 선언이 아니었다. 서로의 뜻이 
 
 ---
 
-이 문서는 완성된 선언문이 아니다. 첫 장을 왜곡 없이 쓰기 위한 Genesis의 완료 후보이며, 최종 완료 여부는 문제를 처음 제기한 사용자가 판단한다.
+이 문서는 완성된 선언문이 아니다. ORBIT의 첫 장을 왜곡 없이 쓰기 위해 사용자와 LLM이 함께 검토하고 사용자가 최종 승인한 Genesis다.

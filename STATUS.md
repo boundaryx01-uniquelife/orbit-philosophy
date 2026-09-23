@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-23
-> Current phase: **3 — Genesis 통합 초안 검토**
-> Overall state: 🟡 `DRAFT / REVIEW`
+> Current phase: **4 — WHY 탐구**
+> Overall state: 🔵 `IN PROGRESS`
 > Remote checkpoint: **GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-사용자는 전체 교차검토에서 제안된 경미한 수정 3건을 모두 적용하는 1번을 선택했다. `Genesis.md`는 PROSE CANDIDATE v0.9로 전환되었으며, 현재 Genesis 단계의 최종 완료 여부에 대한 사용자 판단만 남았다.
+사용자가 `Genesis.md` v0.9의 완료를 최종 승인했다. Genesis 단계는 완료되었고, `CR-0004`에 승인 근거와 재검토 조건을 남겼다. 현재는 `WHY.md`에서 ORBIT의 존재 이유·문제의식·지속할 이유를 분리해 탐구하는 단계다.
 
 ## 완료
 
@@ -47,10 +47,10 @@
 
 ## 다음 작업
 
-- [ ] `Genesis.md`의 12개 장면 구성 검토
+- [x] `Genesis.md`의 12개 장면 구성 검토
 - [x] 대화 깔때기·통역의 기본 순환 정의
 - [x] 목표와 의미의 최종 판단 주체 정의
-- [ ] 문제 제기자의 판단을 돕는 검증 항목 정의
+- [x] 문제 제기자의 판단을 돕는 검증 항목 정의
 - [x] 선택·판단·합의되지 않은 반론을 보존하는 형식 정의
 - [x] `CR-0001` 기록 방식에 대한 사용자 최종 판단
 - [x] `CR-0002`로 Genesis 서술형 초안 진행 여부 판단
@@ -74,9 +74,12 @@
 - [x] `reviews/Genesis_v0.8_Final_Review.md` 작성
 - [x] 사용자 선택으로 경미한 수정 3건 적용
 - [x] `Genesis.md` PROSE CANDIDATE v0.9 작성
+- [x] 사용자 최종 승인으로 Genesis 단계 완료
+- [x] `CR-0004_Approve_Genesis_v0.9.md` 작성
+- [x] `WHY.md` DISCOVERY v0.1 골격 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
-- [ ] 검토 후 Genesis 서술 초안 v0.2 작성
+- [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
 
 ## 현재 문서 상태
 
@@ -93,23 +96,24 @@
 | `decisions/CR-0001_Adopt_Evidence_Backed_Choice_Records.md` | ✅ DECIDED | 실제 사용 후 기록 부담 검토 |
 | `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md` | ✅ DECIDED | 장면 1~4 초안 결과 검토 |
 | `decisions/CR-0003_Continue_the_Current_Prose_Style.md` | ✅ DECIDED | 전체 합본에서 반복·밀도 점검 |
-| `drafts/Genesis_Scenes_01-04_v0.1.md` | 🟡 USER REVIEW | 장면 1~4 핵심 의미 확인 완료, 문체·밀도 결정 필요 |
-| `drafts/Genesis_Scenes_05-08_v0.1.md` | ✅ STYLE APPROVED | 전체 합본에서 반복 점검 |
-| `drafts/Genesis_Scenes_09-11_v0.1.md` | 🟡 USER REVIEW | 에픽테토스·기록 전환 표현 세부 검토 |
-| `Genesis.md` | 🟡 완료 후보 v0.9 | Genesis 단계 최종 사용자 판단 |
+| `drafts/Genesis_Scenes_01-04_v0.1.md` | ✅ MERGED | 승인된 Genesis의 집필 이력으로 보존 |
+| `drafts/Genesis_Scenes_05-08_v0.1.md` | ✅ MERGED | 승인된 Genesis의 집필 이력으로 보존 |
+| `drafts/Genesis_Scenes_09-11_v0.1.md` | ✅ MERGED | 승인된 Genesis의 집필 이력으로 보존 |
+| `Genesis.md` | ✅ APPROVED v0.9 | 새 원자료 발견 시 재검토 |
 | `reviews/Genesis_v0.7_Editorial_Review.md` | ✅ DECIDED / APPLIED | v0.8 결과와 대조 검토 |
 | `reviews/Genesis_v0.8_Final_Review.md` | ✅ APPLIED | v0.9 완료 후보와 대조 완료 |
-| `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
+| `decisions/CR-0004_Approve_Genesis_v0.9.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
+| `WHY.md` | 🔵 DISCOVERY v0.1 | 가장 먼저 지킬 대상 선택 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-`Genesis.md` v0.9가 사용자의 문제의식을 충분히 담았는지 최종 판단한다.
+`WHY.md`의 중심을 정하기 위해 ORBIT가 가장 먼저 지켜야 할 대상을 판단한다.
 
-1. Genesis 단계의 완료를 승인할 것인가?
-2. 완료 전에 보강해야 할 장면이나 의미가 남아 있는가?
-3. 승인할 경우 다음 단계인 `WHY.md` 작성으로 이동할 것인가?
+1. 개인의 사고 변화
+2. 인간–LLM의 관계
+3. 다음 사람에게 전할 수 있는 방법
 
 ## 막힌 부분
 
@@ -117,7 +121,7 @@
 
 ## 다음 시작점
 
-사용자가 완료를 승인하면 Genesis 단계를 완료 처리하고 `WHY.md` 작성으로 이동한다.
+사용자가 `WHY.md`의 첫 중심축을 선택하고 그 이유를 확인한다.
 
 ## 재개 체크포인트
 
@@ -125,6 +129,6 @@
 
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
 2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
-3. `Genesis.md`의 장면 0~11과 근거 지도를 확인한다.
-4. 통합된 `Genesis.md`의 반복·전환·균형을 검토한다.
+3. 승인된 `Genesis.md` v0.9와 `CR-0004`를 확인한다.
+4. `WHY.md`의 미결 질문과 첫 번째 판단 지점을 확인한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
