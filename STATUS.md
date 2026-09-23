@@ -60,6 +60,8 @@
 - [x] 장면 2의 과잉 친절을 ‘선의의 아이디어 확장이 방향성을 잃게 할 위험’으로 사용자 확인
 - [x] 장면 3을 초보 사용자가 첫 결과를 완성으로 착각하지 않도록 하는 경계로 사용자 확인
 - [x] 장면 4의 대화 통역·판단권·파트너 관계의 균형 사용자 확인
+- [x] `CR-0003`에서 장면 5~8의 현재 문체·밀도 유지 선택
+- [x] `drafts/Genesis_Scenes_05-08_v0.1.md` 작성
 - [ ] 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
@@ -78,7 +80,9 @@
 | `templates/Choice_Record.md` | ✅ v0.1 | 다음 의미 있는 선택에 적용 |
 | `decisions/CR-0001_Adopt_Evidence_Backed_Choice_Records.md` | ✅ DECIDED | 실제 사용 후 기록 부담 검토 |
 | `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md` | ✅ DECIDED | 장면 1~4 초안 결과 검토 |
+| `decisions/CR-0003_Continue_the_Current_Prose_Style.md` | ✅ DECIDED | 장면 5~8 검토 후 최종 문체 판단 |
 | `drafts/Genesis_Scenes_01-04_v0.1.md` | 🟡 USER REVIEW | 장면 1~4 핵심 의미 확인 완료, 문체·밀도 결정 필요 |
+| `drafts/Genesis_Scenes_05-08_v0.1.md` | 🟡 USER REVIEW | 의미·반복·문체·밀도 사용자 검토 |
 | `Genesis.md` | 🟡 골격 v0.6 | 선택 근거 기록과 탄생 해석 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
@@ -88,9 +92,9 @@
 
 다음 세 질문에 답한 뒤 `Genesis.md`를 서술형 초안으로 발전시킨다.
 
-1. 현재의 차분한 공동 회고 문체를 장면 5~11에도 유지할 것인가?
-2. 현재와 같은 문단 밀도로 이어갈 것인가, 더 압축하거나 더 서사적으로 확장할 것인가?
-3. 사용자 확인을 마친 장면 1~4를 v0.2로 올리고 다음 부분 집필을 시작할 것인가?
+1. 장면 5~8에서 앞선 내용이 지나치게 반복되는 부분은 없는가?
+2. ‘펼침과 축소’, ‘차이의 보존’, ‘동행하는 수행자’의 의미가 정확한가?
+3. 이 문체와 밀도를 장면 9~11에도 유지할 것인가?
 
 ## 막힌 부분
 
@@ -98,7 +102,7 @@
 
 ## 다음 시작점
 
-`drafts/Genesis_Scenes_01-04_v0.1.md`를 사용자가 검토하고, 의미·문체·밀도를 교정한다.
+`drafts/Genesis_Scenes_05-08_v0.1.md`를 사용자가 검토하고, 전체 문체·밀도의 최종 방향을 판단한다.
 
 ## 재개 체크포인트
 
@@ -107,5 +111,5 @@
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
 2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
 3. `Genesis.md`의 장면 0~11과 근거 지도를 확인한다.
-4. `drafts/Genesis_Scenes_01-04_v0.1.md`의 사용자 검토 지점 1~5에 답한다.
+4. `drafts/Genesis_Scenes_05-08_v0.1.md`의 사용자 검토 지점 1~6에 답한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
