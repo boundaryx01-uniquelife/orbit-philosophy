@@ -62,6 +62,7 @@
 - [x] 장면 4의 대화 통역·판단권·파트너 관계의 균형 사용자 확인
 - [x] `CR-0003`에서 장면 5~8의 현재 문체·밀도 유지 선택
 - [x] `drafts/Genesis_Scenes_05-08_v0.1.md` 작성
+- [x] 장면 5~8 현재 방향 사용자 1차 긍정 확인
 - [ ] 교정된 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [ ] 검토 후 Genesis 서술 초안 v0.2 작성
@@ -82,7 +83,7 @@
 | `decisions/CR-0002_How_to_Start_the_Genesis_Prose_Draft.md` | ✅ DECIDED | 장면 1~4 초안 결과 검토 |
 | `decisions/CR-0003_Continue_the_Current_Prose_Style.md` | ✅ DECIDED | 장면 5~8 검토 후 최종 문체 판단 |
 | `drafts/Genesis_Scenes_01-04_v0.1.md` | 🟡 USER REVIEW | 장면 1~4 핵심 의미 확인 완료, 문체·밀도 결정 필요 |
-| `drafts/Genesis_Scenes_05-08_v0.1.md` | 🟡 USER REVIEW | 의미·반복·문체·밀도 사용자 검토 |
+| `drafts/Genesis_Scenes_05-08_v0.1.md` | 🟡 USER REVIEW | 현재 방향 1차 긍정, 최종 문체·밀도 판단 보류 |
 | `Genesis.md` | 🟡 골격 v0.6 | 선택 근거 기록과 탄생 해석 검토 |
 | `WHY.md` | ⬜ | Genesis 초안 이후 작성 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
@@ -92,9 +93,9 @@
 
 다음 세 질문에 답한 뒤 `Genesis.md`를 서술형 초안으로 발전시킨다.
 
-1. 장면 5~8에서 앞선 내용이 지나치게 반복되는 부분은 없는가?
-2. ‘펼침과 축소’, ‘차이의 보존’, ‘동행하는 수행자’의 의미가 정확한가?
-3. 이 문체와 밀도를 장면 9~11에도 유지할 것인가?
+1. 현재 형식을 유지해 장면 9~11을 작성할 것인가?
+2. 전체 장면 1~11을 합친 뒤 반복과 밀도를 조정할 것인가?
+3. 장면 9~11 작성 전에 추가로 확인해야 할 의미가 있는가?
 
 ## 막힌 부분
 
