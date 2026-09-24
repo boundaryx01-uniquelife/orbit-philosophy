@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
-> Updated: 2026-09-23
+> Updated: 2026-09-24
 > Current phase: **4 — WHY 탐구**
 > Overall state: 🔵 `IN PROGRESS`
 > Remote checkpoint: **GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-사용자는 `drafts/WHY_Prose_v0.1.md`의 중심 의미와 문체를 승인했다. 승인된 서술은 `WHY.md` PROSE DRAFT v0.6으로 통합되었으며, 현재는 Genesis·원자료·`CR-0005`~`CR-0009`와의 교차검토를 준비하는 단계다.
+`WHY.md` PROSE DRAFT v0.6을 Genesis·원자료·`CR-0005`~`CR-0009`와 교차검토했다. 전체 방향은 통과했으며, 파트너 관계의 상호 책임·완료 판단권 표현·출처 범위를 다듬는 경미한 수정 3건의 적용 여부를 사용자가 판단하는 단계다.
 
 ## 완료
 
@@ -89,6 +89,7 @@
 - [x] WHY 서술형 MVP 중심 의미와 문체 사용자 승인
 - [x] `CR-0009_Approve_WHY_Prose_Direction.md` 작성
 - [x] `WHY.md` PROSE DRAFT v0.6 통합
+- [x] `reviews/WHY_v0.6_Cross_Review.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -120,18 +121,19 @@
 | `decisions/CR-0007_Judge_Alignment_by_Mutual_Explanation.md` | ✅ DECIDED | 실제 대화에서 충분성 기준 검증 |
 | `decisions/CR-0008_Preserve_Relational_Memory.md` | ✅ DECIDED | 관계의 기억을 실제 재개 과정에서 검증 |
 | `decisions/CR-0009_Approve_WHY_Prose_Direction.md` | ✅ DECIDED | 통합 교차검토 결과와 대조 |
-| `WHY.md` | 🟡 PROSE DRAFT v0.6 | Genesis·원자료·선택 기록 교차검토 |
+| `WHY.md` | 🟡 PROSE DRAFT v0.6 | 교차검토 권고 수정 적용 여부 판단 |
 | `drafts/WHY_Prose_v0.1.md` | ✅ DIRECTION APPROVED / MERGED | WHY 집필 이력으로 보존 |
+| `reviews/WHY_v0.6_Cross_Review.md` | 🟡 COMPLETE / USER DECISION REQUIRED | 경미한 수정 3건 적용 여부 판단 |
 | `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-통합된 `WHY.md`가 Genesis를 반복하거나 승인된 선택을 왜곡하지 않는지 교차검토한다.
+교차검토에서 권고한 경미한 수정 3건을 적용할지 판단한다.
 
-1. Genesis와 중복되는 설명을 줄일 수 있는가?
-2. `CR-0005`~`CR-0009`의 선택이 빠짐없이 반영되었는가?
-3. 존재 이유·문제의식·지속할 이유가 서로 구분되는가?
+1. 권고 수정 3건을 적용하고 WHY v0.7 완료 후보로 진행한다.
+2. 현재 v0.6을 수정 없이 완료 후보로 진행한다.
+3. 관계의 기억에 실제 사례를 먼저 보강한 뒤 다시 검토한다.
 
 ## 막힌 부분
 
@@ -139,7 +141,7 @@
 
 ## 다음 시작점
 
-`WHY.md` PROSE DRAFT v0.6을 원자료와 교차검토하고 완료 후보에 필요한 수정을 제안한다.
+사용자가 `reviews/WHY_v0.6_Cross_Review.md`의 세 선택지 중 하나를 판단한다.
 
 ## 재개 체크포인트
 
