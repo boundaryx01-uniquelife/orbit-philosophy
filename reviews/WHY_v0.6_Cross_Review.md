@@ -1,6 +1,6 @@
 # WHY v0.6 — Cross Review
 
-> Status: COMPLETE / USER DECISION REQUIRED
+> Status: COMPLETE / APPLIED
 > Date: 2026-09-24
 > Target: `WHY.md` PROSE DRAFT v0.6
 > Compared with: `Genesis.md` APPROVED v0.9, `chronicle/C0001`~`C0005`, `CR-0005`~`CR-0009`
@@ -10,6 +10,10 @@
 `WHY.md` v0.6은 승인된 중심 방향과 충돌하지 않는다. 인간–LLM의 관계, 상호 의미 확인과 조율, 관계의 기억이라는 세 축이 모두 추적되며, Genesis의 장면을 반복하지 않고 존재 이유와 지속 이유로 다시 배열했다.
 
 전면 재작성은 필요하지 않다. 완료 후보로 올리기 전에 의미의 정확성을 높이는 경미한 수정 세 건을 권한다.
+
+## 적용 결과
+
+사용자의 진행 요청에 따라 권고 수정 3건을 모두 적용하고 `WHY.md` PROSE CANDIDATE v0.7을 작성했다. 선택과 적용 근거는 `CR-0010`에 기록했다.
 
 ## 기준별 결과
 

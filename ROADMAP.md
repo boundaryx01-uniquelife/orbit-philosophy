@@ -1,7 +1,7 @@
 # ORBIT Philosophy — Roadmap
 
 > Version: 0.2
-> Updated: 2026-09-24
+> Updated: 2026-09-25
 > Principle: 진행률보다 단계별 완료 조건을 확인한다.
 
 ## 진행 상태
@@ -47,7 +47,8 @@ Genesis에서 확인한 경험을 반복하지 않고, ORBIT의 존재 이유·�
 - [x] WHY 서술형 MVP의 중심 의미와 문체를 사용자 승인한다.
 - [x] 승인된 MVP를 `WHY.md` PROSE DRAFT v0.6으로 통합한다.
 - [x] WHY 통합본을 Genesis·원자료·선택 기록과 교차검토한다.
-- [ ] 교차검토의 경미한 수정 3건 적용 여부를 사용자가 판단한다.
+- [x] 교차검토의 경미한 수정 3건을 적용하고 `CR-0010`에 기록한다.
+- [ ] `WHY.md` PROSE CANDIDATE v0.7의 최종 완료 여부를 사용자가 판단한다.
 
 ## 변경 원칙
 
