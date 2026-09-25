@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-25
-> Current phase: **4 — WHY 탐구**
+> Current phase: **5 — 철학문서 재정제**
 > Overall state: 🔵 `IN PROGRESS`
 > Remote checkpoint: **GitHub `main` 반영 확인 (`81b5320`)**
 
 ## 지금 어디에 있는가
 
-`WHY.md` PROSE DRAFT v0.6의 교차검토에서 전체 방향을 통과하고 경미한 수정 3건을 적용했다. 현재 `WHY.md` PROSE CANDIDATE v0.7의 의미·문체·완료 여부를 사용자가 최종 판단하는 단계다.
+사용자가 `WHY.md` PROSE CANDIDATE v0.7을 승인해 WHY 단계를 완료했다. 현재는 초기 철학 초안의 각 원칙을 승인된 Genesis·WHY 및 원자료와 대조하여 유지·수정·삭제·신규 도출 대상으로 나누는 단계다.
 
 ## 완료
 
@@ -93,6 +93,8 @@
 - [x] 교차검토 권고 수정 3건 적용
 - [x] `CR-0010_Apply_WHY_Cross_Review.md` 작성
 - [x] `WHY.md` PROSE CANDIDATE v0.7 작성
+- [x] 사용자 최종 승인으로 WHY 단계 완료
+- [x] `CR-0011_Approve_WHY_v0.7.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -125,19 +127,21 @@
 | `decisions/CR-0008_Preserve_Relational_Memory.md` | ✅ DECIDED | 관계의 기억을 실제 재개 과정에서 검증 |
 | `decisions/CR-0009_Approve_WHY_Prose_Direction.md` | ✅ DECIDED | 통합 교차검토 결과와 대조 |
 | `decisions/CR-0010_Apply_WHY_Cross_Review.md` | ✅ DECIDED | WHY v0.7 최종 판단과 대조 |
-| `WHY.md` | 🟡 PROSE CANDIDATE v0.7 | 사용자 최종 완료 판단 |
+| `decisions/CR-0011_Approve_WHY_v0.7.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
+| `WHY.md` | ✅ APPROVED v0.7 | 실제 재개 과정에서 관계의 기억 검증 |
 | `drafts/WHY_Prose_v0.1.md` | ✅ DIRECTION APPROVED / MERGED | WHY 집필 이력으로 보존 |
 | `reviews/WHY_v0.6_Cross_Review.md` | ✅ COMPLETE / APPLIED | WHY v0.7과 대조 완료 |
-| `manifesto/P00-01_Philosophy.md` | 🟡 초기 초안 | Genesis·WHY 이후 재정제 |
+| `manifesto/P00-01_Philosophy.md` | 🔵 초기 초안 / 재정제 중 | 원칙별 근거 대조와 구조 재설계 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-`WHY.md` PROSE CANDIDATE v0.7이 WHY 단계의 완료본이 될 수 있는지 사용자가 최종 판단한다.
+초기 철학 초안의 다섯 원칙을 승인된 기록과 대조한다.
 
-1. 현재 v0.7을 승인하고 WHY 단계를 완료한다.
-2. 특정 문장만 지정해 수정한 뒤 다시 판단한다.
-3. 관계의 기억에 실제 사례를 보강한 뒤 다시 판단한다.
+1. 근거가 충분해 유지할 원칙은 무엇인가?
+2. 의미를 수정해야 할 원칙은 무엇인가?
+3. 근거가 부족해 삭제하거나 보류할 원칙은 무엇인가?
+4. Genesis와 WHY에서 새로 도출해야 할 원칙은 무엇인가?
 
 ## 막힌 부분
 
@@ -145,7 +149,7 @@
 
 ## 다음 시작점
 
-사용자가 `WHY.md` PROSE CANDIDATE v0.7의 최종 완료 여부를 판단한다.
+`manifesto/P00-01_Philosophy.md`의 원칙별 근거 대조표를 작성한다.
 
 ## 재개 체크포인트
 
@@ -154,5 +158,5 @@
 1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
 2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
 3. 승인된 `Genesis.md` v0.9와 `CR-0004`를 확인한다.
-4. `WHY.md`의 미결 질문과 첫 번째 판단 지점을 확인한다.
+4. 승인된 `WHY.md` v0.7과 `CR-0011`을 확인한다.
 5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.

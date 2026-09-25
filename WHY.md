@@ -1,7 +1,7 @@
 # WHY — Why ORBIT Must Continue
 
-> Version: PROSE CANDIDATE v0.7
-> Status: COMPLETE CANDIDATE / USER REVIEW
+> Version: PROSE APPROVED v0.7
+> Status: COMPLETE / USER APPROVED
 > Updated: 2026-09-25
 > Sources: `Genesis.md` APPROVED v0.9, `CR-0005`~`CR-0010`
 > Purpose: ORBIT의 존재 이유·문제의식·지속할 이유를 분리해 설명한다.
