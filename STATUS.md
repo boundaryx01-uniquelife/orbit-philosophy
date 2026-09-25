@@ -3,7 +3,7 @@
 > Updated: 2026-09-25
 > Current phase: **4 — WHY 탐구**
 > Overall state: 🔵 `IN PROGRESS`
-> Remote checkpoint: **로컬 `f15770a` / GitHub 인증 후 푸시 필요**
+> Remote checkpoint: **GitHub `main` 반영 확인 (`81b5320`)**
 
 ## 지금 어디에 있는가
 
