@@ -1,6 +1,6 @@
 # Philosophy Refinement Map v0.1
 
-> Status: COMPLETE / USER STRUCTURE DECISION REQUIRED
+> Status: COMPLETE / APPLIED
 > Date: 2026-09-25
 > Target: `manifesto/P00-01_Philosophy.md` 초기 초안
 > Sources: `C0000`~`C0005`, `Genesis.md` APPROVED v0.9, `WHY.md` APPROVED v0.7, `RULES.md` v0.1
@@ -100,3 +100,7 @@
 1. 세 축·일곱 원칙
 2. 다섯 핵심 원칙
 3. 서술형 철학문
+
+## 적용 결과
+
+사용자의 진행 요청에 따라 권고안인 세 축·일곱 원칙을 선택했다. 선택 근거는 `CR-0012`에 기록하고 `manifesto/P00-01_Philosophy.md` REFINEMENT DRAFT v0.2에 적용했다.
