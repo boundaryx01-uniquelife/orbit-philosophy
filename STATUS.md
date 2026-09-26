@@ -7,7 +7,7 @@
 
 ## 지금 어디에 있는가
 
-사용자가 `WHY.md` PROSE CANDIDATE v0.7을 승인해 WHY 단계를 완료했다. 현재는 초기 철학 초안의 각 원칙을 승인된 Genesis·WHY 및 원자료와 대조하여 유지·수정·삭제·신규 도출 대상으로 나누는 단계다.
+사용자가 `WHY.md` PROSE CANDIDATE v0.7을 승인해 WHY 단계를 완료했다. 초기 철학 초안의 다섯 원칙을 승인된 기록과 대조했으며, 현재는 세 축·일곱 원칙, 다섯 핵심 원칙, 서술형 철학문 중 첫 정제본의 구조를 사용자가 선택하는 단계다.
 
 ## 완료
 
@@ -95,6 +95,9 @@
 - [x] `WHY.md` PROSE CANDIDATE v0.7 작성
 - [x] 사용자 최종 승인으로 WHY 단계 완료
 - [x] `CR-0011_Approve_WHY_v0.7.md` 작성
+- [x] 초기 철학 원칙 5개 근거 대조
+- [x] 유지·수정·이동·삭제·신규 도출 대상 분류
+- [x] `reviews/Philosophy_Refinement_Map_v0.1.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -132,16 +135,16 @@
 | `drafts/WHY_Prose_v0.1.md` | ✅ DIRECTION APPROVED / MERGED | WHY 집필 이력으로 보존 |
 | `reviews/WHY_v0.6_Cross_Review.md` | ✅ COMPLETE / APPLIED | WHY v0.7과 대조 완료 |
 | `manifesto/P00-01_Philosophy.md` | 🔵 초기 초안 / 재정제 중 | 원칙별 근거 대조와 구조 재설계 |
+| `reviews/Philosophy_Refinement_Map_v0.1.md` | 🟡 COMPLETE / USER STRUCTURE DECISION REQUIRED | 첫 정제본 구조 선택 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-초기 철학 초안의 다섯 원칙을 승인된 기록과 대조한다.
+철학문서의 첫 정제본 구조를 선택한다.
 
-1. 근거가 충분해 유지할 원칙은 무엇인가?
-2. 의미를 수정해야 할 원칙은 무엇인가?
-3. 근거가 부족해 삭제하거나 보류할 원칙은 무엇인가?
-4. Genesis와 WHY에서 새로 도출해야 할 원칙은 무엇인가?
+1. 세 축·일곱 원칙으로 구성한다.
+2. 다섯 핵심 원칙으로 압축한다.
+3. 서술형 철학문으로 구성한다.
 
 ## 막힌 부분
 
@@ -149,7 +152,7 @@
 
 ## 다음 시작점
 
-`manifesto/P00-01_Philosophy.md`의 원칙별 근거 대조표를 작성한다.
+사용자가 `reviews/Philosophy_Refinement_Map_v0.1.md`의 세 구조 중 하나를 선택한다.
 
 ## 재개 체크포인트
 
