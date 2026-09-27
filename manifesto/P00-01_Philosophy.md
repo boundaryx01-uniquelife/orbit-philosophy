@@ -1,8 +1,8 @@
 # P00-01 — Philosophy
 
 > Version: REFINEMENT DRAFT v0.2
-> Status: DRAFT / USER REVIEW
-> Updated: 2026-09-26
+> Status: DIRECTION APPROVED / CROSS-REVIEWED
+> Updated: 2026-09-27
 > Sources: `C0000`~`C0005`, `Genesis.md` APPROVED v0.9, `WHY.md` APPROVED v0.7, `CR-0001`~`CR-0012`
 > Purpose: ORBIT가 현재까지 확인한 철학을 관계·작업·기억의 원칙으로 정리한다.
 

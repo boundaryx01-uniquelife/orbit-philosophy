@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
-> Updated: 2026-09-26
+> Updated: 2026-09-27
 > Current phase: **5 — 철학문서 재정제**
 > Overall state: 🔵 `IN PROGRESS`
-> Remote checkpoint: **GitHub `main` 반영 확인 (`81b5320`)**
+> Remote checkpoint: **GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-철학문서의 첫 정제본 구조를 세 축·일곱 원칙으로 선택하고 `manifesto/P00-01_Philosophy.md` REFINEMENT DRAFT v0.2를 작성했다. 현재는 초안의 중심 의미와 문체를 검토한 뒤 원자료·Genesis·WHY 교차검토로 진행할지 판단하는 단계다.
+철학문서 REFINEMENT DRAFT v0.2의 중심 의미와 문체를 승인하고 원자료·Genesis·WHY·Rules 교차검토를 완료했다. 전체 구조와 일곱 원칙은 통과했으며, 내부 일관성·의미 확인의 충분성·근거 추적성을 보완하는 경미한 수정 3건의 적용 여부를 사용자가 판단하는 단계다.
 
 ## 완료
 
@@ -101,6 +101,9 @@
 - [x] 세 축·일곱 원칙 구조 선택
 - [x] `CR-0012_Choose_Three_Axes_Seven_Principles.md` 작성
 - [x] `manifesto/P00-01_Philosophy.md` REFINEMENT DRAFT v0.2 작성
+- [x] 철학문서 v0.2 중심 방향과 문체 승인
+- [x] `CR-0013_Approve_Philosophy_v0.2_Direction.md` 작성
+- [x] `reviews/Philosophy_v0.2_Cross_Review.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -138,17 +141,19 @@
 | `drafts/WHY_Prose_v0.1.md` | ✅ DIRECTION APPROVED / MERGED | WHY 집필 이력으로 보존 |
 | `reviews/WHY_v0.6_Cross_Review.md` | ✅ COMPLETE / APPLIED | WHY v0.7과 대조 완료 |
 | `decisions/CR-0012_Choose_Three_Axes_Seven_Principles.md` | ✅ DECIDED | 정제 초안 및 교차검토 결과와 대조 |
-| `manifesto/P00-01_Philosophy.md` | 🟡 REFINEMENT DRAFT v0.2 | 중심 의미·문체 사용자 검토 |
+| `decisions/CR-0013_Approve_Philosophy_v0.2_Direction.md` | ✅ DECIDED | 교차검토 및 완료 후보와 대조 |
+| `manifesto/P00-01_Philosophy.md` | 🟡 REFINEMENT DRAFT v0.2 / CROSS-REVIEWED | 경미한 수정 적용 여부 판단 |
 | `reviews/Philosophy_Refinement_Map_v0.1.md` | ✅ COMPLETE / APPLIED | 정제 초안 v0.2와 대조 완료 |
+| `reviews/Philosophy_v0.2_Cross_Review.md` | 🟡 COMPLETE / USER DECISION REQUIRED | 경미한 수정 3건 적용 여부 판단 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-철학문서 정제 초안 v0.2의 중심 의미와 문체를 검토한다.
+철학문서 v0.2 교차검토의 경미한 수정 3건을 적용할지 판단한다.
 
-1. 현재 방향을 승인하고 원자료·Genesis·WHY 교차검토로 진행한다.
-2. 일곱 원칙의 구분이나 순서를 수정한다.
-3. 문체와 밀도를 먼저 조정한다.
+1. 권고 수정 3건을 적용하고 v0.3 완료 후보로 진행한다.
+2. 에픽테토스 제거와 의미 확인 보강만 적용한다.
+3. 현재 v0.2를 수정 없이 완료 후보로 진행한다.
 
 ## 막힌 부분
 
@@ -156,7 +161,7 @@
 
 ## 다음 시작점
 
-사용자가 `manifesto/P00-01_Philosophy.md` REFINEMENT DRAFT v0.2의 중심 의미와 문체를 검토한다.
+사용자가 `reviews/Philosophy_v0.2_Cross_Review.md`의 세 선택지 중 하나를 판단한다.
 
 ## 재개 체크포인트
 
