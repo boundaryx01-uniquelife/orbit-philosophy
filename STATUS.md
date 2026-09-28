@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-28
-> Current phase: **5 완료 / 다음 6 — README 재작성**
-> Overall state: 🟡 `NEXT PHASE READY`
-> Remote checkpoint: **GitHub `main` 반영 확인**
+> Current phase: **6 — README 재작성**
+> Overall state: 🔵 `IN PROGRESS / CANDIDATE REVIEW`
+> Remote checkpoint: **이전 승인본까지 GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-사용자가 `manifesto/P00-01_Philosophy.md` REFINEMENT CANDIDATE v0.3을 승인해 철학문서 재정제 단계를 완료했다. 다음 작업은 승인된 Genesis·WHY·Philosophy와 운영 문서를 연결하는 프로젝트 현관으로 `README.md`를 재작성하는 것이다.
+승인된 Genesis·WHY·Philosophy와 운영·진행 기록을 연결하는 프로젝트 현관으로 `README.md` REWRITE CANDIDATE v0.2를 작성했다. 링크·문서 역할·중복·누락 교차검토를 통과했으며, 사용자 최종 승인을 받으면 6단계가 완료된다.
 
 ## 완료
 
@@ -109,6 +109,11 @@
 - [x] `manifesto/P00-01_Philosophy.md` REFINEMENT CANDIDATE v0.3 작성
 - [x] 사용자 최종 승인으로 철학문서 재정제 단계 완료
 - [x] `CR-0015_Approve_Philosophy_v0.3.md` 작성
+- [x] 기존 README와 승인 문서·실제 저장소 구조 대조
+- [x] README를 프로젝트 현관으로 정의하고 `CR-0016`에 기록
+- [x] 처음 읽는 경로와 작업 재개 경로 분리
+- [x] `README.md` REWRITE CANDIDATE v0.2 작성
+- [x] README v0.2 링크·역할·중복·누락 교차검토
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -152,15 +157,16 @@
 | `manifesto/P00-01_Philosophy.md` | ✅ APPROVED v0.3 | 실제 작업과 전체 교차검토에서 검증 |
 | `reviews/Philosophy_Refinement_Map_v0.1.md` | ✅ COMPLETE / APPLIED | 정제 초안 v0.2와 대조 완료 |
 | `reviews/Philosophy_v0.2_Cross_Review.md` | ✅ COMPLETE / APPLIED | 철학문서 v0.3과 대조 완료 |
-| `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
+| `README.md` | 🟡 REWRITE CANDIDATE v0.2 | 사용자 최종 승인 |
+| `decisions/CR-0016_Define_README_As_Project_Entrance.md` | ✅ DECIDED | README 최종 승인 결과와 대조 |
+| `reviews/README_v0.2_Cross_Review.md` | ✅ COMPLETE | README 최종 승인 결과와 대조 |
 
 ## 다음 관문
 
-6단계 `README.md` 재작성의 역할과 구조를 정한다.
+6단계 `README.md` 완료 후보를 검토한다.
 
-1. 첫 방문자가 ORBIT의 존재 이유와 문서 읽는 순서를 이해할 수 있는가?
-2. Genesis·WHY·Philosophy·Rules의 역할 차이가 드러나는가?
-3. 진행 기록과 선택 기록으로 이동할 수 있는가?
+1. 프로젝트 현관이라는 현재 구조와 밀도가 사용자의 의도에 맞는가?
+2. README v0.2를 6단계 완료본으로 승인할 것인가?
 
 ## 막힌 부분
 
@@ -168,7 +174,7 @@
 
 ## 다음 시작점
 
-현재 `README.md`를 승인된 핵심 문서와 대조하고 재작성 구조를 제안한다.
+`README.md` REWRITE CANDIDATE v0.2의 사용자 최종 승인을 받는다.
 
 ## 재개 체크포인트
 
