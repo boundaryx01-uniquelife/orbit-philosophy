@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-28
-> Current phase: **9 — 책·교육·제품 병렬 탐색**
-> Overall state: 🔵 `IN PROGRESS / THREE MVPs READY`
-> Remote checkpoint: **세 확장 트랙 MVP까지 GitHub `main` 반영 확인 (`96e2f66`)**
+> Current phase: **9A — 책 우선 제작·검증**
+> Overall state: 🔵 `IN PROGRESS / EPUB PROTOTYPE READY`
+> Remote checkpoint: **책 우선 전환과 EPUB v0.1을 현재 GitHub `main` 체크포인트로 관리**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 트랙을 독립적으로 시작했다. 책은 3부 10장 구성과 제1장 샘플, 교육은 3차시 수업 모듈, 제품은 대화 깔때기 MVP 명세까지 첫 결과를 만들었다. 내부 구현 가능성은 확인했지만 효과는 아직 검증하지 않았으므로, 다음 작업은 실제 독자·학습자·사용자 반응을 수집하는 것이다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 현재 3부 10장 구성과 제1장 샘플에 표지·본문 삽화를 더한 재현 가능한 EPUB v0.1이 있다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다. 다음 작업은 전자책을 실제로 읽으며 제목·표지·가독성·중심 메시지를 검증하는 것이다.
 
 ## 완료
 
@@ -137,6 +137,9 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 트랙을 독
 - [x] 세 트랙의 원칙·경험·산출물·위험 비교표 작성
 - [x] 세 트랙 공통 검증 기록 양식 작성
 - [x] 세 확장 MVP의 Genesis v1.0 정합성 교차검토
+- [x] 책 트랙 우선 진행과 시각물 포함 EPUB 시제품 결정
+- [x] 표지 원화와 제1장 삽화 제작
+- [x] 가변형 EPUB 3 빌드·구조 검증
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -193,10 +196,14 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 트랙을 독
 | `reviews/Genesis_Document_Set_v1.0_Release_Review.md` | ✅ RELEASE APPROVED | 재검토 조건 발생 시 확인 |
 | `chronicle/C0007_One_Philosophy_Three_Forms.md` | ✅ DIRECTION v0.1 | 세 트랙 실제 검증 결과와 대조 |
 | `decisions/CR-0020_Run_Three_Expansion_Tracks_In_Parallel.md` | ✅ DECIDED | 병렬 탐색의 부담과 효과 재검토 |
-| `tracks/README.md` | 🔵 DISCOVERY v0.1 | 세 MVP 실제 검증 진행 |
+| `tracks/README.md` | 🔵 DISCOVERY v0.2 | 책 우선 검증과 다른 두 MVP 보존 |
 | `tracks/COMPARISON.md` | 🟡 v0.1 | 실제 검증 자료가 생기면 효과 비교 추가 |
-| `tracks/book/BOOK_TRACK.md` | 🟡 DISCOVERY v0.1 | 샘플 독자 검증 |
+| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.2 | EPUB 독자 검증 |
 | `tracks/book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md` | 🟡 SAMPLE MVP v0.1 | 독자 3명 이상 반응 수집 |
+| `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.1 | 실제 기기·앱 표시 검증 |
+| `tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub` | 🟡 EPUB PROTOTYPE v0.1 | 제목·표지·가독성·메시지 독자 검증 |
+| `decisions/CR-0021_Prioritize_Book_And_Build_EPUB_Prototype.md` | ✅ DECIDED | 독자 검증 뒤 우선순위 재검토 |
+| `chronicle/C0008_The_Book_Became_A_Reading_Object.md` | ✅ MILESTONE v0.1 | 전체 원고 진전 시 대조 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
 | `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
@@ -206,25 +213,26 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 트랙을 독
 
 ## 다음 관문
 
-9단계 세 확장 MVP를 실제 사용으로 검증한다.
+9A단계 책 EPUB를 실제 읽기 경험으로 검증한다.
 
-1. 책 샘플을 읽은 사람이 중심 메시지를 자기 말로 설명하는가?
-2. 학습자가 첫 결과의 외형과 목표 도달을 구분하고 실제로 교정하는가?
-3. 제품 흐름이 목표 이탈과 재설명을 줄이면서 과도한 기록 부담을 만들지 않는가?
+1. 표지가 ORBIT의 ‘관계와 조율’을 전달하는가, 아니면 천문학 책으로 오해되는가?
+2. 작은 화면에서 제1장과 기록 질문을 무리 없이 읽을 수 있는가?
+3. 독자가 중심 메시지를 ‘속도 비판’이 아니라 ‘첫 결과에서 판단을 멈추지 말자는 경고’로 설명하는가?
 
 ## 막힌 부분
 
-초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 세 확장 MVP는 내부 초안만 존재하며 실제 독자·학습자·사용자 검증 자료는 아직 없다.
+초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. EPUB은 구조 검사를 통과했지만 실제 전자책 앱·기기와 독자 반응은 아직 검증하지 않았다. 최종 제목과 저자 표기도 정하지 않았다.
 
 ## 다음 시작점
 
-`tracks/COMPARISON.md`로 세 구현 방식을 비교한 뒤, 책 독자 검증·교육 1차시 파일럿·제품 종이 프로토타입 중 실제로 실행 가능한 검증부터 수행한다.
+`tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub`을 휴대전화 또는 전자책 앱에서 읽고, 제목·표지·가독성과 제1장 중심 메시지에 대한 첫 반응을 기록한다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
-1. `tracks/README.md`와 `tracks/COMPARISON.md`에서 세 트랙의 공통 기준과 차이를 확인한다.
-2. 실행할 트랙의 방향 문서와 첫 MVP를 읽는다.
-3. 해당 문서의 검증 계획에 따라 실제 반응과 산출물을 수집한다.
-4. 결과를 선택 기록과 진행판에 반영하고 GitHub `main`에 체크포인트를 남긴다.
+1. `tracks/book/BOOK_TRACK.md`와 `tracks/book/EPUB_PRODUCTION.md`에서 책의 목표와 제작 경계를 확인한다.
+2. EPUB v0.1을 실제 기기 또는 앱에서 읽는다.
+3. 제목·표지·가독성·중심 메시지의 반응을 수집한다.
+4. 독자 검증 결과로 다음 장 집필 또는 구조 수정을 판단한다.
+5. 결과를 기록하고 GitHub `main`에 체크포인트를 남긴다.

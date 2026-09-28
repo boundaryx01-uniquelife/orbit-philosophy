@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 992 1586" role="img" aria-labelledby="title description">
+  <title id="title">첫 답은 끝이 아니다</title>
+  <desc id="description">검은 바탕에서 서로 다른 두 궤도가 주황색 중심을 통과해 정렬되는 표지</desc>
+  <image x="0" y="0" width="992" height="1586" preserveAspectRatio="xMidYMid slice" xlink:href="cover-art-v0.1.png" />
+  <g fill="#f4f0e8" font-family="Noto Sans CJK KR, Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif">
+    <text x="82" y="150" font-size="30" font-weight="600" letter-spacing="4">ORBIT PHILOSOPHY</text>
+    <text x="82" y="270" font-size="82" font-weight="800" letter-spacing="-3">첫 답은</text>
+    <text x="82" y="370" font-size="82" font-weight="800" letter-spacing="-3">끝이 아니다</text>
+    <text x="86" y="430" font-size="25" font-weight="400">인간과 LLM이 서로의 뜻을 맞춰 가는 대화의 기술</text>
+  </g>
+  <circle cx="52" cy="1433" r="6" fill="#e45524" />
+  <text x="82" y="1443" fill="#b9b4aa" font-family="Noto Sans CJK KR, Noto Sans KR, Apple SD Gothic Neo, Malgun Gothic, sans-serif" font-size="22" letter-spacing="2">EPUB PROTOTYPE · v0.1</text>
+</svg>

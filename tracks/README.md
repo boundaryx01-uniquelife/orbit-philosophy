@@ -1,7 +1,7 @@
 # ORBIT Expansion Tracks
 
-> Version: DISCOVERY v0.1
-> Status: THREE TRACKS IN PROGRESS
+> Version: DISCOVERY v0.2
+> Status: BOOK PRIORITY / OTHER MVPs PRESERVED
 > Started: 2026-09-28
 > Source baseline: `Genesis Document Set v1.0`
 > Decision: `CR-0020`
@@ -43,9 +43,11 @@
 
 | 트랙 | 방향 문서 | 첫 MVP | 현재 상태 |
 |---|---|---|:---:|
-| 책 | [`book/BOOK_TRACK.md`](book/BOOK_TRACK.md) | [`book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md`](book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md) | MVP READY |
+| 책 | [`book/BOOK_TRACK.md`](book/BOOK_TRACK.md) | [EPUB v0.1](book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub) | EPUB PROTOTYPE |
 | 교육 | [`education/EDUCATION_TRACK.md`](education/EDUCATION_TRACK.md) | [`education/modules/M01_First_Output_Is_Not_The_End.md`](education/modules/M01_First_Output_Is_Not_The_End.md) | MVP READY |
 | 제품 | [`product/PRODUCT_TRACK.md`](product/PRODUCT_TRACK.md) | [`product/MVP_SPEC.md`](product/MVP_SPEC.md) | SPEC READY |
+
+세 MVP를 만든 뒤 사용자는 책을 먼저 진행하기로 선택했다. 책은 [EPUB v0.1](book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub)까지 진전시키며, 교육과 제품은 비교 가능한 첫 결과를 보존한 채 보류한다. 이는 병렬 탐색의 폐기가 아니라 `CR-0021`에 기록한 현재 우선순위다.
 
 ## 공통 비교 기준
 
@@ -59,8 +61,8 @@
 
 ## 다음 검증
 
-- 책: 샘플 1장을 실제 독자 3명 이상에게 읽히고 이해·공감·행동 변화 질문을 수집한다.
-- 교육: 3차시 중 1차시를 소규모로 적용하고 학생 산출물과 교사 관찰을 기록한다.
-- 제품: 종이 또는 클릭 프로토타입으로 전체 흐름을 3회 이상 수행하고 불필요한 입력을 제거한다.
+- 책: EPUB v0.1을 실제 기기에서 확인하고, 샘플 1장을 독자 3명 이상에게 읽혀 이해·공감·행동 변화 질문을 수집한다.
+- 교육: 책 우선 검증 뒤 재개하며, 3차시 중 1차시를 소규모로 적용한다.
+- 제품: 책 우선 검증 뒤 재개하며, 종이 또는 클릭 프로토타입으로 전체 흐름을 3회 이상 수행한다.
 
 검증 전까지 세 트랙은 `DISCOVERY / MVP` 상태이며, 출판·정규 교육과정·소프트웨어 개발 착수는 각각 별도의 다음 결정으로 남긴다.

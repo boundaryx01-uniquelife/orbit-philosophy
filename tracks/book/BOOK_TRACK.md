@@ -1,7 +1,7 @@
 # ORBIT Book Track
 
-> Version: DISCOVERY v0.1
-> Status: OUTLINE + SAMPLE MVP READY
+> Version: DISCOVERY v0.2
+> Status: BOOK PRIORITY + EPUB PROTOTYPE
 > Source baseline: `Genesis Document Set v1.0`
 
 ## 이 트랙이 만드는 것
@@ -84,6 +84,16 @@
 - 읽은 뒤 자신의 최근 LLM 작업을 한 번 더 검토하고 싶어지는가?
 - 실천 질문이 철학의 여운을 깨뜨릴 만큼 설명서처럼 느껴지지 않는가?
 
+## EPUB 시제품
+
+책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 현재 목차와 제1장 샘플을 [EPUB v0.1](epub/dist/First_Answer_Is_Not_The_End_v0.1.epub)로 묶었다. 이 결과는 출간본이 아니라 실제 전자책의 가독성, 목차 흐름과 시각 언어를 확인하기 위한 제작 MVP다.
+
+- 제작 원칙과 남은 결정: [`EPUB_PRODUCTION.md`](EPUB_PRODUCTION.md)
+- 다시 만드는 방법: [`epub/README.md`](epub/README.md)
+- 표지와 삽화의 의미·생성 지시: [`assets/README.md`](assets/README.md)
+
+표지는 두 궤도의 정렬을 상징으로 사용하고, 제1장 삽화는 완성된 외형과 아직 맞지 않은 목표의 차이를 보여 준다. 후속 삽화는 원고보다 먼저 만들지 않는다.
+
 ## 제작 흐름
 
 1. 장별 중심 질문을 하나로 제한한다.
@@ -103,7 +113,7 @@
 
 ## 아직 결정하지 않은 것
 
-- 실제 출판 여부와 출판 방식
+- 실제 출판·유통 여부
 - 최종 제목·분량·독자 연령
 - 공동 저자 표기와 인간–LLM 대화의 인용 형식
 - 실습 워크북을 본문에 넣을지 별책으로 분리할지
