@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-28
-> Current phase: **7 완료 / 다음 8 — Genesis 문서 세트 v1.0**
-> Overall state: 🟡 `NEXT DECISION READY`
-> Remote checkpoint: **7단계 전체 교차검토까지 GitHub `main` 반영 확인 (`814b089`)**
+> Current phase: **8 완료 — Genesis Document Set v1.0**
+> Overall state: ✅ `GENESIS TRACK COMPLETE / NEXT TRACK REQUIRES APPROVAL`
+> Remote checkpoint: **`genesis-v1.0` 릴리스 커밋과 태그 GitHub 반영**
 
 ## 지금 어디에 있는가
 
-사용자가 `README.md` v0.2를 승인해 6단계를 완료했고, 이어서 7단계 전체 교차검토를 마쳤다. 핵심 의미의 모순이나 근거 없는 미화는 발견되지 않았으며, 식별자·상태·출처·기록 형식과 운영 규칙의 비결정적 불일치를 수정했다. 다음 단계는 문서 세트의 구성과 버전을 v1.0으로 확정하는 결정이다.
+사용자가 핵심·운영·근거 이력의 3계층 구성을 승인해 Genesis Document Set v1.0을 확정했다. 개별 문서 버전은 유지하면서 검증된 구성 전체에 세트 버전 v1.0을 부여했고, `DOCUMENT_SET.md`, `CR-0019`, `C0006`과 릴리스 검토를 연결했다. Genesis Track은 완료되었으며 책·교육·제품 확장은 별도 승인 전까지 시작하지 않는다.
 
 ## 완료
 
@@ -122,6 +122,13 @@
 - [x] `RULES.md`의 Chronicle·Choice Record 역할을 실제 운영에 맞게 정리
 - [x] `reviews/Full_Document_Set_Cross_Review_v0.1.md` 작성
 - [x] `CR-0018_Apply_Full_Cross_Review_Corrections.md` 작성
+- [x] Genesis Document Set v1.0의 3계층 구성 사용자 승인
+- [x] 개별 문서 버전과 세트 버전 분리
+- [x] `DOCUMENT_SET.md` 작성
+- [x] `CR-0019_Define_Genesis_Document_Set_v1.0.md` 작성
+- [x] `C0006_The_First_Complete_Document_Set.md` 작성
+- [x] `reviews/Genesis_Document_Set_v1.0_Release_Review.md` 작성
+- [x] `genesis-v1.0` Git 태그로 릴리스 체크포인트 고정
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -172,14 +179,18 @@
 | `decisions/CR-0017_Approve_README_v0.2.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
 | `reviews/Full_Document_Set_Cross_Review_v0.1.md` | ✅ COMPLETE / APPLIED | v1.0 문서 세트 확정 근거 |
 | `decisions/CR-0018_Apply_Full_Cross_Review_Corrections.md` | ✅ DECIDED | 정합성 수정의 변경 근거 |
+| `DOCUMENT_SET.md` | ✅ RELEASE v1.0 | Genesis Track의 현재 안정 체크포인트 |
+| `chronicle/C0006_The_First_Complete_Document_Set.md` | ✅ MILESTONE v0.1 | v1.0 완료 사건 보존 |
+| `decisions/CR-0019_Define_Genesis_Document_Set_v1.0.md` | ✅ DECIDED | 세트 범위·버전·태그 결정 근거 |
+| `reviews/Genesis_Document_Set_v1.0_Release_Review.md` | ✅ RELEASE APPROVED | 재검토 조건 발생 시 확인 |
 
 ## 다음 관문
 
-8단계 Genesis 문서 세트 v1.0의 범위를 확정한다.
+9단계 후속 확장 트랙의 목적과 범위를 별도로 정한다.
 
-1. v1.0에 핵심 문서만 포함할지, 운영·근거 기록까지 세트로 포함할지 정한다.
-2. 개별 문서 버전은 유지하면서 문서 세트에 v1.0을 부여할지 정한다.
-3. 미복원 항목과 실제 사용 검증을 v1.0의 재검토 조건으로 명시한다.
+1. 책, 교육과정 또는 제품 중 무엇을 먼저 탐구할 것인가?
+2. 선택한 확장은 누구를 위한 것이며 어떤 문제를 해결하는가?
+3. Genesis v1.0에서 무엇을 가져오고 무엇을 새로 검증할 것인가?
 
 ## 막힌 부분
 
@@ -187,14 +198,13 @@
 
 ## 다음 시작점
 
-`reviews/Full_Document_Set_Cross_Review_v0.1.md`를 근거로 Genesis 문서 세트 v1.0의 포함 범위와 버전 방식을 결정한다.
+후속 확장을 시작하기 전 `DOCUMENT_SET.md`와 `WHY.md`를 기준으로 대상·목적·범위와 완료 조건을 별도 결정한다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
-1. `ROADMAP.md`에서 현재 단계와 완료 조건을 확인한다.
-2. `chronicle/C0001_Correcting_the_Central_Question.md`부터 `C0005_Every_Choice_Carries_Its_Reasons.md`까지 확인한다.
-3. 승인된 `Genesis.md` v0.9와 `CR-0004`를 확인한다.
-4. 승인된 `WHY.md` v0.7과 `CR-0011`을 확인한다.
-5. 작업 결과를 GitHub `main`에 반영했는지 확인한다.
+1. `DOCUMENT_SET.md`에서 Genesis v1.0의 구성과 재검토 조건을 확인한다.
+2. `STATUS.md`와 `ROADMAP.md`에서 다음 트랙의 승인 여부를 확인한다.
+3. 선택한 확장과 관련된 핵심 문서와 Choice Record만 추가로 읽는다.
+4. 작업 결과와 새 체크포인트를 GitHub `main`에 반영했는지 확인한다.

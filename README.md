@@ -5,6 +5,7 @@
 > Version: REWRITE APPROVED v0.2
 > Status: COMPLETE / USER APPROVED
 > Updated: 2026-09-28
+> Document set: [Genesis v1.0](DOCUMENT_SET.md)
 
 ## ORBIT는 무엇인가
 
@@ -38,6 +39,7 @@ ORBIT Philosophy는 인간이 LLM을 더 효율적으로 사용하는 방법만�
 | [RULES.md](RULES.md) | 협업·판단·기록을 위한 운영 규칙 | DRAFT / ACTIVE v0.2 |
 | [STATUS.md](STATUS.md) | 지금의 작업 상태와 정확한 재시작점 | LIVE |
 | [ROADMAP.md](ROADMAP.md) | 전체 단계와 단계별 완료 조건 | LIVE |
+| [DOCUMENT_SET.md](DOCUMENT_SET.md) | Genesis Track v1.0의 구성·버전·재검토 조건 | RELEASE v1.0 |
 
 ## 현재 철학 한눈에 보기
 
@@ -83,6 +85,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 ├── RULES.md                  # 협업·기록 규칙
 ├── STATUS.md                 # 현재 상태와 재시작점
 ├── ROADMAP.md                # 단계와 완료 조건
+├── DOCUMENT_SET.md           # Genesis Track v1.0 명세
 ├── manifesto/                # 현재 철학문서
 ├── chronicle/                # 사건과 교정의 기록
 ├── decisions/                # 선택과 판단의 근거
@@ -91,7 +94,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 └── templates/                # 재사용할 기록 형식
 ```
 
-현재 확정된 핵심 철학문서는 Genesis, WHY와 Philosophy다. 진행 중인 단계와 아직 해결하지 않은 질문은 [STATUS.md](STATUS.md)에서 확인한다.
+현재 Genesis Track의 첫 안정 체크포인트는 [Genesis Document Set v1.0](DOCUMENT_SET.md)이다. 이후 진행 단계와 아직 해결하지 않은 질문은 [STATUS.md](STATUS.md)에서 확인한다.
 
 ## License
 
