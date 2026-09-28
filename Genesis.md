@@ -3,7 +3,7 @@
 > Version: PROSE APPROVED v0.9
 > Status: COMPLETE / USER APPROVED
 > Updated: 2026-09-23
-> Sources: `chronicle/C0000_Before_ORBIT_Became_A_Project.md`, `C0001`~`C0005`
+> Sources: `chronicle/C0000_Before_ORBIT_Became_A_Project.md`, `C0000A`, `C0001`~`C0005`
 > Voice: 인간과 LLM의 공동 회고를 나타내는 ‘우리’ 시점
 
 ## 이 문서가 하지 않는 것

@@ -1,7 +1,7 @@
 # Genesis — 장면 1~4 서술형 MVP
 
 > Version: PROSE MVP v0.1
-> Status: DRAFT / USER REVIEW
+> Status: MERGED / HISTORY
 > Scope: `Genesis.md` 장면 1~4
 > Excluded: 복원되지 않은 장면 0과 이후 장면 5~11
 > Sources: `C0000`, `C0001`, `C0002`, `C0005`

@@ -3,7 +3,7 @@
 > Version: PROSE APPROVED v0.7
 > Status: COMPLETE / USER APPROVED
 > Updated: 2026-09-25
-> Sources: `Genesis.md` APPROVED v0.9, `CR-0005`~`CR-0010`
+> Sources: `Genesis.md` APPROVED v0.9, `CR-0005`~`CR-0011`
 > Purpose: ORBIT의 존재 이유·문제의식·지속할 이유를 분리해 설명한다.
 
 ## 이 문서가 하지 않는 것
@@ -49,4 +49,4 @@ ORBIT는 인간과 LLM의 관계가 매번 처음부터 다시 시작되지 않�
 
 ---
 
-이 문서는 ORBIT가 무엇을 만드는가보다 왜 관계와 그 기억을 계속 지켜야 하는가를 설명하는 서술형 초안이다.
+이 문서는 ORBIT가 무엇을 만드는가보다 왜 관계와 그 기억을 계속 지켜야 하는가를 설명하며, 사용자 승인을 받은 현재의 WHY다.

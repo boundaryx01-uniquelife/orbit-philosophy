@@ -1,7 +1,8 @@
-# C0001 — The Beginning
+# C0000A — The Beginning
 
 > Date: 2026-09-22
 > Status: Chronicle
+> Note: 최초 프로젝트 기록을 `C0000`과 `C0001` 사이의 보조 기록으로 분리함
 
 ## 왜 시작했는가
 

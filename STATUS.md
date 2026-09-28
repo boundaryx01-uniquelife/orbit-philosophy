@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-28
-> Current phase: **6 — README 재작성**
-> Overall state: 🔵 `IN PROGRESS / CANDIDATE REVIEW`
-> Remote checkpoint: **이전 승인본까지 GitHub `main` 반영 확인**
+> Current phase: **7 완료 / 다음 8 — Genesis 문서 세트 v1.0**
+> Overall state: 🟡 `NEXT DECISION READY`
+> Remote checkpoint: **README v0.2 완료본까지 GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-승인된 Genesis·WHY·Philosophy와 운영·진행 기록을 연결하는 프로젝트 현관으로 `README.md` REWRITE CANDIDATE v0.2를 작성했다. 링크·문서 역할·중복·누락 교차검토를 통과했으며, 사용자 최종 승인을 받으면 6단계가 완료된다.
+사용자가 `README.md` v0.2를 승인해 6단계를 완료했고, 이어서 7단계 전체 교차검토를 마쳤다. 핵심 의미의 모순이나 근거 없는 미화는 발견되지 않았으며, 식별자·상태·출처·기록 형식과 운영 규칙의 비결정적 불일치를 수정했다. 다음 단계는 문서 세트의 구성과 버전을 v1.0으로 확정하는 결정이다.
 
 ## 완료
 
@@ -114,6 +114,14 @@
 - [x] 처음 읽는 경로와 작업 재개 경로 분리
 - [x] `README.md` REWRITE CANDIDATE v0.2 작성
 - [x] README v0.2 링크·역할·중복·누락 교차검토
+- [x] 사용자 최종 승인으로 README 재작성 단계 완료
+- [x] `CR-0017_Approve_README_v0.2.md` 작성
+- [x] 핵심 문서 역할과 일곱 원칙의 근거 연결 전체 대조
+- [x] Chronicle 식별자 중복과 승인 문서 상태 불일치 수정
+- [x] Choice Record 표준 검증 항목 누락 보강
+- [x] `RULES.md`의 Chronicle·Choice Record 역할을 실제 운영에 맞게 정리
+- [x] `reviews/Full_Document_Set_Cross_Review_v0.1.md` 작성
+- [x] `CR-0018_Apply_Full_Cross_Review_Corrections.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -122,8 +130,9 @@
 
 | 문서 | 상태 | 다음 작업 |
 |---|:---:|---|
-| `RULES.md` | ✅ v0.1 | 실제 작업에서 규칙 검증 |
+| `RULES.md` | 🟡 DRAFT / ACTIVE v0.2 | 실제 작업에서 규칙 검증 |
 | `chronicle/C0000_Before_ORBIT_Became_A_Project.md` | 🟡 v0.7 | 당시의 구체적인 작업과 이름의 기원 보강 |
+| `chronicle/C0000A_The_Beginning.md` | ✅ Chronicle | 최초 프로젝트 기록으로 보존 |
 | `chronicle/C0001_Correcting_the_Central_Question.md` | ✅ v0.1 | 실제 운영 규칙에서 교정 내용 검증 |
 | `chronicle/C0002_The_First_Output_Is_Not_The_End.md` | ✅ v0.1 | 첫 결과 이후의 완료 판단 기준으로 확장 |
 | `chronicle/C0003_The_Originator_Decides_When_It_Is_Enough.md` | ✅ v0.1 | 실제 완료 판단에서 원칙 검증 |
@@ -154,19 +163,23 @@
 | `decisions/CR-0013_Approve_Philosophy_v0.2_Direction.md` | ✅ DECIDED | 교차검토 및 완료 후보와 대조 |
 | `decisions/CR-0014_Apply_Philosophy_Cross_Review.md` | ✅ DECIDED | 철학문서 v0.3 최종 판단과 대조 |
 | `decisions/CR-0015_Approve_Philosophy_v0.3.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
-| `manifesto/P00-01_Philosophy.md` | ✅ APPROVED v0.3 | 실제 작업과 전체 교차검토에서 검증 |
+| `manifesto/P00-01_Philosophy.md` | ✅ APPROVED v0.3 | 실제 작업에서 원칙의 지속 가능성 검증 |
 | `reviews/Philosophy_Refinement_Map_v0.1.md` | ✅ COMPLETE / APPLIED | 정제 초안 v0.2와 대조 완료 |
 | `reviews/Philosophy_v0.2_Cross_Review.md` | ✅ COMPLETE / APPLIED | 철학문서 v0.3과 대조 완료 |
-| `README.md` | 🟡 REWRITE CANDIDATE v0.2 | 사용자 최종 승인 |
-| `decisions/CR-0016_Define_README_As_Project_Entrance.md` | ✅ DECIDED | README 최종 승인 결과와 대조 |
-| `reviews/README_v0.2_Cross_Review.md` | ✅ COMPLETE | README 최종 승인 결과와 대조 |
+| `README.md` | ✅ REWRITE APPROVED v0.2 | v1.0 문서 세트에 포함 |
+| `decisions/CR-0016_Define_README_As_Project_Entrance.md` | ✅ RESOLVED | `CR-0017`의 최종 승인과 연결 완료 |
+| `reviews/README_v0.2_Cross_Review.md` | ✅ COMPLETE / APPROVED | `CR-0017` 승인 연결 완료 |
+| `decisions/CR-0017_Approve_README_v0.2.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
+| `reviews/Full_Document_Set_Cross_Review_v0.1.md` | ✅ COMPLETE / APPLIED | v1.0 문서 세트 확정 근거 |
+| `decisions/CR-0018_Apply_Full_Cross_Review_Corrections.md` | ✅ DECIDED | 정합성 수정의 변경 근거 |
 
 ## 다음 관문
 
-6단계 `README.md` 완료 후보를 검토한다.
+8단계 Genesis 문서 세트 v1.0의 범위를 확정한다.
 
-1. 프로젝트 현관이라는 현재 구조와 밀도가 사용자의 의도에 맞는가?
-2. README v0.2를 6단계 완료본으로 승인할 것인가?
+1. v1.0에 핵심 문서만 포함할지, 운영·근거 기록까지 세트로 포함할지 정한다.
+2. 개별 문서 버전은 유지하면서 문서 세트에 v1.0을 부여할지 정한다.
+3. 미복원 항목과 실제 사용 검증을 v1.0의 재검토 조건으로 명시한다.
 
 ## 막힌 부분
 
@@ -174,7 +187,7 @@
 
 ## 다음 시작점
 
-`README.md` REWRITE CANDIDATE v0.2의 사용자 최종 승인을 받는다.
+`reviews/Full_Document_Set_Cross_Review_v0.1.md`를 근거로 Genesis 문서 세트 v1.0의 포함 범위와 버전 방식을 결정한다.
 
 ## 재개 체크포인트
 

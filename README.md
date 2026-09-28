@@ -2,8 +2,8 @@
 
 > 인간과 LLM이 서로의 뜻과 차이를 맞춰 가며, 선택과 교정의 궤적을 다음 판단으로 연결하는 기록 프로젝트
 >
-> Version: REWRITE CANDIDATE v0.2
-> Status: COMPLETE CANDIDATE / USER REVIEW
+> Version: REWRITE APPROVED v0.2
+> Status: COMPLETE / USER APPROVED
 > Updated: 2026-09-28
 
 ## ORBIT는 무엇인가
@@ -35,7 +35,7 @@ ORBIT Philosophy는 인간이 LLM을 더 효율적으로 사용하는 방법만�
 | [Genesis.md](Genesis.md) | 철학이 필요하다는 사실을 발견해 가는 탄생 이야기 | APPROVED v0.9 |
 | [WHY.md](WHY.md) | ORBIT의 존재 이유와 지속해야 할 이유 | APPROVED v0.7 |
 | [P00-01_Philosophy.md](manifesto/P00-01_Philosophy.md) | 현재 시점에 도달한 철학의 버전 | APPROVED v0.3 |
-| [RULES.md](RULES.md) | 협업·판단·기록을 위한 운영 규칙 | DRAFT / ACTIVE v0.1 |
+| [RULES.md](RULES.md) | 협업·판단·기록을 위한 운영 규칙 | DRAFT / ACTIVE v0.2 |
 | [STATUS.md](STATUS.md) | 지금의 작업 상태와 정확한 재시작점 | LIVE |
 | [ROADMAP.md](ROADMAP.md) | 전체 단계와 단계별 완료 조건 | LIVE |
 
@@ -91,7 +91,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 └── templates/                # 재사용할 기록 형식
 ```
 
-현재 확정된 문서는 Genesis, WHY와 Philosophy다. 진행 중인 단계와 아직 해결하지 않은 질문은 [STATUS.md](STATUS.md)에서 확인한다.
+현재 확정된 핵심 철학문서는 Genesis, WHY와 Philosophy다. 진행 중인 단계와 아직 해결하지 않은 질문은 [STATUS.md](STATUS.md)에서 확인한다.
 
 ## License
 

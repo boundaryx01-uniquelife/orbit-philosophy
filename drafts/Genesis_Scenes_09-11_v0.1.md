@@ -1,7 +1,7 @@
 # Genesis — 장면 9~11 서술형 MVP
 
 > Version: PROSE MVP v0.1
-> Status: DRAFT / USER REVIEW
+> Status: MERGED / HISTORY
 > Scope: `Genesis.md` 장면 9~11
 > Style basis: `drafts/Genesis_Scenes_01-04_v0.1.md`, `drafts/Genesis_Scenes_05-08_v0.1.md`
 > Sources: `C0000`
