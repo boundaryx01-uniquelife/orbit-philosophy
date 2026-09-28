@@ -3,7 +3,7 @@
 > Updated: 2026-09-28
 > Current phase: **9 — 책·교육·제품 병렬 탐색**
 > Overall state: 🔵 `IN PROGRESS / THREE MVPs READY`
-> Remote checkpoint: **`genesis-v1.0` 릴리스 커밋과 태그 GitHub 반영**
+> Remote checkpoint: **세 확장 트랙 MVP까지 GitHub `main` 반영 확인 (`96e2f66`)**
 
 ## 지금 어디에 있는가
 
