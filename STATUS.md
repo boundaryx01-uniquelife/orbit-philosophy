@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-09-28
-> Current phase: **8 완료 — Genesis Document Set v1.0**
-> Overall state: ✅ `GENESIS TRACK COMPLETE / NEXT TRACK REQUIRES APPROVAL`
+> Current phase: **9 — 책·교육·제품 병렬 탐색**
+> Overall state: 🔵 `IN PROGRESS / THREE MVPs READY`
 > Remote checkpoint: **`genesis-v1.0` 릴리스 커밋과 태그 GitHub 반영**
 
 ## 지금 어디에 있는가
 
-사용자가 핵심·운영·근거 이력의 3계층 구성을 승인해 Genesis Document Set v1.0을 확정했다. 개별 문서 버전은 유지하면서 검증된 구성 전체에 세트 버전 v1.0을 부여했고, `DOCUMENT_SET.md`, `CR-0019`, `C0006`과 릴리스 검토를 연결했다. Genesis Track은 완료되었으며 책·교육·제품 확장은 별도 승인 전까지 시작하지 않는다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 트랙을 독립적으로 시작했다. 책은 3부 10장 구성과 제1장 샘플, 교육은 3차시 수업 모듈, 제품은 대화 깔때기 MVP 명세까지 첫 결과를 만들었다. 내부 구현 가능성은 확인했지만 효과는 아직 검증하지 않았으므로, 다음 작업은 실제 독자·학습자·사용자 반응을 수집하는 것이다.
 
 ## 완료
 
@@ -129,6 +129,14 @@
 - [x] `C0006_The_First_Complete_Document_Set.md` 작성
 - [x] `reviews/Genesis_Document_Set_v1.0_Release_Review.md` 작성
 - [x] `genesis-v1.0` Git 태그로 릴리스 체크포인트 고정
+- [x] 세 확장 트랙 병렬 탐색을 `CR-0020`으로 결정
+- [x] `C0007_One_Philosophy_Three_Forms.md` 작성
+- [x] 책 트랙 방향·목차와 제1장 샘플 MVP 작성
+- [x] 교육 트랙 방향과 3차시 모듈 MVP 작성
+- [x] 제품 트랙 방향과 구현 가능한 MVP 명세 작성
+- [x] 세 트랙의 원칙·경험·산출물·위험 비교표 작성
+- [x] 세 트랙 공통 검증 기록 양식 작성
+- [x] 세 확장 MVP의 Genesis v1.0 정합성 교차검토
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -173,7 +181,7 @@
 | `manifesto/P00-01_Philosophy.md` | ✅ APPROVED v0.3 | 실제 작업에서 원칙의 지속 가능성 검증 |
 | `reviews/Philosophy_Refinement_Map_v0.1.md` | ✅ COMPLETE / APPLIED | 정제 초안 v0.2와 대조 완료 |
 | `reviews/Philosophy_v0.2_Cross_Review.md` | ✅ COMPLETE / APPLIED | 철학문서 v0.3과 대조 완료 |
-| `README.md` | ✅ REWRITE APPROVED v0.2 | v1.0 문서 세트에 포함 |
+| `README.md` | ✅ EXPANSION UPDATE v0.3 | 세 확장 트랙 현관 역할 검증 |
 | `decisions/CR-0016_Define_README_As_Project_Entrance.md` | ✅ RESOLVED | `CR-0017`의 최종 승인과 연결 완료 |
 | `reviews/README_v0.2_Cross_Review.md` | ✅ COMPLETE / APPROVED | `CR-0017` 승인 연결 완료 |
 | `decisions/CR-0017_Approve_README_v0.2.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
@@ -183,28 +191,40 @@
 | `chronicle/C0006_The_First_Complete_Document_Set.md` | ✅ MILESTONE v0.1 | v1.0 완료 사건 보존 |
 | `decisions/CR-0019_Define_Genesis_Document_Set_v1.0.md` | ✅ DECIDED | 세트 범위·버전·태그 결정 근거 |
 | `reviews/Genesis_Document_Set_v1.0_Release_Review.md` | ✅ RELEASE APPROVED | 재검토 조건 발생 시 확인 |
+| `chronicle/C0007_One_Philosophy_Three_Forms.md` | ✅ DIRECTION v0.1 | 세 트랙 실제 검증 결과와 대조 |
+| `decisions/CR-0020_Run_Three_Expansion_Tracks_In_Parallel.md` | ✅ DECIDED | 병렬 탐색의 부담과 효과 재검토 |
+| `tracks/README.md` | 🔵 DISCOVERY v0.1 | 세 MVP 실제 검증 진행 |
+| `tracks/COMPARISON.md` | 🟡 v0.1 | 실제 검증 자료가 생기면 효과 비교 추가 |
+| `tracks/book/BOOK_TRACK.md` | 🟡 DISCOVERY v0.1 | 샘플 독자 검증 |
+| `tracks/book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md` | 🟡 SAMPLE MVP v0.1 | 독자 3명 이상 반응 수집 |
+| `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
+| `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
+| `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
+| `tracks/product/MVP_SPEC.md` | 🟡 SPEC v0.1 | 종이·클릭 프로토타입 3회 수행 |
+| `templates/Expansion_Validation_Record.md` | ✅ v0.1 | 각 트랙 실제 검증에 사용 |
+| `reviews/Expansion_Tracks_v0.1_Cross_Review.md` | ✅ COMPLETE | 실제 검증 결과와 대조 |
 
 ## 다음 관문
 
-9단계 후속 확장 트랙의 목적과 범위를 별도로 정한다.
+9단계 세 확장 MVP를 실제 사용으로 검증한다.
 
-1. 책, 교육과정 또는 제품 중 무엇을 먼저 탐구할 것인가?
-2. 선택한 확장은 누구를 위한 것이며 어떤 문제를 해결하는가?
-3. Genesis v1.0에서 무엇을 가져오고 무엇을 새로 검증할 것인가?
+1. 책 샘플을 읽은 사람이 중심 메시지를 자기 말로 설명하는가?
+2. 학습자가 첫 결과의 외형과 목표 도달을 구분하고 실제로 교정하는가?
+3. 제품 흐름이 목표 이탈과 재설명을 줄이면서 과도한 기록 부담을 만들지 않는가?
 
 ## 막힌 부분
 
-초기 대화의 일부는 정확한 원문이 남아 있지 않아 `Confirmed Recollection`으로 기록했다. 또한 최초 문제의식 직전의 작업과 프로젝트 이름의 기원은 아직 복원되지 않았다.
+초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 세 확장 MVP는 내부 초안만 존재하며 실제 독자·학습자·사용자 검증 자료는 아직 없다.
 
 ## 다음 시작점
 
-후속 확장을 시작하기 전 `DOCUMENT_SET.md`와 `WHY.md`를 기준으로 대상·목적·범위와 완료 조건을 별도 결정한다.
+`tracks/COMPARISON.md`로 세 구현 방식을 비교한 뒤, 책 독자 검증·교육 1차시 파일럿·제품 종이 프로토타입 중 실제로 실행 가능한 검증부터 수행한다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
-1. `DOCUMENT_SET.md`에서 Genesis v1.0의 구성과 재검토 조건을 확인한다.
-2. `STATUS.md`와 `ROADMAP.md`에서 다음 트랙의 승인 여부를 확인한다.
-3. 선택한 확장과 관련된 핵심 문서와 Choice Record만 추가로 읽는다.
-4. 작업 결과와 새 체크포인트를 GitHub `main`에 반영했는지 확인한다.
+1. `tracks/README.md`와 `tracks/COMPARISON.md`에서 세 트랙의 공통 기준과 차이를 확인한다.
+2. 실행할 트랙의 방향 문서와 첫 MVP를 읽는다.
+3. 해당 문서의 검증 계획에 따라 실제 반응과 산출물을 수집한다.
+4. 결과를 선택 기록과 진행판에 반영하고 GitHub `main`에 체크포인트를 남긴다.

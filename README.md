@@ -2,8 +2,8 @@
 
 > 인간과 LLM이 서로의 뜻과 차이를 맞춰 가며, 선택과 교정의 궤적을 다음 판단으로 연결하는 기록 프로젝트
 >
-> Version: REWRITE APPROVED v0.2
-> Status: COMPLETE / USER APPROVED
+> Version: EXPANSION UPDATE v0.3
+> Status: COMPLETE / ACTIVE
 > Updated: 2026-09-28
 > Document set: [Genesis v1.0](DOCUMENT_SET.md)
 
@@ -67,6 +67,10 @@ ORBIT Philosophy는 인간이 LLM을 더 효율적으로 사용하는 방법만�
 
 ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 감정적 기억을 뜻하지 않는다. 서로 확인한 의미와 경계, 선택의 근거와 남은 차이를 다음 대화에서 다시 사용할 수 있도록 외부에 남긴 기록이다.
 
+## 확장 트랙
+
+Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 병렬로 탐색한다. 각 트랙은 독립된 대상·MVP·성공 기준을 가지며, 실제 독자·학습자·사용자 검증 전에는 어느 방향이 더 효과적이라고 결론 내리지 않는다.
+
 ## 이 프로젝트의 경계
 
 - ORBIT는 단순한 AI 생산성 안내서가 아니다.
@@ -91,7 +95,8 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 ├── decisions/                # 선택과 판단의 근거
 ├── drafts/                   # 집필 과정
 ├── reviews/                  # 교차검토 결과
-└── templates/                # 재사용할 기록 형식
+├── templates/                # 재사용할 기록 형식
+└── tracks/                   # 책·교육·제품 확장 실험
 ```
 
 현재 Genesis Track의 첫 안정 체크포인트는 [Genesis Document Set v1.0](DOCUMENT_SET.md)이다. 이후 진행 단계와 아직 해결하지 않은 질문은 [STATUS.md](STATUS.md)에서 확인한다.
