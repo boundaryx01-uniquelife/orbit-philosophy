@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
-> Updated: 2026-09-27
-> Current phase: **5 — 철학문서 재정제**
-> Overall state: 🔵 `IN PROGRESS`
+> Updated: 2026-09-28
+> Current phase: **5 완료 / 다음 6 — README 재작성**
+> Overall state: 🟡 `NEXT PHASE READY`
 > Remote checkpoint: **GitHub `main` 반영 확인**
 
 ## 지금 어디에 있는가
 
-철학문서 v0.2 교차검토의 경미한 수정 3건을 모두 적용하고 REFINEMENT CANDIDATE v0.3을 작성했다. 현재는 세 축·일곱 원칙의 의미·문체·근거 추적성과 5단계 완료 여부를 사용자가 최종 판단하는 단계다.
+사용자가 `manifesto/P00-01_Philosophy.md` REFINEMENT CANDIDATE v0.3을 승인해 철학문서 재정제 단계를 완료했다. 다음 작업은 승인된 Genesis·WHY·Philosophy와 운영 문서를 연결하는 프로젝트 현관으로 `README.md`를 재작성하는 것이다.
 
 ## 완료
 
@@ -107,6 +107,8 @@
 - [x] 철학문서 v0.2 교차검토 권고 수정 3건 적용
 - [x] `CR-0014_Apply_Philosophy_Cross_Review.md` 작성
 - [x] `manifesto/P00-01_Philosophy.md` REFINEMENT CANDIDATE v0.3 작성
+- [x] 사용자 최종 승인으로 철학문서 재정제 단계 완료
+- [x] `CR-0015_Approve_Philosophy_v0.3.md` 작성
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -146,18 +148,19 @@
 | `decisions/CR-0012_Choose_Three_Axes_Seven_Principles.md` | ✅ DECIDED | 정제 초안 및 교차검토 결과와 대조 |
 | `decisions/CR-0013_Approve_Philosophy_v0.2_Direction.md` | ✅ DECIDED | 교차검토 및 완료 후보와 대조 |
 | `decisions/CR-0014_Apply_Philosophy_Cross_Review.md` | ✅ DECIDED | 철학문서 v0.3 최종 판단과 대조 |
-| `manifesto/P00-01_Philosophy.md` | 🟡 REFINEMENT CANDIDATE v0.3 | 사용자 최종 완료 판단 |
+| `decisions/CR-0015_Approve_Philosophy_v0.3.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
+| `manifesto/P00-01_Philosophy.md` | ✅ APPROVED v0.3 | 실제 작업과 전체 교차검토에서 검증 |
 | `reviews/Philosophy_Refinement_Map_v0.1.md` | ✅ COMPLETE / APPLIED | 정제 초안 v0.2와 대조 완료 |
 | `reviews/Philosophy_v0.2_Cross_Review.md` | ✅ COMPLETE / APPLIED | 철학문서 v0.3과 대조 완료 |
 | `README.md` | 🟡 초기 초안 | 마지막에 현관 구조로 재작성 |
 
 ## 다음 관문
 
-철학문서 REFINEMENT CANDIDATE v0.3이 5단계 완료본이 될 수 있는지 사용자가 최종 판단한다.
+6단계 `README.md` 재작성의 역할과 구조를 정한다.
 
-1. 현재 v0.3을 승인하고 철학문서 재정제 단계를 완료한다.
-2. 특정 문장이나 근거 표를 수정한 뒤 다시 판단한다.
-3. 실제 작업에서 일곱 원칙을 한 차례 적용한 뒤 완료를 판단한다.
+1. 첫 방문자가 ORBIT의 존재 이유와 문서 읽는 순서를 이해할 수 있는가?
+2. Genesis·WHY·Philosophy·Rules의 역할 차이가 드러나는가?
+3. 진행 기록과 선택 기록으로 이동할 수 있는가?
 
 ## 막힌 부분
 
@@ -165,7 +168,7 @@
 
 ## 다음 시작점
 
-사용자가 `manifesto/P00-01_Philosophy.md` REFINEMENT CANDIDATE v0.3의 최종 완료 여부를 판단한다.
+현재 `README.md`를 승인된 핵심 문서와 대조하고 재작성 구조를 제안한다.
 
 ## 재개 체크포인트
 
