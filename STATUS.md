@@ -3,7 +3,7 @@
 > Updated: 2026-09-28
 > Current phase: **7 완료 / 다음 8 — Genesis 문서 세트 v1.0**
 > Overall state: 🟡 `NEXT DECISION READY`
-> Remote checkpoint: **README v0.2 완료본까지 GitHub `main` 반영 확인**
+> Remote checkpoint: **7단계 전체 교차검토까지 GitHub `main` 반영 확인 (`814b089`)**
 
 ## 지금 어디에 있는가
 
