@@ -1,5 +1,7 @@
 # Web Book Prototype
 
+공개 페이지: <https://boundaryx01-uniquelife.github.io/orbit-philosophy/book/>
+
 `dist/First_Answer_Is_Not_The_End_v0.1.html`은 별도 서버 없이 브라우저에서 바로 열 수 있는 단일 파일 웹북이다. 글꼴, 표지와 본문 삽화를 파일 안에 포함한다.
 
 ## 다시 만들기

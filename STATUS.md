@@ -3,11 +3,13 @@
 > Updated: 2026-09-29
 > Current phase: **9A — 책 우선 제작·검증**
 > Overall state: 🔵 `IN PROGRESS / EDITABLE WEB + EPUB + PDF READY`
-> Remote checkpoint: **책의 세 읽기 형식을 현재 GitHub `main` 체크포인트로 관리**
+> Remote checkpoint: **공개 교정 웹판과 세 읽기 형식을 GitHub `main` 체크포인트로 관리**
 
 ## 지금 어디에 있는가
 
 Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 현재 3부 10장 구성과 제1장 샘플을 공통 원고로 사용한 EPUB·반응형 웹·A5 PDF v0.1이 있다. 웹판에는 읽으며 직접 고치고 브라우저에 자동 저장한 뒤 Markdown으로 내보내는 교정 모드를 추가했다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다.
+
+공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
 ## 완료
 
