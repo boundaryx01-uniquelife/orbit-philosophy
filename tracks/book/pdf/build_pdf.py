@@ -71,17 +71,17 @@ class CoverPage(Flowable):
         canvas.setFillColor(CREAM)
         canvas.setFont("OrbitBold", 8.5)
         canvas.drawString(15 * mm, self.height - 17 * mm, "ORBIT PHILOSOPHY")
-        canvas.setFont("OrbitBold", 26)
-        canvas.drawString(15 * mm, self.height - 35 * mm, "첫 답은")
-        canvas.drawString(15 * mm, self.height - 49 * mm, "끝이 아니다")
-        canvas.setFont("OrbitRegular", 8.8)
+        canvas.setFont("OrbitBold", 22)
+        canvas.drawString(15 * mm, self.height - 33 * mm, "첫 결과물이 곧")
+        canvas.drawString(15 * mm, self.height - 46 * mm, "완성은 아니다")
+        canvas.setFont("OrbitRegular", 7.7)
         canvas.setFillColor(colors.HexColor("#D9D2C7"))
-        canvas.drawString(15 * mm, self.height - 59 * mm, self.subtitle)
+        canvas.drawString(15 * mm, self.height - 57 * mm, self.subtitle)
         canvas.setFillColor(ACCENT)
         canvas.circle(15 * mm, 16 * mm, 1.3 * mm, fill=1, stroke=0)
         canvas.setFillColor(colors.HexColor("#AAA49B"))
         canvas.setFont("OrbitRegular", 7.2)
-        canvas.drawString(20 * mm, 14.8 * mm, "PDF PROTOTYPE · v0.1")
+        canvas.drawString(20 * mm, 14.8 * mm, "PDF PROTOTYPE · v0.2")
 
 
 class OrbitDocTemplate(BaseDocTemplate):
@@ -186,7 +186,7 @@ def draw_body_page(canvas, doc) -> None:
         canvas.line(18 * mm, 13 * mm, A5[0] - 18 * mm, 13 * mm)
         canvas.setFillColor(MUTED)
         canvas.setFont("OrbitRegular", 6.8)
-        canvas.drawString(18 * mm, 8.2 * mm, "첫 답은 끝이 아니다")
+        canvas.drawString(18 * mm, 8.2 * mm, "첫 결과물이 곧 완성은 아니다")
         canvas.drawRightString(A5[0] - 18 * mm, 8.2 * mm, str(doc.page))
     canvas.restoreState()
 
@@ -264,27 +264,27 @@ def build(repo_root: Path, output: Path) -> None:
         str(output),
         pagesize=A5,
         pageTemplates=[cover_template, body_template],
-        title="첫 답은 끝이 아니다",
+        title="첫 결과물이 곧 완성은 아니다",
         author="ORBIT Philosophy",
-        subject="인간과 LLM이 서로의 뜻을 맞춰 가는 대화의 기술",
+        subject="첫 프롬프트와 MVP 이후, 인간과 LLM이 함께 완성해 가는 법",
         creator="ORBIT Philosophy PDF pipeline",
     )
 
     story: list[Flowable] = [
         CoverPage(
             assets / "cover-art-v0.1.png",
-            "첫 답은 끝이 아니다",
-            "인간과 LLM이 서로의 뜻을 맞춰 가는 대화의 기술",
+            "첫 결과물이 곧 완성은 아니다",
+            "첫 프롬프트와 MVP 이후, 인간과 LLM이 함께 완성해 가는 법",
         ),
         NextPageTemplate("body"),
         PageBreak(),
         Spacer(1, 30 * mm),
-        Paragraph("첫 답은<br/>끝이 아니다", ParagraphStyle(
+        Paragraph("첫 결과물이 곧<br/>완성은 아니다", ParagraphStyle(
             "Title", parent=body, fontName="OrbitBold", fontSize=25, leading=33,
             alignment=TA_LEFT, textColor=INK, wordWrap="CJK"
         )),
         Spacer(1, 5 * mm),
-        Paragraph("인간과 LLM이 서로의 뜻을 맞춰 가는 대화의 기술", ParagraphStyle(
+        Paragraph("첫 프롬프트와 MVP 이후,<br/>인간과 LLM이 함께 완성해 가는 법", ParagraphStyle(
             "Subtitle", parent=body, fontSize=10.5, leading=17, textColor=MUTED,
             wordWrap="CJK"
         )),
@@ -293,7 +293,7 @@ def build(repo_root: Path, output: Path) -> None:
             "Credit", parent=body, fontName="OrbitBold", fontSize=9, textColor=ACCENT
         )),
         Spacer(1, 4 * mm),
-        Paragraph("PDF PROTOTYPE · v0.1 · 2026-09-29", ParagraphStyle(
+        Paragraph("PDF PROTOTYPE · v0.2 · 2026-09-30", ParagraphStyle(
             "Edition", parent=body, fontSize=7.5, textColor=MUTED
         )),
         PageBreak(),
@@ -302,8 +302,8 @@ def build(repo_root: Path, output: Path) -> None:
     ]
 
     parts = [
-        ("1부. 완성처럼 보이는 첫 결과", [
-            "1. 첫 답은 왜 끝처럼 보이는가",
+        ("1부. 완성처럼 보이는 첫 결과물", [
+            "1. 완성처럼 보이는 첫 결과물",
             "2. 친절한 답이 목표를 잃게 할 때",
             "3. 같은 말을 해도 같은 뜻이 아니다",
         ]),
@@ -343,17 +343,17 @@ def build(repo_root: Path, output: Path) -> None:
         )),
         Spacer(1, 3 * mm),
         Paragraph(
-            "이 파일은 《첫 답은 끝이 아니다》의 출간 완료본이 아니다. 제목, 구성과 읽기 경험을 확인하기 위해 만든 PDF 시제품이다. 현재 전체 3부 10장의 설계와 제1장 샘플을 담았다.",
+            "이 파일은 《첫 결과물이 곧 완성은 아니다》의 출간본이 아니다. 제목과 구성, 읽기 경험을 함께 검토하기 위한 PDF 시제품이다. 현재 3부 10장의 설계와 제1장 샘플을 담았다.",
             body,
         ),
         Spacer(1, 3 * mm),
         Paragraph(
-            "이 책은 더 좋은 프롬프트를 한 번에 만드는 법보다 첫 결과 이후의 대화를 다룬다. 인간과 LLM이 같은 말을 서로 다른 뜻으로 이해할 수 있다는 사실에서 출발해, 목표·경계·완료 조건을 어떻게 맞추고 그 과정의 차이와 선택을 어떻게 기억할지를 묻는다.",
+            "이 책은 한 번에 좋은 프롬프트를 만드는 기술보다 첫 결과물 이후의 판단을 다룬다. 첫 응답이나 첫 MVP가 완성처럼 보여도, 인간과 LLM은 목표·경계·완료 조건을 서로 다르게 이해할 수 있다. 그 차이를 어떻게 확인하고 교정하며 다음 판단을 위해 무엇을 기록할지 묻는다.",
             body,
         ),
     ])
     story.extend(parse_markdown(
-        repo_root / "tracks/book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md",
+        repo_root / "tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md",
         style_map,
     ))
 

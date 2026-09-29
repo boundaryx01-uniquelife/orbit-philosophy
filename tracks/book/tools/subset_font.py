@@ -11,7 +11,7 @@ from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
 
 
-EXTRA_TEXT = "첫 답은 끝이 아니다 인간과 LLM이 서로의 뜻을 맞춰 가는 대화의 기술 ORBIT PHILOSOPHY EPUB WEB PDF PROTOTYPE v0.1 0123456789"
+EXTRA_TEXT = "첫 결과물이 곧 완성은 아니다 첫 프롬프트와 MVP 이후 인간과 LLM이 함께 완성해 가는 법 ORBIT PHILOSOPHY EPUB WEB PDF PROTOTYPE v0.2 0123456789"
 
 
 def make_font(source: Path, output: Path, weight: int, text: str) -> None:

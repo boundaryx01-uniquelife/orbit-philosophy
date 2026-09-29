@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const STORAGE_KEY = "orbit-book-corrections:first-answer:v0.1";
+  const STORAGE_KEY = "orbit-book-corrections:first-output:v0.2";
   const manuscript = document.getElementById("editable-manuscript");
   const toggleButton = document.getElementById("edit-toggle");
   const exportButton = document.getElementById("export-corrections");
@@ -56,7 +56,7 @@
     const savedAt = new Date().toISOString();
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        version: "v0.1",
+        version: "v0.2",
         savedAt: savedAt,
         html: sanitizeHtml(manuscript.innerHTML)
       }));
@@ -133,8 +133,8 @@
     const exportedAt = new Date().toISOString();
     const markdown = [
       "---",
-      "title: \"첫 답은 끝이 아니다 - 교정본\"",
-      "source: \"ORBIT web correction v0.1\"",
+      "title: \"첫 결과물이 곧 완성은 아니다 - 교정본\"",
+      "source: \"ORBIT web correction v0.2\"",
       "exported_at: \"" + exportedAt + "\"",
       "---",
       "",
@@ -145,7 +145,7 @@
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "First_Answer_Is_Not_The_End_corrections_v0.1.md";
+    link.download = "First_Output_Is_Not_Completion_corrections_v0.2.md";
     document.body.appendChild(link);
     link.click();
     link.remove();

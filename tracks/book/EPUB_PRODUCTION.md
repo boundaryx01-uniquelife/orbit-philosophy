@@ -2,7 +2,7 @@
 
 > Version: v0.1
 > Status: PROTOTYPE PIPELINE
-> Working title: 《첫 답은 끝이 아니다》
+> Working title: 《첫 결과물이 곧 완성은 아니다》
 
 ## 이번 판본의 목적
 

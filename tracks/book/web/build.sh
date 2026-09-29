@@ -3,13 +3,13 @@ set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
 web_dir="$repo_root/tracks/book/web"
-output="$web_dir/dist/First_Answer_Is_Not_The_End_v0.1.html"
+output="$web_dir/dist/First_Output_Is_Not_Completion_v0.2.html"
 
 mkdir -p "$web_dir/dist"
 
 pandoc \
   "$repo_root/tracks/book/epub/src/frontmatter.md" \
-  "$repo_root/tracks/book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md" \
+  "$repo_root/tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md" \
   --from=markdown \
   --to=html5 \
   --standalone \
@@ -27,9 +27,9 @@ pandoc \
 grep -q '<meta charset="utf-8">' "$output"
 grep -q 'data:image/png;base64' "$output"
 grep -q 'data:font/ttf;base64' "$output"
-grep -q 'id="제1장-첫-답은-왜-끝처럼-보이는가"' "$output"
+grep -q 'id="제1장-완성처럼-보이는-첫-결과물"' "$output"
 grep -q 'id="editable-manuscript"' "$output"
-grep -q 'orbit-book-corrections:first-answer:v0.1' "$output"
+grep -q 'orbit-book-corrections:first-output:v0.2' "$output"
 if grep -Eq '<script[^>]+src=|<link[^>]+rel="stylesheet"' "$output"; then
   echo "External script or stylesheet dependency found" >&2
   exit 1

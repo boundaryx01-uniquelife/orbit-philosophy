@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
-> Updated: 2026-09-29
+> Updated: 2026-09-30
 > Current phase: **9A — 책 우선 제작·검증**
 > Overall state: 🔵 `IN PROGRESS / EDITABLE WEB + EPUB + PDF READY`
 > Remote checkpoint: **공개 교정 웹판과 세 읽기 형식을 GitHub `main` 체크포인트로 관리**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 현재 3부 10장 구성과 제1장 샘플을 공통 원고로 사용한 EPUB·반응형 웹·A5 PDF v0.1이 있다. 웹판에는 읽으며 직접 고치고 브라우저에 자동 저장한 뒤 Markdown으로 내보내는 교정 모드를 추가했다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 책의 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, ‘첫 결과물’을 첫 응답부터 초기 MVP까지로 정의한 제1장 v0.2를 작성했다. 같은 원고로 EPUB·반응형 웹·A5 PDF v0.2를 만들었으며, 웹판에서는 읽으며 직접 고치고 브라우저에 자동 저장한 뒤 Markdown으로 내보낼 수 있다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -148,6 +148,10 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 - [x] 세 판본의 공통 원고와 형식별 역할 정의
 - [x] 웹판 인라인 교정·로컬 자동 저장·Markdown 내보내기 구현
 - [x] 공개 페이지가 GitHub 원고를 자동으로 덮어쓰지 않는 보호 경계 설정
+- [x] 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고 `CR-0024`에 근거 기록
+- [x] ‘첫 결과물’을 첫 응답부터 초기 MVP까지로 정의한 제1장 v0.2 작성
+- [x] v0.2 원고 기준 한글 부분 글꼴 재생성 및 PDF 전 페이지 시각 검증
+- [x] v0.2 웹 교정본을 기존 v0.1 저장 데이터와 분리
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -206,19 +210,21 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `decisions/CR-0020_Run_Three_Expansion_Tracks_In_Parallel.md` | ✅ DECIDED | 병렬 탐색의 부담과 효과 재검토 |
 | `tracks/README.md` | 🔵 DISCOVERY v0.2 | 책 우선 검증과 다른 두 MVP 보존 |
 | `tracks/COMPARISON.md` | 🟡 v0.1 | 실제 검증 자료가 생기면 효과 비교 추가 |
-| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.3 | 세 판본 독자 검증 |
-| `tracks/book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md` | 🟡 SAMPLE MVP v0.1 | 독자 3명 이상 반응 수집 |
+| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.4 | 세 판본 독자 검증 |
+| `tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md` | 🟡 READER CORRECTION READY v0.2 | 웹 교정본 회수·반영 |
 | `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.1 | 실제 기기·앱 표시 검증 |
-| `tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub` | 🟡 EPUB PROTOTYPE v0.1 | 제목·표지·가독성·메시지 독자 검증 |
-| `tracks/book/web/dist/First_Answer_Is_Not_The_End_v0.1.html` | 🟡 EDITABLE WEB PROTOTYPE v0.1 | 교정·복원·내보내기 실제 브라우저 검증 |
-| `output/pdf/First_Answer_Is_Not_The_End_v0.1.pdf` | 🟡 PDF PROTOTYPE v0.1 | 화면·종이 출력 검증 |
-| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.1 | 전체 원고 이후 형식별 비용 재검토 |
+| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.2.epub` | 🟡 EPUB PROTOTYPE v0.2 | 제목·표지·가독성·메시지 독자 검증 |
+| `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.2.html` | 🟡 EDITABLE WEB PROTOTYPE v0.2 | 사용자 직접 교정·Markdown 회수 |
+| `output/pdf/First_Output_Is_Not_Completion_v0.2.pdf` | 🟡 PDF PROTOTYPE v0.2 | 화면·종이 출력 검증 |
+| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.2 | 전체 원고 이후 형식별 비용 재검토 |
 | `decisions/CR-0021_Prioritize_Book_And_Build_EPUB_Prototype.md` | ✅ DECIDED | 독자 검증 뒤 우선순위 재검토 |
 | `chronicle/C0008_The_Book_Became_A_Reading_Object.md` | ✅ MILESTONE v0.1 | 전체 원고 진전 시 대조 |
 | `decisions/CR-0022_Produce_Web_And_PDF_From_One_Manuscript.md` | ✅ DECIDED | 공개·인쇄 단계에서 재검토 |
 | `chronicle/C0009_One_Book_Three_Reading_Surfaces.md` | ✅ MILESTONE v0.1 | 독자 검증 결과와 대조 |
 | `decisions/CR-0023_Keep_Web_Corrections_Local_Until_Reviewed.md` | 🟡 PROVISIONAL | 사용자가 실제 교정 뒤 최종 판단 |
 | `chronicle/C0010_Reading_Became_Correction.md` | 🔵 EXPERIMENT v0.1 | 실제 교정 흐름 결과와 대조 |
+| `decisions/CR-0024_Rename_Book_And_Clarify_First_Output.md` | 🟡 PROVISIONAL | v0.2 사용자 교정 뒤 제목·부제 재검토 |
+| `reviews/Book_v0.2_Language_Review.md` | ✅ COMPLETE | 사용자 교정본과 대조 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
 | `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
@@ -232,15 +238,15 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 
 1. 표지가 ORBIT의 ‘관계와 조율’을 전달하는가, 아니면 천문학 책으로 오해되는가?
 2. 웹판에서 읽기 흐름을 크게 끊지 않고 문장을 고치고 다시 불러올 수 있는가?
-3. 독자가 중심 메시지를 ‘속도 비판’이 아니라 ‘첫 결과에서 판단을 멈추지 말자는 경고’로 설명하는가?
+3. 독자가 중심 메시지를 ‘속도 비판’이 아니라 ‘완성처럼 보이는 첫 결과물에서 판단을 멈추지 말자는 경고’로 설명하는가?
 
 ## 막힌 부분
 
-초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 세 판본은 제작 검사를 통과했지만 실제 전자책 앱·휴대전화 브라우저·종이 출력과 독자 반응은 아직 검증하지 않았다. 최종 제목과 저자 표기도 정하지 않았다.
+초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 세 판본은 제작 검사를 통과했지만 실제 전자책 앱·휴대전화 브라우저·종이 출력과 독자 반응은 아직 검증하지 않았다. 제목은 v0.2 작업 제목이며, 저자 표기는 아직 정하지 않았다.
 
 ## 다음 시작점
 
-`tracks/book/FORMAT_MATRIX.md`에서 세 형식의 차이를 확인하고 EPUB·웹·PDF 가운데 실제 사용 가능한 형식으로 제1장을 읽은 첫 반응을 기록한다.
+공개 웹판에서 제1장 v0.2를 읽으며 직접 고친 뒤 `Markdown 내려받기`로 교정본을 회수한다. 그 파일을 원고와 대조해 선택적으로 반영한다.
 
 ## 재개 체크포인트
 

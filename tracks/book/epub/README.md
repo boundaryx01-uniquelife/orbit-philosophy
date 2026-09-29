@@ -1,6 +1,6 @@
 # EPUB Prototype
 
-`dist/First_Answer_Is_Not_The_End_v0.1.epub`은 현재 책 설계를 실제 전자책에서 확인하기 위한 가변형 EPUB 3 시제품이다.
+`dist/First_Output_Is_Not_Completion_v0.2.epub`은 현재 책 설계를 실제 전자책에서 확인하기 위한 가변형 EPUB 3 시제품이다.
 
 ## 다시 만들기
 
