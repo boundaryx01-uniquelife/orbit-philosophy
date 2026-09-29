@@ -2,12 +2,12 @@
 
 > Updated: 2026-09-28
 > Current phase: **9A — 책 우선 제작·검증**
-> Overall state: 🔵 `IN PROGRESS / EPUB PROTOTYPE READY`
-> Remote checkpoint: **책 우선 전환과 EPUB v0.1을 현재 GitHub `main` 체크포인트로 관리**
+> Overall state: 🔵 `IN PROGRESS / EPUB + WEB + PDF READY`
+> Remote checkpoint: **책의 세 읽기 형식을 현재 GitHub `main` 체크포인트로 관리**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 현재 3부 10장 구성과 제1장 샘플에 표지·본문 삽화를 더한 재현 가능한 EPUB v0.1이 있다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다. 다음 작업은 전자책을 실제로 읽으며 제목·표지·가독성·중심 메시지를 검증하는 것이다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 현재 3부 10장 구성과 제1장 샘플을 공통 원고로 사용한 EPUB·반응형 웹·A5 PDF v0.1이 있다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다. 다음 작업은 세 형식을 실제 기기와 독자에게 적용해 제목·표지·가독성·중심 메시지를 검증하는 것이다.
 
 ## 완료
 
@@ -140,6 +140,10 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 - [x] 책 트랙 우선 진행과 시각물 포함 EPUB 시제품 결정
 - [x] 표지 원화와 제1장 삽화 제작
 - [x] 가변형 EPUB 3 빌드·구조 검증
+- [x] 외부 의존성 없는 반응형 단일 HTML 웹북 제작
+- [x] 한글 글꼴을 포함한 A5 PDF 8쪽 제작
+- [x] PDF 전 페이지 렌더링·시각 검증
+- [x] 세 판본의 공통 원고와 형식별 역할 정의
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -198,12 +202,17 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `decisions/CR-0020_Run_Three_Expansion_Tracks_In_Parallel.md` | ✅ DECIDED | 병렬 탐색의 부담과 효과 재검토 |
 | `tracks/README.md` | 🔵 DISCOVERY v0.2 | 책 우선 검증과 다른 두 MVP 보존 |
 | `tracks/COMPARISON.md` | 🟡 v0.1 | 실제 검증 자료가 생기면 효과 비교 추가 |
-| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.2 | EPUB 독자 검증 |
+| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.3 | 세 판본 독자 검증 |
 | `tracks/book/drafts/Chapter_01_First_Result_Is_Not_The_End_v0.1.md` | 🟡 SAMPLE MVP v0.1 | 독자 3명 이상 반응 수집 |
 | `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.1 | 실제 기기·앱 표시 검증 |
 | `tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub` | 🟡 EPUB PROTOTYPE v0.1 | 제목·표지·가독성·메시지 독자 검증 |
+| `tracks/book/web/dist/First_Answer_Is_Not_The_End_v0.1.html` | 🟡 WEB PROTOTYPE v0.1 | 모바일·PC 실제 브라우저 검증 |
+| `output/pdf/First_Answer_Is_Not_The_End_v0.1.pdf` | 🟡 PDF PROTOTYPE v0.1 | 화면·종이 출력 검증 |
+| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.1 | 전체 원고 이후 형식별 비용 재검토 |
 | `decisions/CR-0021_Prioritize_Book_And_Build_EPUB_Prototype.md` | ✅ DECIDED | 독자 검증 뒤 우선순위 재검토 |
 | `chronicle/C0008_The_Book_Became_A_Reading_Object.md` | ✅ MILESTONE v0.1 | 전체 원고 진전 시 대조 |
+| `decisions/CR-0022_Produce_Web_And_PDF_From_One_Manuscript.md` | ✅ DECIDED | 공개·인쇄 단계에서 재검토 |
+| `chronicle/C0009_One_Book_Three_Reading_Surfaces.md` | ✅ MILESTONE v0.1 | 독자 검증 결과와 대조 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
 | `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
@@ -213,26 +222,26 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 
 ## 다음 관문
 
-9A단계 책 EPUB를 실제 읽기 경험으로 검증한다.
+9A단계 책의 EPUB·웹·PDF를 실제 읽기 경험으로 검증한다.
 
 1. 표지가 ORBIT의 ‘관계와 조율’을 전달하는가, 아니면 천문학 책으로 오해되는가?
-2. 작은 화면에서 제1장과 기록 질문을 무리 없이 읽을 수 있는가?
+2. 전자책 앱·휴대전화 브라우저·PDF에서 제1장과 기록 질문을 무리 없이 읽을 수 있는가?
 3. 독자가 중심 메시지를 ‘속도 비판’이 아니라 ‘첫 결과에서 판단을 멈추지 말자는 경고’로 설명하는가?
 
 ## 막힌 부분
 
-초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. EPUB은 구조 검사를 통과했지만 실제 전자책 앱·기기와 독자 반응은 아직 검증하지 않았다. 최종 제목과 저자 표기도 정하지 않았다.
+초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 세 판본은 제작 검사를 통과했지만 실제 전자책 앱·휴대전화 브라우저·종이 출력과 독자 반응은 아직 검증하지 않았다. 최종 제목과 저자 표기도 정하지 않았다.
 
 ## 다음 시작점
 
-`tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub`을 휴대전화 또는 전자책 앱에서 읽고, 제목·표지·가독성과 제1장 중심 메시지에 대한 첫 반응을 기록한다.
+`tracks/book/FORMAT_MATRIX.md`에서 세 형식의 차이를 확인하고 EPUB·웹·PDF 가운데 실제 사용 가능한 형식으로 제1장을 읽은 첫 반응을 기록한다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
 1. `tracks/book/BOOK_TRACK.md`와 `tracks/book/EPUB_PRODUCTION.md`에서 책의 목표와 제작 경계를 확인한다.
-2. EPUB v0.1을 실제 기기 또는 앱에서 읽는다.
+2. EPUB·웹·PDF v0.1 중 사용할 형식을 실제 기기에서 읽는다.
 3. 제목·표지·가독성·중심 메시지의 반응을 수집한다.
 4. 독자 검증 결과로 다음 장 집필 또는 구조 수정을 판단한다.
 5. 결과를 기록하고 GitHub `main`에 체크포인트를 남긴다.

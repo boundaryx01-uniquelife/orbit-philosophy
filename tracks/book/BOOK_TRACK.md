@@ -1,7 +1,7 @@
 # ORBIT Book Track
 
-> Version: DISCOVERY v0.2
-> Status: BOOK PRIORITY + EPUB PROTOTYPE
+> Version: DISCOVERY v0.3
+> Status: BOOK PRIORITY + THREE FORMAT PROTOTYPES
 > Source baseline: `Genesis Document Set v1.0`
 
 ## 이 트랙이 만드는 것
@@ -93,6 +93,15 @@
 - 표지와 삽화의 의미·생성 지시: [`assets/README.md`](assets/README.md)
 
 표지는 두 궤도의 정렬을 상징으로 사용하고, 제1장 삽화는 완성된 외형과 아직 맞지 않은 목표의 차이를 보여 준다. 후속 삽화는 원고보다 먼저 만들지 않는다.
+
+## 웹·PDF 시제품
+
+EPUB에 이어 같은 원고에서 두 판본을 추가했다.
+
+- [반응형 웹북](web/dist/First_Answer_Is_Not_The_End_v0.1.html): 표지·글꼴·삽화를 포함한 단일 HTML
+- [A5 PDF](../../output/pdf/First_Answer_Is_Not_The_End_v0.1.pdf): 고정 지면 8쪽, 한글 글꼴·책갈피·쪽 번호 포함
+
+세 형식의 쓰임과 검증 상태는 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 비교한다. 형식별 파일을 따로 집필하지 않고 제1장 마크다운을 공통 원고로 유지한다.
 
 ## 제작 흐름
 

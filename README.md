@@ -69,7 +69,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 
 ## 확장 트랙
 
-Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 첫 MVP를 비교한 현재는 [책 EPUB v0.1](tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub)을 우선 검증하며, 교육과 제품은 재개 가능한 상태로 보존한다. 각 트랙은 독립된 대상·MVP·성공 기준을 유지한다.
+Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 첫 MVP를 비교한 현재는 책을 우선하며, 같은 제1장 원고로 [EPUB](tracks/book/epub/dist/First_Answer_Is_Not_The_End_v0.1.epub)·[웹](tracks/book/web/dist/First_Answer_Is_Not_The_End_v0.1.html)·[PDF](output/pdf/First_Answer_Is_Not_The_End_v0.1.pdf) 판본을 만들었다. 교육과 제품은 재개 가능한 상태로 보존한다.
 
 ## 이 프로젝트의 경계
 
@@ -96,7 +96,8 @@ Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증�
 ├── drafts/                   # 집필 과정
 ├── reviews/                  # 교차검토 결과
 ├── templates/                # 재사용할 기록 형식
-└── tracks/                   # 책·교육·제품 확장 실험
+├── tracks/                   # 책·교육·제품 확장 실험
+└── output/pdf/               # 고정 지면 책 시제품
 ```
 
 현재 Genesis Track의 첫 안정 체크포인트는 [Genesis Document Set v1.0](DOCUMENT_SET.md)이다. 이후 진행 단계와 아직 해결하지 않은 질문은 [STATUS.md](STATUS.md)에서 확인한다.
