@@ -33,11 +33,25 @@
     </aside>
 
     <main id="main-content" class="book-content">
+      <section class="editor-toolbar" aria-label="원고 교정 도구">
+        <div class="editor-copy">
+          <p class="editor-title">읽으며 교정하기</p>
+          <p id="editor-status" class="editor-status" aria-live="polite">읽기 모드 · 원문이 보호됩니다.</p>
+        </div>
+        <div class="editor-actions">
+          <button id="edit-toggle" class="editor-primary" type="button">교정 시작</button>
+          <button id="export-corrections" type="button">Markdown 내려받기</button>
+          <button id="reset-corrections" class="editor-danger" type="button">원문으로 복원</button>
+        </div>
+      </section>
+      <p class="editor-boundary">수정 내용은 이 브라우저에만 자동 저장됩니다. GitHub 원고에는 자동 반영되지 않습니다.</p>
       <div class="prototype-note">
         <span>v0.1</span>
         <p>전체 3부 10장 설계와 제1장만 담은 읽기 경험 검증용 시제품입니다.</p>
       </div>
-      $body$
+      <article id="editable-manuscript" aria-label="교정 가능한 책 원고" spellcheck="true">
+        $body$
+      </article>
       <footer class="book-footer">
         <p>첫 답은 끝이 아니다. 첫 결과 뒤의 더 정확한 대화가 본 작업이다.</p>
         <span>ORBIT Philosophy · 2026</span>
@@ -59,5 +73,6 @@
     toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     updateReadingState();
   </script>
+  <script src="editor.js"></script>
 </body>
 </html>

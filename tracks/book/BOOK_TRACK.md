@@ -98,10 +98,12 @@
 
 EPUB에 이어 같은 원고에서 두 판본을 추가했다.
 
-- [반응형 웹북](web/dist/First_Answer_Is_Not_The_End_v0.1.html): 표지·글꼴·삽화를 포함한 단일 HTML
+- [반응형 웹북](web/dist/First_Answer_Is_Not_The_End_v0.1.html): 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
 - [A5 PDF](../../output/pdf/First_Answer_Is_Not_The_End_v0.1.pdf): 고정 지면 8쪽, 한글 글꼴·책갈피·쪽 번호 포함
 
 세 형식의 쓰임과 검증 상태는 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 비교한다. 형식별 파일을 따로 집필하지 않고 제1장 마크다운을 공통 원고로 유지한다.
+
+웹 교정본은 저장소 원고를 자동으로 덮어쓰지 않는다. 현재 브라우저에 자동 저장한 뒤 Markdown으로 내보내며, 실제 원고 반영은 [`CR-0023`](../../decisions/CR-0023_Keep_Web_Corrections_Local_Until_Reviewed.md)에 따라 별도로 판단한다.
 
 ## 제작 흐름
 

@@ -28,6 +28,11 @@ grep -q '<meta charset="utf-8">' "$output"
 grep -q 'data:image/png;base64' "$output"
 grep -q 'data:font/ttf;base64' "$output"
 grep -q 'id="제1장-첫-답은-왜-끝처럼-보이는가"' "$output"
+grep -q 'id="editable-manuscript"' "$output"
+grep -q 'orbit-book-corrections:first-answer:v0.1' "$output"
+if grep -Eq '<script[^>]+src=|<link[^>]+rel="stylesheet"' "$output"; then
+  echo "External script or stylesheet dependency found" >&2
+  exit 1
+fi
 
 echo "$output"
-

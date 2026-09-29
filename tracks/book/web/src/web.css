@@ -191,6 +191,88 @@ body {
   padding: 5rem clamp(1.5rem, 6vw, 6rem) 8rem;
 }
 
+.editor-toolbar {
+  align-items: center;
+  background: var(--ink);
+  color: white;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin: -2rem 0 0;
+  padding: 1.1rem 1.2rem;
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+}
+
+.editor-title {
+  font-size: 0.85rem !important;
+  font-weight: 700;
+  margin: 0;
+}
+
+.editor-status {
+  color: #bdb7ad;
+  font-size: 0.72rem !important;
+  margin: 0.18rem 0 0;
+}
+
+.editor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.editor-actions button {
+  background: transparent;
+  border: 1px solid #65615a;
+  color: #e8e1d7;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.72rem;
+  padding: 0.52rem 0.7rem;
+}
+
+.editor-actions .editor-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  font-weight: 700;
+}
+
+.editor-actions .editor-danger {
+  color: #c6bcb0;
+}
+
+.editor-boundary {
+  color: var(--muted);
+  font-size: 0.72rem !important;
+  margin: 0.75rem 0 4rem;
+  text-align: right;
+}
+
+#editable-manuscript[contenteditable="true"] {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 1px rgba(223, 80, 31, 0.42);
+  outline: 0;
+  padding: 0 1.2rem 2rem;
+}
+
+#editable-manuscript[contenteditable="true"] p:hover,
+#editable-manuscript[contenteditable="true"] li:hover,
+#editable-manuscript[contenteditable="true"] h1:hover,
+#editable-manuscript[contenteditable="true"] h2:hover,
+#editable-manuscript[contenteditable="true"] h3:hover,
+#editable-manuscript[contenteditable="true"] blockquote:hover {
+  background: rgba(223, 80, 31, 0.075);
+}
+
+#editable-manuscript[contenteditable="true"] :focus {
+  background: rgba(223, 80, 31, 0.11);
+  outline: 2px solid rgba(223, 80, 31, 0.32);
+  outline-offset: 0.2rem;
+}
+
 .prototype-note {
   align-items: flex-start;
   border-bottom: 1px solid var(--line);
@@ -336,6 +418,26 @@ figcaption {
   .book-content {
     padding-top: 3.5rem;
   }
+
+  .editor-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: -1rem;
+    position: static;
+  }
+
+  .editor-actions {
+    width: 100%;
+  }
+
+  .editor-actions button {
+    flex: 1 1 auto;
+  }
+
+  .editor-boundary {
+    margin-bottom: 3rem;
+    text-align: left;
+  }
 }
 
 @media print {
@@ -343,6 +445,11 @@ figcaption {
   .start-reading,
   .toc-panel,
   .to-top {
+    display: none;
+  }
+
+  .editor-toolbar,
+  .editor-boundary {
     display: none;
   }
 
@@ -355,4 +462,3 @@ figcaption {
     display: block;
   }
 }
-
