@@ -2,12 +2,12 @@
 
 > Updated: 2026-09-30
 > Current phase: **9A — 책 우선 제작·검증**
-> Overall state: 🔵 `IN PROGRESS / WEB-FIRST CORRECTION`
-> Remote checkpoint: **공개 교정 웹판을 중심으로 GitHub `main` 체크포인트를 관리**
+> Overall state: 🔵 `IN PROGRESS / FULL DRAFT REVIEW`
+> Remote checkpoint: **전체 초안 v0.4는 로컬 검증 중이며 공개 반영은 별도 승인 뒤 진행**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 책의 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, 첫 결과물·과잉 친절·의미의 어긋남을 잇는 1부의 세 장을 작성했다. 현재는 반응형 웹판을 기본 검토본으로 사용해 읽으며 직접 고치고, 브라우저에 자동 저장한 뒤 Markdown으로 내보낸다. PDF는 제작 파이프라인 검증을 마쳤지만 원고가 완성 단계에 들어갈 때까지 생성을 중단한다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든 뒤, 사용자의 선택으로 책 트랙을 먼저 진전시켰다. 책의 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, 3부 10장의 전체 첫 초안을 작성했다. 현재는 반응형 웹판을 기본 검토본으로 사용해 전체 흐름과 문장을 읽으며 고치는 단계다. 용어 체계화는 열 장을 한 번에 읽은 뒤 진행하고, PDF는 문장과 구조가 안정될 때까지 생성을 중단한다. 교육과 제품은 폐기하지 않고 첫 MVP 상태로 보류한다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -158,6 +158,11 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 - [x] 웹판을 기본 교정 환경으로 전환하고 PDF 생성을 원고 완성 단계까지 중단
 - [x] 외부 교정본 1건을 원문과 대조해 명백한 표현 개선만 선별 반영
 - [x] 1부를 AI 활용 입문자 관점에서 재검토하고 가독성 8.2/10으로 기록
+- [x] 용어 체계화보다 제10장까지의 전체 초안을 먼저 완성하기로 결정하고 `CR-0027`에 기록
+- [x] 제4~10장 v0.1 작성
+- [x] 제2부·제3부 전환면과 3부 10장 전체 흐름 구성
+- [x] 전체 초안을 AI 활용 입문자 관점에서 교차검토하고 가독성 8.3/10으로 기록
+- [x] 전체 원고 기준 웹·EPUB v0.4 제작·검증
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -202,7 +207,7 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `manifesto/P00-01_Philosophy.md` | ✅ APPROVED v0.3 | 실제 작업에서 원칙의 지속 가능성 검증 |
 | `reviews/Philosophy_Refinement_Map_v0.1.md` | ✅ COMPLETE / APPLIED | 정제 초안 v0.2와 대조 완료 |
 | `reviews/Philosophy_v0.2_Cross_Review.md` | ✅ COMPLETE / APPLIED | 철학문서 v0.3과 대조 완료 |
-| `README.md` | ✅ EXPANSION UPDATE v0.3 | 세 확장 트랙 현관 역할 검증 |
+| `README.md` | ✅ EXPANSION UPDATE v0.4 | 전체 초안과 공개 상태의 구분 유지 |
 | `decisions/CR-0016_Define_README_As_Project_Entrance.md` | ✅ RESOLVED | `CR-0017`의 최종 승인과 연결 완료 |
 | `reviews/README_v0.2_Cross_Review.md` | ✅ COMPLETE / APPROVED | `CR-0017` 승인 연결 완료 |
 | `decisions/CR-0017_Approve_README_v0.2.md` | ✅ DECIDED | 재검토 조건 발생 시 확인 |
@@ -216,15 +221,16 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `decisions/CR-0020_Run_Three_Expansion_Tracks_In_Parallel.md` | ✅ DECIDED | 병렬 탐색의 부담과 효과 재검토 |
 | `tracks/README.md` | 🔵 DISCOVERY v0.2 | 책 우선 검증과 다른 두 MVP 보존 |
 | `tracks/COMPARISON.md` | 🟡 v0.1 | 실제 검증 자료가 생기면 효과 비교 추가 |
-| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.6 | 웹판에서 1부 세 장 독자 검증 |
+| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.7 | 전체 10장 흐름과 용어 검토 |
 | `tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md` | 🟡 READER CORRECTION READY v0.2 | 웹 교정본 회수·반영 |
 | `tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 과잉 친절 사례와 설명 밀도 검증 |
 | `tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 의미 확인 실천의 이해도 검증 |
-| `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.2 | 실제 기기·앱 표시 검증 |
-| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.3.epub` | 🟡 EPUB PROTOTYPE v0.3 | 1부 흐름·가독성·메시지 독자 검증 |
-| `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.3.html` | 🟡 EDITABLE WEB PROTOTYPE v0.3 | 사용자 직접 교정·Markdown 회수 |
+| `tracks/book/drafts/Chapter_04_The_Conversation_Funnel_And_Translation_v0.1.md` ~ `Chapter_10_Completion_Without_Finality_v0.1.md` | 🟡 FULL DRAFT REVIEW READY v0.1 | 전체 흐름·용어·사례 밀도 검증 |
+| `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.3 | 실제 기기·앱 표시 검증 |
+| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.4.epub` | 🟡 EPUB PROTOTYPE v0.4 | 전체 10장 흐름·가독성·메시지 검증 |
+| `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.4.html` | 🟡 EDITABLE WEB PROTOTYPE v0.4 | 전체 10장 직접 교정·Markdown 회수 |
 | `output/pdf/First_Output_Is_Not_Completion_v0.3.pdf` | ⏸️ PDF CHECKPOINT v0.3 | 전체 원고 완성 단계까지 갱신 중단 |
-| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.4 | PDF 재개 조건 검토 |
+| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.5 | PDF 재개 조건 검토 |
 | `decisions/CR-0021_Prioritize_Book_And_Build_EPUB_Prototype.md` | ✅ DECIDED | 독자 검증 뒤 우선순위 재검토 |
 | `chronicle/C0008_The_Book_Became_A_Reading_Object.md` | ✅ MILESTONE v0.1 | 전체 원고 진전 시 대조 |
 | `decisions/CR-0022_Produce_Web_And_PDF_From_One_Manuscript.md` | ✅ DECIDED | 공개·인쇄 단계에서 재검토 |
@@ -237,6 +243,9 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `reviews/Book_Part_One_v0.3_Cross_Review.md` | ✅ COMPLETE | 사용자 교정본과 대조 |
 | `reviews/Book_Part_One_AI_Beginner_Readability_Review_v0.1.md` | ✅ COMPLETE | 실제 초보 독자 반응과 대조 |
 | `decisions/CR-0026_Pause_PDF_And_Use_Web_For_Correction.md` | ✅ DECIDED | 전체 원고 완성 단계에서 PDF 재개 조건 확인 |
+| `decisions/CR-0027_Complete_Full_Draft_Before_Terminology_Systematization.md` | ✅ DECIDED / APPLIED | 전체 원고를 읽은 뒤 용어 체계화 |
+| `reviews/Book_Full_Draft_v0.4_Cross_Review.md` | ✅ COMPLETE | 실제 초보 독자 반응과 대조 |
+| `chronicle/C0011_The_Book_Reached_Ten_Chapters.md` | ✅ MILESTONE v0.1 | 용어·독자 검증 뒤 변화와 대조 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
 | `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
@@ -246,11 +255,12 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 
 ## 다음 관문
 
-9A단계 책의 웹판을 실제 읽기·교정 경험으로 검증한다.
+9A단계 책의 전체 10장 웹판을 실제 읽기·교정 경험으로 검증한다.
 
 1. 표지가 ORBIT의 ‘관계와 조율’을 전달하는가, 아니면 천문학 책으로 오해되는가?
 2. 웹판에서 읽기 흐름을 크게 끊지 않고 문장을 고치고 다시 불러올 수 있는가?
 3. 독자가 중심 메시지를 ‘속도 비판’이 아니라 ‘완성처럼 보이는 첫 결과물에서 판단을 멈추지 말자는 경고’로 설명하는가?
+4. `완성·완료·완결`, `확인·검증`, `AI·LLM`을 문맥 안에서 구분할 수 있는가?
 
 ## 막힌 부분
 
@@ -258,14 +268,14 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 
 ## 다음 시작점
 
-공개 웹판에서 1부의 세 장을 이어 읽으며 직접 고친 뒤 `Markdown 내려받기`로 교정본을 회수한다. 그 파일을 원고와 대조해 선택적으로 반영하고, 세 장의 연결이 충분한지 판단한다.
+로컬 웹판 v0.4에서 전체 열 장을 이어 읽으며 막히는 용어와 반복 문장을 표시한다. 그 결과를 바탕으로 용어를 체계화한 뒤, 실제 AI 활용 입문자 검증을 준비한다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
 1. `tracks/book/BOOK_TRACK.md`와 `tracks/book/EPUB_PRODUCTION.md`에서 책의 목표와 제작 경계를 확인한다.
-2. 웹판 v0.3을 실제 휴대전화와 PC에서 읽고 교정한다.
-3. 제목·표지·가독성·중심 메시지의 반응을 수집한다.
-4. 독자 검증 결과로 다음 장 집필 또는 구조 수정을 판단한다.
-5. 결과를 기록하고 GitHub `main`에 체크포인트를 남긴다.
+2. 웹판 v0.4에서 전체 10장의 흐름과 반복·막히는 용어를 표시한다.
+3. 용어를 본문 설명·핵심어·별도 안내 대상으로 나눠 체계화한다.
+4. 실제 초보 독자에게 제목·가독성·중심 메시지와 행동 변화를 확인한다.
+5. 결과를 기록하고 공개 반영 여부를 별도로 판단한다.

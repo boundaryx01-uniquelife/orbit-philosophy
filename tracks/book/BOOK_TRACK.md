@@ -1,7 +1,7 @@
 # ORBIT Book Track
 
-> Version: DISCOVERY v0.6
-> Status: BOOK PRIORITY + WEB-FIRST CORRECTION
+> Version: DISCOVERY v0.7
+> Status: FULL DRAFT + WEB-FIRST CORRECTION
 > Source baseline: `Genesis Document Set v1.0`
 
 ## 이 트랙이 만드는 것
@@ -40,7 +40,7 @@
 
 부제: 첫 프롬프트와 MVP 이후, 인간과 LLM이 함께 완성해 가는 법
 
-‘첫 결과물’은 첫 응답 하나만을 뜻하지 않는다. 첫 프롬프트에서 시작해 초기 대화를 거쳐 처음으로 형태를 갖춘 문서·코드·디자인·계획·MVP를 함께 가리킨다. 제목과 부제는 1부 독자 교정 뒤에 다시 판단한다.
+‘첫 결과물’은 첫 응답 하나만을 뜻하지 않는다. 첫 프롬프트에서 시작해 초기 대화를 거쳐 처음으로 형태를 갖춘 문서·코드·디자인·계획·MVP를 함께 가리킨다. 제목과 부제는 전체 초안의 독자 교정 뒤에 다시 판단한다.
 
 ## 3부 구성안
 
@@ -74,21 +74,22 @@
 5. 선택과 반론을 남기는 기록 질문
 6. 원자료와 해석의 경계 표시
 
-## 1부 원고 MVP
+## 전체 원고 초안
 
-[제1장 v0.2](drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md)는 ‘인스턴트적 사고’를 속도 비판이 아니라 완성처럼 보이는 첫 결과물에서 판단을 멈추는 태도에 대한 경고로 풀어 쓴다. [제2장 v0.1](drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md)은 유용한 확장이 목표와 범위를 흐리는 과정을, [제3장 v0.1](drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md)은 같은 표현을 사용해도 서로 다른 기준을 떠올릴 수 있다는 문제를 다룬다.
+[제1장 v0.2](drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md)과 제2~3장 v0.1은 첫 결과물·과잉 친절·의미의 어긋남을 다룬다. 제4~7장 v0.1은 의미 확인을 실제 대화와 판단으로 옮기고, 제8~10장 v0.1은 교정과 선택을 다음 작업에 연결해 완벽하지 않은 상태에서도 한 단계를 완결하는 방법을 다룬다.
 
-1부의 검증 질문은 다음과 같다.
+전체 초안의 검증 질문은 다음과 같다.
 
 - 독자가 첫 결과물과 완성을 구분할 수 있는가?
 - ‘빠른 생성이 나쁘다’는 주장으로 오해하지 않는가?
 - 읽은 뒤 자신의 최근 LLM 작업을 한 번 더 검토하고 싶어지는가?
 - 실천 질문이 철학의 여운을 깨뜨릴 만큼 설명서처럼 느껴지지 않는가?
-- 세 장이 첫 결과물 → 과잉 친절 → 의미 확인의 흐름으로 자연스럽게 이어지는가?
+- 열 장이 첫 결과물의 발견 → 대화와 판단 → 기록과 완결의 흐름으로 자연스럽게 이어지는가?
+- `완성·완료·완결`, `확인·검증`, `AI·LLM` 같은 인접 표현을 초보 독자가 구분할 수 있는가?
 
 ## EPUB 시제품
 
-책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 현재 목차와 1부의 세 장을 [EPUB v0.3](epub/dist/First_Output_Is_Not_Completion_v0.3.epub)으로 묶었다. 이 결과는 출간본이 아니라 실제 전자책의 가독성, 목차 흐름과 시각 언어를 확인하기 위한 제작 MVP다.
+책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 3부 10장 전체 초안을 [EPUB v0.4](epub/dist/First_Output_Is_Not_Completion_v0.4.epub)로 묶었다. 이 결과는 출간본이 아니라 실제 전자책의 가독성, 목차 흐름과 시각 언어를 확인하기 위한 제작 MVP다.
 
 - 제작 원칙과 남은 결정: [`EPUB_PRODUCTION.md`](EPUB_PRODUCTION.md)
 - 다시 만드는 방법: [`epub/README.md`](epub/README.md)
@@ -100,11 +101,11 @@
 
 현재 원고를 빠르게 읽고 고치는 단계에서는 웹판을 기본 검토본으로 사용한다.
 
-- [반응형 웹북 v0.3](web/dist/First_Output_Is_Not_Completion_v0.3.html): 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
-- [EPUB v0.3](epub/dist/First_Output_Is_Not_Completion_v0.3.epub): 전자책 앱에서 읽기 위한 보조 판본
+- [반응형 웹북 v0.4](web/dist/First_Output_Is_Not_Completion_v0.4.html): 전체 10장과 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
+- [EPUB v0.4](epub/dist/First_Output_Is_Not_Completion_v0.4.epub): 전체 10장을 전자책 앱에서 읽기 위한 보조 판본
 - [A5 PDF v0.3](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf): 기존 제작 검증을 보존하는 참고용 체크포인트. 원고가 완성 단계에 들어갈 때까지 갱신하지 않음
 
-형식별 파일을 따로 집필하지 않고 세 장의 마크다운을 공통 원고로 유지한다. 현재 운용 우선순위와 PDF 재개 조건은 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 정리한다.
+형식별 파일을 따로 집필하지 않고 열 장의 마크다운을 공통 원고로 유지한다. 현재 운용 우선순위와 PDF 재개 조건은 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 정리한다.
 
 웹 교정본은 저장소 원고를 자동으로 덮어쓰지 않는다. 현재 브라우저에 자동 저장한 뒤 Markdown으로 내보내며, 실제 원고 반영은 [`CR-0023`](../../decisions/CR-0023_Keep_Web_Corrections_Local_Until_Reviewed.md)에 따라 별도로 판단한다.
 
@@ -121,8 +122,8 @@
 ## 첫 검증 계획
 
 - 대상: LLM 사용 경험이 서로 다른 독자 3~5명
-- 자료: 1부의 세 장과 독자 기록 질문
-- 확인: 핵심 메시지 회상, 오해, 지루한 지점, 자신의 경험 연결, 실제 행동 의향
+- 자료: 3부 10장 전체 초안과 독자 기록 질문
+- 확인: 핵심 메시지 회상, 막히는 용어, 반복·지루한 지점, 자신의 경험 연결, 실제 행동 의향
 - 통과 기준: 과반수가 ‘속도가 아니라 완성처럼 보이는 첫 결과물에서 판단을 멈추는 태도에 대한 경고’라고 자기 말로 설명하고, 최소 한 가지 재검토 행동을 제시함
 
 ## 아직 결정하지 않은 것
