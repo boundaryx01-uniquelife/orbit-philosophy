@@ -3,7 +3,7 @@ set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
 web_dir="$repo_root/tracks/book/web"
-output="$web_dir/dist/First_Output_Is_Not_Completion_v0.4.html"
+output="$web_dir/dist/First_Output_Is_Not_Completion_v0.5.html"
 
 mkdir -p "$web_dir/dist"
 
@@ -13,7 +13,7 @@ pandoc \
   "$repo_root/tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md" \
   "$repo_root/tracks/book/epub/src/part-02.md" \
-  "$repo_root/tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.2.md" \
+  "$repo_root/tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md" \
   "$repo_root/tracks/book/drafts/Chapter_05_A_Relationship_That_Does_Not_Erase_Differences_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_06_Judgment_And_Partner_Responsibility_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_07_Every_Choice_Needs_A_Reason_v0.1.md" \
@@ -21,6 +21,7 @@ pandoc \
   "$repo_root/tracks/book/drafts/Chapter_08_When_Conversation_Disappears_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_09_Recording_Misunderstanding_And_Correction_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_10_Completion_Without_Finality_v0.1.md" \
+  "$repo_root/tracks/book/epub/src/appendix.md" \
   --from=markdown \
   --to=html5 \
   --standalone \
@@ -49,7 +50,7 @@ grep -q 'id="제8장-대화가-사라지면-관계도-처음으로-돌아간다"
 grep -q 'id="제9장-오해와-교정의-궤적을-남기는-법"' "$output"
 grep -q 'id="제10장-완성하지-않고도-완결할-수-있는가"' "$output"
 grep -q 'id="editable-manuscript"' "$output"
-grep -q 'orbit-book-corrections:first-output:v0.4' "$output"
+grep -q 'orbit-book-corrections:first-output:v0.5' "$output"
 if grep -q 'Version: DRAFT' "$output"; then
   echo "Draft metadata leaked into web output" >&2
   exit 1
