@@ -158,6 +158,8 @@ def parse_markdown(path: Path, styles: dict[str, ParagraphStyle]) -> list[Flowab
             continue
         if stripped.startswith("## "):
             flush_paragraph()
+            if stripped[3:] == "독자 기록":
+                story.append(PageBreak())
             story.append(heading(stripped[3:], styles["h2"], 1))
             story.append(Spacer(1, 2 * mm))
             continue
