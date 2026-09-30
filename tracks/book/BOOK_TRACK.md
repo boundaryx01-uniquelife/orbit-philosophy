@@ -1,7 +1,7 @@
 # ORBIT Book Track
 
-> Version: DISCOVERY v0.5
-> Status: BOOK PRIORITY + PART ONE IN THREE FORMATS
+> Version: DISCOVERY v0.6
+> Status: BOOK PRIORITY + WEB-FIRST CORRECTION
 > Source baseline: `Genesis Document Set v1.0`
 
 ## 이 트랙이 만드는 것
@@ -96,14 +96,15 @@
 
 표지는 두 궤도의 정렬을 상징으로 사용하고, 제1장 삽화는 완성된 외형과 아직 맞지 않은 목표의 차이를 보여 준다. 후속 삽화는 원고보다 먼저 만들지 않는다.
 
-## 웹·PDF 시제품
+## 웹 중심 교정
 
-EPUB과 같은 원고에서 두 판본을 함께 만든다.
+현재 원고를 빠르게 읽고 고치는 단계에서는 웹판을 기본 검토본으로 사용한다.
 
 - [반응형 웹북 v0.3](web/dist/First_Output_Is_Not_Completion_v0.3.html): 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
-- [A5 PDF v0.3](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf): 고정 지면, 한글 글꼴·책갈피·쪽 번호 포함
+- [EPUB v0.3](epub/dist/First_Output_Is_Not_Completion_v0.3.epub): 전자책 앱에서 읽기 위한 보조 판본
+- [A5 PDF v0.3](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf): 기존 제작 검증을 보존하는 참고용 체크포인트. 원고가 완성 단계에 들어갈 때까지 갱신하지 않음
 
-세 형식의 쓰임과 검증 상태는 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 비교한다. 형식별 파일을 따로 집필하지 않고 세 장의 마크다운을 공통 원고로 유지한다.
+형식별 파일을 따로 집필하지 않고 세 장의 마크다운을 공통 원고로 유지한다. 현재 운용 우선순위와 PDF 재개 조건은 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 정리한다.
 
 웹 교정본은 저장소 원고를 자동으로 덮어쓰지 않는다. 현재 브라우저에 자동 저장한 뒤 Markdown으로 내보내며, 실제 원고 반영은 [`CR-0023`](../../decisions/CR-0023_Keep_Web_Corrections_Local_Until_Reviewed.md)에 따라 별도로 판단한다.
 

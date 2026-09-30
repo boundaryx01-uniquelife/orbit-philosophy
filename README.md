@@ -69,7 +69,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 
 ## 확장 트랙
 
-Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 첫 MVP를 비교한 현재는 책을 우선한다. 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, 1부의 세 장을 같은 원고에서 [EPUB](tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.3.epub)·[읽으며 교정하는 웹판](https://boundaryx01-uniquelife.github.io/orbit-philosophy/book/)·[PDF](output/pdf/First_Output_Is_Not_Completion_v0.3.pdf)로 만든다. 교육과 제품은 재개 가능한 상태로 보존한다.
+Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 첫 MVP를 비교한 현재는 책을 우선한다. 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, 1부의 세 장은 [읽으며 교정하는 웹판](https://boundaryx01-uniquelife.github.io/orbit-philosophy/book/)을 기본 검토본으로 삼는다. [EPUB](tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.3.epub)은 보조 판본으로 유지하고, PDF는 원고가 완성 단계에 들어갈 때 다시 제작한다. 교육과 제품은 재개 가능한 상태로 보존한다.
 
 ## 이 프로젝트의 경계
 

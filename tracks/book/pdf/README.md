@@ -1,10 +1,14 @@
 # PDF Prototype
 
+> Status: `PAUSED UNTIL MANUSCRIPT COMPLETION`
+
 `output/pdf/First_Output_Is_Not_Completion_v0.3.pdf`은 화면 읽기와 소량 인쇄를 함께 고려한 A5 고정 지면 시제품이다.
 
-## 다시 만들기
+현재 v0.3은 PDF 제작 파이프라인을 검증한 참고용 체크포인트다. 원고를 교정하는 동안에는 반응이 빠르고 직접 수정할 수 있는 웹판을 사용하며, PDF를 다시 생성하지 않는다.
 
-저장소 루트에서 실행한다.
+## 다시 만드는 시점
+
+전체 원고의 구조와 문장이 완성 단계에 들어가고, 고정 지면·인쇄·최종 조판 검토가 필요해질 때 이 빌드를 재개한다.
 
 ```bash
 ./tracks/book/pdf/build.sh

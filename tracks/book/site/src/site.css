@@ -113,7 +113,7 @@ h2 {
   border-bottom: 1px solid var(--line);
   border-top: 1px solid var(--line);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .format-grid article {
@@ -207,4 +207,3 @@ footer a {
     gap: 0.8rem;
   }
 }
-
