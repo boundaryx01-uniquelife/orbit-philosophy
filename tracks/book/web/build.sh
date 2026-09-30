@@ -13,7 +13,7 @@ pandoc \
   "$repo_root/tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md" \
   "$repo_root/tracks/book/epub/src/part-02.md" \
-  "$repo_root/tracks/book/drafts/Chapter_04_The_Conversation_Funnel_And_Translation_v0.1.md" \
+  "$repo_root/tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.2.md" \
   "$repo_root/tracks/book/drafts/Chapter_05_A_Relationship_That_Does_Not_Erase_Differences_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_06_Judgment_And_Partner_Responsibility_v0.1.md" \
   "$repo_root/tracks/book/drafts/Chapter_07_Every_Choice_Needs_A_Reason_v0.1.md" \
@@ -41,7 +41,7 @@ grep -q 'data:font/ttf;base64' "$output"
 grep -q 'id="제1장-완성처럼-보이는-첫-결과물"' "$output"
 grep -q 'id="제2장-친절한-답이-목표를-잃게-할-때"' "$output"
 grep -q 'id="제3장-같은-말을-해도-같은-뜻은-아니다"' "$output"
-grep -q 'id="제4장-대화-깔때기와-통역"' "$output"
+grep -q 'id="제4장-결과를-만들기-전에-네-줄로-확인하기"' "$output"
 grep -q 'id="제5장-다름을-지우지-않는-관계"' "$output"
 grep -q 'id="제6장-판단권과-파트너의-책임"' "$output"
 grep -q 'id="제7장-선택에는-이유가-따라야-한다"' "$output"

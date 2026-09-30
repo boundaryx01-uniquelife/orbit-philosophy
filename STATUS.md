@@ -225,7 +225,7 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md` | 🟡 READER CORRECTION READY v0.2 | 웹 교정본 회수·반영 |
 | `tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 과잉 친절 사례와 설명 밀도 검증 |
 | `tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 의미 확인 실천의 이해도 검증 |
-| `tracks/book/drafts/Chapter_04_The_Conversation_Funnel_And_Translation_v0.1.md` ~ `Chapter_10_Completion_Without_Finality_v0.1.md` | 🟡 FULL DRAFT REVIEW READY v0.1 | 전체 흐름·용어·사례 밀도 검증 |
+| `tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.2.md` ~ `Chapter_10_Completion_Without_Finality_v0.1.md` | 🟡 FULL DRAFT REVIEW READY | 전체 흐름·용어·사례 밀도 검증 |
 | `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.3 | 실제 기기·앱 표시 검증 |
 | `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.4.epub` | 🟡 EPUB PROTOTYPE v0.4 | 전체 10장 흐름·가독성·메시지 검증 |
 | `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.4.html` | 🟡 EDITABLE WEB PROTOTYPE v0.4 | 전체 10장 직접 교정·Markdown 회수 |

@@ -20,7 +20,8 @@
 - 제1장 원고: `tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md`
 - 제2장 원고: `tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md`
 - 제3장 원고: `tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md`
-- 제4~10장 원고: `tracks/book/drafts/Chapter_04_*.md` ~ `Chapter_10_*.md`
+- 제4장 원고: `tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.2.md`
+- 제5~10장 원고: `tracks/book/drafts/Chapter_05_*.md` ~ `Chapter_10_*.md`
 - 메타데이터: `tracks/book/epub/src/metadata.yaml`
 - 표지·삽화: `tracks/book/assets/`
 
