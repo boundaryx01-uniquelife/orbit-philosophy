@@ -3,7 +3,7 @@ set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
 epub_dir="$repo_root/tracks/book/epub"
-output="$epub_dir/dist/First_Output_Is_Not_Completion_v0.2.epub"
+output="$epub_dir/dist/First_Output_Is_Not_Completion_v0.3.epub"
 build_dir="$(mktemp -d)"
 trap 'rm -rf "$build_dir"' EXIT
 
@@ -17,6 +17,8 @@ python3 "$epub_dir/src/embed_cover.py" \
 pandoc \
   "$epub_dir/src/frontmatter.md" \
   "$repo_root/tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md" \
+  "$repo_root/tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md" \
+  "$repo_root/tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md" \
   --from=markdown \
   --to=epub3 \
   --metadata-file="$epub_dir/src/metadata.yaml" \

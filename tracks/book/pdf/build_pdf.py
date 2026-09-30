@@ -41,6 +41,7 @@ CREAM = colors.HexColor("#F7F2E9")
 def inline_markup(text: str) -> str:
     text = escape(text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", text)
+    text = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<font color='#6F6A62'>\1</font>", text)
     text = re.sub(r"`(.+?)`", r"<font name='OrbitRegular'>\1</font>", text)
     return text
 
@@ -81,7 +82,7 @@ class CoverPage(Flowable):
         canvas.circle(15 * mm, 16 * mm, 1.3 * mm, fill=1, stroke=0)
         canvas.setFillColor(colors.HexColor("#AAA49B"))
         canvas.setFont("OrbitRegular", 7.2)
-        canvas.drawString(20 * mm, 14.8 * mm, "PDF PROTOTYPE · v0.2")
+        canvas.drawString(20 * mm, 14.8 * mm, "PDF PROTOTYPE · v0.3")
 
 
 class OrbitDocTemplate(BaseDocTemplate):
@@ -127,7 +128,7 @@ def parse_markdown(path: Path, styles: dict[str, ParagraphStyle]) -> list[Flowab
         if not quote_lines:
             return
         text = " ".join(quote_lines)
-        if "Version: SAMPLE MVP" not in text:
+        if not any(label in text for label in ("Version:", "Status:", "Sources:")):
             story.append(Paragraph(inline_markup(text), styles["quote"]))
             story.append(Spacer(1, 2.5 * mm))
         quote_lines = []
@@ -214,7 +215,7 @@ def build(repo_root: Path, output: Path) -> None:
     style_map = {
         "body": body,
         "h1": ParagraphStyle(
-            "H1", parent=body, fontName="OrbitBold", fontSize=21, leading=28,
+            "H1", parent=body, fontName="OrbitBold", fontSize=18.5, leading=25,
             textColor=INK, spaceBefore=8 * mm, borderWidth=0, wordWrap="CJK"
         ),
         "h2": ParagraphStyle(
@@ -295,7 +296,7 @@ def build(repo_root: Path, output: Path) -> None:
             "Credit", parent=body, fontName="OrbitBold", fontSize=9, textColor=ACCENT
         )),
         Spacer(1, 4 * mm),
-        Paragraph("PDF PROTOTYPE · v0.2 · 2026-09-30", ParagraphStyle(
+        Paragraph("PDF PROTOTYPE · v0.3 · 2026-09-30", ParagraphStyle(
             "Edition", parent=body, fontSize=7.5, textColor=MUTED
         )),
         PageBreak(),
@@ -345,7 +346,7 @@ def build(repo_root: Path, output: Path) -> None:
         )),
         Spacer(1, 3 * mm),
         Paragraph(
-            "이 파일은 《첫 결과물이 곧 완성은 아니다》의 출간본이 아니다. 제목과 구성, 읽기 경험을 함께 검토하기 위한 PDF 시제품이다. 현재 3부 10장의 설계와 제1장 샘플을 담았다.",
+            "이 파일은 《첫 결과물이 곧 완성은 아니다》의 출간본이 아니다. 제목과 구성, 읽기 경험을 함께 검토하기 위한 PDF 시제품이다. 현재 3부 10장의 설계와 1부의 세 장을 담았다.",
             body,
         ),
         Spacer(1, 3 * mm),
@@ -354,10 +355,12 @@ def build(repo_root: Path, output: Path) -> None:
             body,
         ),
     ])
-    story.extend(parse_markdown(
-        repo_root / "tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md",
-        style_map,
-    ))
+    for manuscript in (
+        "Chapter_01_First_Output_Is_Not_Completion_v0.2.md",
+        "Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md",
+        "Chapter_03_Same_Words_Different_Meanings_v0.1.md",
+    ):
+        story.extend(parse_markdown(repo_root / "tracks/book/drafts" / manuscript, style_map))
 
     output.parent.mkdir(parents=True, exist_ok=True)
     doc.build(story)
