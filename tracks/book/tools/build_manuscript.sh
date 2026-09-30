@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 repo_root="$(git rev-parse --show-toplevel)"
-output="$repo_root/tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.5.md"
+output="$repo_root/tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.6.md"
 mkdir -p "$(dirname "$output")"
 pandoc \
   "$repo_root/tracks/book/epub/src/frontmatter.md" \

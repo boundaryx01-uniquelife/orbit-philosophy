@@ -2,7 +2,7 @@
 
 > 인간과 LLM이 서로의 뜻과 차이를 맞춰 가며, 선택과 교정의 궤적을 다음 판단으로 연결하는 기록 프로젝트
 >
-> Version: EXPANSION UPDATE v0.5
+> Version: EXPANSION UPDATE v0.6
 > Status: COMPLETE / ACTIVE
 > Updated: 2026-09-30
 > Document set: [Genesis v1.0](DOCUMENT_SET.md)
@@ -69,7 +69,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 
 ## 확장 트랙
 
-Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 첫 MVP를 비교한 현재는 책을 우선한다. 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, 서문과 3부 10장의 최종 후보 v0.5를 [읽으며 교정하는 웹판](https://boundaryx01-uniquelife.github.io/orbit-philosophy/book/)의 다음 배포본으로 준비했다. [EPUB v0.5](tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.5.epub)은 보조 판본으로 유지하고, PDF는 문장과 구조가 안정된 뒤 다시 제작한다. 교육과 제품은 재개 가능한 상태로 보존한다.
+Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 첫 MVP를 비교한 현재는 책을 우선한다. 작업 제목을 《첫 결과물이 곧 완성은 아니다》로 정리하고, 서문과 3부 10장의 최종 후보 v0.6를 [읽으며 교정하는 웹판](https://boundaryx01-uniquelife.github.io/orbit-philosophy/book/)의 다음 배포본으로 준비했다. [EPUB v0.6](tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.6.epub)은 보조 판본으로 유지하고, PDF는 문장과 구조가 안정된 뒤 다시 제작한다. 교육과 제품은 재개 가능한 상태로 보존한다.
 
 ## 이 프로젝트의 경계
 
