@@ -156,6 +156,8 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 - [x] 제3장 「같은 말을 해도 같은 뜻은 아니다」 v0.1 작성
 - [x] 1부의 세 장을 EPUB·웹·PDF v0.3 공통 원고로 통합
 - [x] 웹판을 기본 교정 환경으로 전환하고 PDF 생성을 원고 완성 단계까지 중단
+- [x] 외부 교정본 1건을 원문과 대조해 명백한 표현 개선만 선별 반영
+- [x] 1부를 AI 활용 입문자 관점에서 재검토하고 가독성 8.2/10으로 기록
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -233,6 +235,7 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 확장 MVP를 만든
 | `reviews/Book_v0.2_Language_Review.md` | ✅ COMPLETE | 사용자 교정본과 대조 |
 | `decisions/CR-0025_Complete_Part_One_Before_Part_Two.md` | 🟡 PROVISIONAL | 1부 독자 교정 뒤 장별 역할 재검토 |
 | `reviews/Book_Part_One_v0.3_Cross_Review.md` | ✅ COMPLETE | 사용자 교정본과 대조 |
+| `reviews/Book_Part_One_AI_Beginner_Readability_Review_v0.1.md` | ✅ COMPLETE | 실제 초보 독자 반응과 대조 |
 | `decisions/CR-0026_Pause_PDF_And_Use_Web_For_Correction.md` | ✅ DECIDED | 전체 원고 완성 단계에서 PDF 재개 조건 확인 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
