@@ -3,7 +3,7 @@ set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
 epub_dir="$repo_root/tracks/book/epub"
-output="$epub_dir/dist/First_Output_Is_Not_Completion_v0.7.epub"
+output="$epub_dir/dist/First_Output_Is_Not_Completion_v0.8.epub"
 build_dir="$(mktemp -d)"
 trap 'rm -rf "$build_dir"' EXIT
 
