@@ -1,6 +1,6 @@
 # EPUB Prototype
 
-`dist/First_Output_Is_Not_Completion_v0.9.epub`은 서문·3부 10장·작업 안내를 담은 외부 검토본을 전자책에서 읽기 위한 가변형 EPUB 3 파일이다.
+`dist/First_Output_Is_Not_Completion_v0.10.epub`은 서문·3부 10장·작업 안내를 담은 외부 검토본을 전자책에서 읽기 위한 가변형 EPUB 3 파일이다.
 
 ## 다시 만들기
 

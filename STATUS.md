@@ -2,12 +2,12 @@
 
 > Updated: 2026-10-01
 > Current phase: **9A — 책 우선 제작·검증**
-> Overall state: 🔵 `EXTERNAL REVIEW v0.9 / READER REVIEW`
-> Remote checkpoint: **MVP와 LLM을 쉬운 말로 풀어 쓴 v0.9 외부 검토본은 로컬에서 제작했으며 공개 웹사이트에는 아직 배포하지 않음**
+> Overall state: 🔵 `EXTERNAL REVIEW v0.10 / READER REVIEW`
+> Remote checkpoint: **LLM의 첫 소개와 이후 호칭을 다시 정리한 v0.10 외부 검토본은 로컬에서 제작했으며 공개 웹사이트에는 아직 배포하지 않음**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책 트랙을 먼저 진전시켰다. 《첫 결과물이 곧 완성은 아니다》의 서문·3부 10장·작업 안내를 다듬고, `MVP`와 `LLM`을 첫 등장에서는 원래 용어와 함께 소개한 뒤 ‘시험용 첫 결과물’과 ‘AI’로 이어 가는 외부 검토본 v0.9를 제작했다. 원래 문제의식과 AI의 반론 가능성을 유지한다. PDF 생성과 공개 웹사이트 배포는 이번 수정에 포함하지 않는다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책 트랙을 먼저 진전시켰다. 《첫 결과물이 곧 완성은 아니다》의 서문·3부 10장·작업 안내를 다듬고, `LLM(Large Language Model, 대규모 언어 모델)`을 처음 소개한 뒤 문맥에 따라 ‘대화형 AI’와 ‘AI’로 이어 가는 외부 검토본 v0.10을 제작했다. 원래 문제의식과 AI의 반론 가능성을 유지한다. PDF 생성과 공개 웹사이트 배포는 이번 수정에 포함하지 않는다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -225,14 +225,14 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 | `tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md` | 🟡 READER CORRECTION READY v0.2 | 웹 교정본 회수·반영 |
 | `tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 과잉 친절 사례와 설명 밀도 검증 |
 | `tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 의미 확인 실천의 이해도 검증 |
-| `tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md` 및 전체 원고 | 🟡 EXTERNAL REVIEW v0.9 | 독자 의견과 용어 이해도 대조 |
+| `tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md` 및 전체 원고 | 🟡 EXTERNAL REVIEW v0.10 | 독자 의견과 용어 이해도 대조 |
 | `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.3 | 실제 기기·앱 표시 검증 |
-| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.9.epub` | 🟡 EXTERNAL REVIEW v0.9 | 실제 읽기·의미 판단 |
-| `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.9.html` | 🟡 EXTERNAL REVIEW v0.9 | 전체 읽기·교정 |
-| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.9.md` | 🟡 FULL MANUSCRIPT v0.9 | 동일 원고 확인·재사용 |
-| `reviews/Book_v0.9_Accessible_Terminology_Revision_Record.md` | ✅ REVISION RECORD | MVP·LLM 표현과 용어집 수정 확인 |
+| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.10.epub` | 🟡 EXTERNAL REVIEW v0.10 | 실제 읽기·의미 판단 |
+| `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.10.html` | 🟡 EXTERNAL REVIEW v0.10 | 전체 읽기·교정 |
+| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.10.md` | 🟡 FULL MANUSCRIPT v0.10 | 동일 원고 확인·재사용 |
+| `reviews/Book_v0.10_LLM_Naming_Revision_Record.md` | ✅ REVISION RECORD | LLM 첫 소개와 이후 호칭 확인 |
 | `output/pdf/First_Output_Is_Not_Completion_v0.3.pdf` | ⏸️ PDF CHECKPOINT v0.3 | 전체 원고 완성 단계까지 갱신 중단 |
-| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.9 | PDF 재개 조건 검토 |
+| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.10 | PDF 재개 조건 검토 |
 | `decisions/CR-0021_Prioritize_Book_And_Build_EPUB_Prototype.md` | ✅ DECIDED | 독자 검증 뒤 우선순위 재검토 |
 | `chronicle/C0008_The_Book_Became_A_Reading_Object.md` | ✅ MILESTONE v0.1 | 전체 원고 진전 시 대조 |
 | `decisions/CR-0022_Produce_Web_And_PDF_From_One_Manuscript.md` | ✅ DECIDED | 공개·인쇄 단계에서 재검토 |
@@ -270,14 +270,14 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 
 ## 다음 시작점
 
-외부 검토본 v0.9를 실제 독자에게 제공해 ‘시험용 첫 결과물’과 ‘AI’ 표현이 읽히는지 확인한다. 이후 반응을 원고와 대조한다. 이번 수정 기록은 `reviews/Book_v0.9_Accessible_Terminology_Revision_Record.md`에 있다.
+외부 검토본 v0.10을 실제 독자에게 제공해 LLM 첫 설명과 ‘대화형 AI’·‘AI’의 구분이 자연스러운지 확인한다. 이후 반응을 원고와 대조한다. 이번 수정 기록은 `reviews/Book_v0.10_LLM_Naming_Revision_Record.md`에 있다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
 1. `tracks/book/BOOK_TRACK.md`와 `tracks/book/EPUB_PRODUCTION.md`에서 책의 목표와 제작 경계를 확인한다.
-2. 웹판 v0.9의 서문과 전체 10장을 읽고 의미가 유지됐는지 판단한다.
+2. 웹판 v0.10의 서문과 전체 10장을 읽고 의미가 유지됐는지 판단한다.
 3. 용어는 첫 등장 설명과 부록 찾아보기를 대조한다.
 4. 실제 초보 독자에게 제목·가독성·중심 메시지와 행동 변화를 확인한다.
 5. 결과를 기록하고 공개 반영 여부를 별도로 판단한다.

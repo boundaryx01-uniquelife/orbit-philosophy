@@ -3,7 +3,7 @@ set -euo pipefail
 
 repo_root="$(git rev-parse --show-toplevel)"
 web_dir="$repo_root/tracks/book/web"
-output="$web_dir/dist/First_Output_Is_Not_Completion_v0.9.html"
+output="$web_dir/dist/First_Output_Is_Not_Completion_v0.10.html"
 
 mkdir -p "$web_dir/dist"
 
@@ -50,7 +50,7 @@ grep -q 'id="제8장-대화가-사라지면-관계도-처음으로-돌아간다"
 grep -q 'id="제9장-오해와-교정의-궤적을-남기는-법"' "$output"
 grep -q 'id="제10장-완성하지-않고도-완결할-수-있는가"' "$output"
 grep -q 'id="editable-manuscript"' "$output"
-grep -q 'orbit-book-corrections:first-output:v0.9' "$output"
+grep -q 'orbit-book-corrections:first-output:v0.10' "$output"
 if grep -q 'Version: DRAFT' "$output"; then
   echo "Draft metadata leaked into web output" >&2
   exit 1
