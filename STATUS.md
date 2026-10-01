@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-10-01
-> Current phase: **9A — 책 우선 제작·검증**
-> Overall state: 🔵 `EXTERNAL REVIEW v0.10 / READER REVIEW`
-> Remote checkpoint: **LLM의 첫 소개와 이후 호칭을 다시 정리한 v0.10 외부 검토본은 로컬에서 제작했으며 공개 웹사이트에는 아직 배포하지 않음**
+> Current phase: **9B — 책 용어 체계화**
+> Overall state: 🔵 `FIRST AUTHORING COMPLETE v1.0 / TERMINOLOGY SYSTEMATIZATION`
+> Remote checkpoint: **1차 저작 완성본 v1.0을 제작·보존하고 2단계 용어 체계화에 진입함. 공개 웹사이트 배포는 별도 판단으로 남김**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책 트랙을 먼저 진전시켰다. 《첫 결과물이 곧 완성은 아니다》의 서문·3부 10장·작업 안내를 다듬고, `LLM(Large Language Model, 대규모 언어 모델)`을 처음 소개한 뒤 문맥에 따라 ‘대화형 AI’와 ‘AI’로 이어 가는 외부 검토본 v0.10을 제작했다. 원래 문제의식과 AI의 반론 가능성을 유지한다. PDF 생성과 공개 웹사이트 배포는 이번 수정에 포함하지 않는다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책 트랙을 먼저 진전시켰다. 《첫 결과물이 곧 완성은 아니다》의 서문·3부 10장·작업 안내를 다듬어 1차 저작 완성본 v1.0으로 고정했다. 이 버전은 현재까지의 내용과 문장을 승인한 기준점이며 출간·유통·최종 조판의 완료 선언은 아니다. 원래 문제의식과 AI의 반론 가능성을 유지한 채, 이제 전체 문맥에서 용어를 체계화하는 2단계로 이동한다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -163,6 +163,10 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 - [x] 제2부·제3부 전환면과 3부 10장 전체 흐름 구성
 - [x] 전체 초안을 AI 활용 입문자 관점에서 교차검토하고 가독성 8.3/10으로 기록
 - [x] 전체 원고 기준 웹·EPUB v0.4 제작·검증
+- [x] LLM·MVP의 첫 설명과 이후 쉬운 호칭을 정리한 v0.10 외부 검토본 제작
+- [x] 서문·3부 10장·작업 안내를 1차 저작 완성본 v1.0으로 고정
+- [x] 1차 저작 마감 결정·Chronicle·릴리스 검토·아카이브 작성
+- [x] 2단계 용어 체계화의 범위·분류·완료 조건 정의
 - [x] 장면 9~11의 ‘두 번의 탄생’ 해석에 대한 사용자 확인
 - [ ] 장면 0의 실제 작업과 `ORBIT Philosophy` 이름의 기원 복원
 - [x] 검토 후 Genesis 서술 통합본 v0.9 작성 및 승인
@@ -221,18 +225,20 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 | `decisions/CR-0020_Run_Three_Expansion_Tracks_In_Parallel.md` | ✅ DECIDED | 병렬 탐색의 부담과 효과 재검토 |
 | `tracks/README.md` | 🔵 DISCOVERY v0.2 | 책 우선 검증과 다른 두 MVP 보존 |
 | `tracks/COMPARISON.md` | 🟡 v0.1 | 실제 검증 자료가 생기면 효과 비교 추가 |
-| `tracks/book/BOOK_TRACK.md` | 🔵 DISCOVERY v0.7 | 전체 10장 흐름과 용어 검토 |
+| `tracks/book/BOOK_TRACK.md` | 🔵 FIRST AUTHORING SET v1.0 | 2단계 용어 체계화 |
 | `tracks/book/drafts/Chapter_01_First_Output_Is_Not_Completion_v0.2.md` | 🟡 READER CORRECTION READY v0.2 | 웹 교정본 회수·반영 |
 | `tracks/book/drafts/Chapter_02_When_Helpfulness_Loses_The_Goal_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 과잉 친절 사례와 설명 밀도 검증 |
 | `tracks/book/drafts/Chapter_03_Same_Words_Different_Meanings_v0.1.md` | 🟡 READER CORRECTION READY v0.1 | 의미 확인 실천의 이해도 검증 |
-| `tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md` 및 전체 원고 | 🟡 EXTERNAL REVIEW v0.10 | 독자 의견과 용어 이해도 대조 |
+| `tracks/book/drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md` 및 전체 원고 | ✅ FIRST AUTHORING COMPLETE v1.0 | 용어 변경은 근거와 함께 별도 반영 |
 | `tracks/book/EPUB_PRODUCTION.md` | 🔵 PROTOTYPE PIPELINE v0.3 | 실제 기기·앱 표시 검증 |
-| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.10.epub` | 🟡 EXTERNAL REVIEW v0.10 | 실제 읽기·의미 판단 |
-| `tracks/book/web/dist/First_Output_Is_Not_Completion_v0.10.html` | 🟡 EXTERNAL REVIEW v0.10 | 전체 읽기·교정 |
-| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v0.10.md` | 🟡 FULL MANUSCRIPT v0.10 | 동일 원고 확인·재사용 |
+| `tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md` | ✅ COMPLETE / USER APPROVED | 1차 저작 기준점 보존 |
+| `tracks/book/TERMINOLOGY_SYSTEMATIZATION.md` | 🔵 PHASE 2 IN PROGRESS | 용어 목록·역할·표기 원칙 확정 |
+| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v1.0.epub` | ✅ FIRST AUTHORING COMPLETE v1.0 | 실제 기기 표시 검증 |
+| `tracks/book/web/dist/First_Output_Is_Not_Completion_v1.0.html` | ✅ FIRST AUTHORING COMPLETE v1.0 | 용어 검토·교정 |
+| `tracks/book/epub/dist/First_Output_Is_Not_Completion_v1.0.md` | ✅ FULL MANUSCRIPT v1.0 | 동일 원고 확인·재사용 |
 | `reviews/Book_v0.10_LLM_Naming_Revision_Record.md` | ✅ REVISION RECORD | LLM 첫 소개와 이후 호칭 확인 |
-| `output/pdf/First_Output_Is_Not_Completion_v0.3.pdf` | ⏸️ PDF CHECKPOINT v0.3 | 전체 원고 완성 단계까지 갱신 중단 |
-| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v0.10 | PDF 재개 조건 검토 |
+| `output/pdf/First_Output_Is_Not_Completion_v0.3.pdf` | ⏸️ PDF CHECKPOINT v0.3 | 2단계 용어 체계화 뒤 최종 조판 재개 판단 |
+| `tracks/book/FORMAT_MATRIX.md` | ✅ FORMAT MAP v1.0 | PDF 재개 조건 검토 |
 | `decisions/CR-0021_Prioritize_Book_And_Build_EPUB_Prototype.md` | ✅ DECIDED | 독자 검증 뒤 우선순위 재검토 |
 | `chronicle/C0008_The_Book_Became_A_Reading_Object.md` | ✅ MILESTONE v0.1 | 전체 원고 진전 시 대조 |
 | `decisions/CR-0022_Produce_Web_And_PDF_From_One_Manuscript.md` | ✅ DECIDED | 공개·인쇄 단계에서 재검토 |
@@ -244,10 +250,14 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 | `decisions/CR-0025_Complete_Part_One_Before_Part_Two.md` | 🟡 PROVISIONAL | 1부 독자 교정 뒤 장별 역할 재검토 |
 | `reviews/Book_Part_One_v0.3_Cross_Review.md` | ✅ COMPLETE | 사용자 교정본과 대조 |
 | `reviews/Book_Part_One_AI_Beginner_Readability_Review_v0.1.md` | ✅ COMPLETE | 실제 초보 독자 반응과 대조 |
-| `decisions/CR-0026_Pause_PDF_And_Use_Web_For_Correction.md` | ✅ DECIDED | 전체 원고 완성 단계에서 PDF 재개 조건 확인 |
+| `decisions/CR-0026_Pause_PDF_And_Use_Web_For_Correction.md` | ✅ DECIDED | 2단계 용어 체계화 뒤 PDF 재개 조건 확인 |
 | `decisions/CR-0027_Complete_Full_Draft_Before_Terminology_Systematization.md` | ✅ DECIDED / APPLIED | 전체 원고를 읽은 뒤 용어 체계화 |
 | `reviews/Book_Full_Draft_v0.4_Cross_Review.md` | ✅ COMPLETE | 실제 초보 독자 반응과 대조 |
 | `chronicle/C0011_The_Book_Reached_Ten_Chapters.md` | ✅ MILESTONE v0.1 | 용어·독자 검증 뒤 변화와 대조 |
+| `decisions/CR-0028_Close_First_Authoring_And_Enter_Terminology_Phase.md` | ✅ DECIDED / APPLIED | 2단계 종료 시 대조 |
+| `chronicle/C0012_The_First_Authoring_Was_Closed.md` | ✅ MILESTONE v0.1 | 이후 변경이 기준 의미를 바꾸는지 대조 |
+| `reviews/Book_First_Authoring_v1.0_Release_Review.md` | ✅ RELEASE APPROVED | 재검토 조건 발생 시 확인 |
+| `reviews/Book_Phase_1_Archive_20261001.md` | ✅ ARCHIVED | 1차 저작 재개·복원 기준 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
 | `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
@@ -257,27 +267,27 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 
 ## 다음 관문
 
-9A단계 책의 전체 10장 웹판을 실제 읽기·교정 경험으로 검증한다.
+9B단계에서 전체 원고의 용어를 한 흐름으로 체계화한다.
 
-1. 표지가 ORBIT의 ‘관계와 조율’을 전달하는가, 아니면 천문학 책으로 오해되는가?
-2. 웹판에서 읽기 흐름을 크게 끊지 않고 문장을 고치고 다시 불러올 수 있는가?
-3. 독자가 중심 메시지를 ‘속도 비판’이 아니라 ‘완성처럼 보이는 첫 결과물에서 판단을 멈추지 말자는 경고’로 설명하는가?
-4. `완성·완료·완결`, `확인·검증`, `AI·LLM`을 문맥 안에서 구분할 수 있는가?
+1. 전문 용어, ORBIT 내부 표현, 일상어를 구분한다.
+2. 각 용어의 대표 표현과 허용할 대체 표현을 정한다.
+3. 첫 등장 설명·본문의 쉬운 표현·부록의 자세한 설명을 연결한다.
+4. 용어 변경이 원래 문제의식이나 남은 반론을 지우지 않았는지 대조한다.
 
 ## 막힌 부분
 
-초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 웹·EPUB·PDF 제작 검사는 통과했지만 실제 휴대전화 브라우저와 독자 반응은 아직 검증하지 않았다. PDF 인쇄 검증은 원고 완성 단계로 미뤘다. 제목은 현재 작업 제목이며, 저자 표기는 아직 정하지 않았다.
+초기 대화의 일부와 프로젝트 이름의 기원은 여전히 미복원 상태다. 웹·EPUB 제작 검사는 통과했지만 실제 휴대전화 브라우저와 독자 반응은 아직 검증하지 않았다. PDF 인쇄 검증, 최종 제목·저자 표기와 출판 여부는 1차 저작 완료 범위에 포함하지 않았다.
 
 ## 다음 시작점
 
-외부 검토본 v0.10을 실제 독자에게 제공해 LLM 첫 설명과 ‘대화형 AI’·‘AI’의 구분이 자연스러운지 확인한다. 이후 반응을 원고와 대조한다. 이번 수정 기록은 `reviews/Book_v0.10_LLM_Naming_Revision_Record.md`에 있다.
+`tracks/book/TERMINOLOGY_SYSTEMATIZATION.md`의 목록을 기준으로 용어별 첫 등장, 반복 횟수와 문맥을 대조한다. 첫 묶음은 `LLM·대화형 AI·AI`, `MVP·시험용 첫 결과물·첫 결과물`, `완성·완료·완결`이다.
 
 ## 재개 체크포인트
 
 집이나 새 대화에서 작업을 재개할 때 다음 순서로 시작한다.
 
 1. `tracks/book/BOOK_TRACK.md`와 `tracks/book/EPUB_PRODUCTION.md`에서 책의 목표와 제작 경계를 확인한다.
-2. 웹판 v0.10의 서문과 전체 10장을 읽고 의미가 유지됐는지 판단한다.
-3. 용어는 첫 등장 설명과 부록 찾아보기를 대조한다.
-4. 실제 초보 독자에게 제목·가독성·중심 메시지와 행동 변화를 확인한다.
-5. 결과를 기록하고 공개 반영 여부를 별도로 판단한다.
+2. `tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md`에서 1차 저작의 고정 범위를 확인한다.
+3. `tracks/book/TERMINOLOGY_SYSTEMATIZATION.md`에서 현재 용어 묶음과 완료 조건을 확인한다.
+4. 웹판 v1.0과 전체 원고 Markdown을 대조하며 용어를 검토한다.
+5. 변경 이유를 기록하고 v1.0의 의미를 바꾸는 수정은 별도 판단한다.

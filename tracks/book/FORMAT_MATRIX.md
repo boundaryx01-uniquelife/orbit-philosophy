@@ -1,6 +1,6 @@
 # Book Format Matrix
 
-> Version: v0.10
+> Version: v1.0
 > Updated: 2026-10-01
 > Principle: 원고는 하나로 관리하고, 읽는 환경에 맞게 표현만 달리한다.
 
@@ -8,9 +8,9 @@
 
 | 형식 | 가장 알맞은 사용 | 장점 | 현재 한계 | 산출물 |
 |---|---|---|---|---|
-| 반응형 웹 | **현재 기본 검토본**. PC·휴대전화에서 읽으며 표현 교정하기 | 화면 폭에 따라 재배치되고, 교정본을 브라우저에 자동 저장해 Markdown으로 내보냄 | 기기 간 자동 동기화와 GitHub 직접 반영은 지원하지 않음 | [`web/dist/First_Output_Is_Not_Completion_v0.10.html`](web/dist/First_Output_Is_Not_Completion_v0.10.html) |
-| EPUB 3 | 전자책 앱·리더기에서 오래 읽기 | 글자 크기와 화면 폭에 따라 본문이 자연스럽게 흐름 | 기기별 글꼴·표지 표현 차이를 실제 앱에서 더 확인해야 함 | [`epub/dist/First_Output_Is_Not_Completion_v0.10.epub`](epub/dist/First_Output_Is_Not_Completion_v0.10.epub) |
-| A5 PDF | 원고 완성 뒤 인쇄·고정 지면 검토 | 표지·여백·줄바꿈·페이지 번호를 고정해 최종 조판을 확인할 수 있음 | **제작 일시 중단**. v0.3은 제작 검증 기록으로만 보존 | [`../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf`](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf) |
+| 반응형 웹 | **현재 기본 검토본**. PC·휴대전화에서 읽으며 용어와 표현 교정하기 | 화면 폭에 따라 재배치되고, 교정본을 브라우저에 자동 저장해 Markdown으로 내보냄 | 기기 간 자동 동기화와 GitHub 직접 반영은 지원하지 않음 | [`web/dist/First_Output_Is_Not_Completion_v1.0.html`](web/dist/First_Output_Is_Not_Completion_v1.0.html) |
+| EPUB 3 | 전자책 앱·리더기에서 오래 읽기 | 글자 크기와 화면 폭에 따라 본문이 자연스럽게 흐름 | 기기별 글꼴·표지 표현 차이를 실제 앱에서 더 확인해야 함 | [`epub/dist/First_Output_Is_Not_Completion_v1.0.epub`](epub/dist/First_Output_Is_Not_Completion_v1.0.epub) |
+| A5 PDF | 용어 체계화 뒤 인쇄·고정 지면 검토 | 표지·여백·줄바꿈·페이지 번호를 고정해 최종 조판을 확인할 수 있음 | **제작 일시 중단**. v0.3은 제작 검증 기록으로만 보존 | [`../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf`](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf) |
 
 ## 하나의 원고를 유지하는 이유
 
@@ -29,7 +29,7 @@
 
 - EPUB은 가변형 본문과 전자책 목차를 만든다.
 - 웹은 반응형 목차, 읽기 진행 표시와 단일 HTML 패키징을 맡는다.
-- PDF는 원고가 완성 단계에 들어간 뒤 A5 고정 지면, 글꼴 임베딩, 책갈피와 쪽 번호를 검증한다.
+- PDF는 2단계 용어 체계화를 마친 뒤 A5 고정 지면, 글꼴 임베딩, 책갈피와 쪽 번호를 검증한다.
 
 ## 현재 검증 상태
 
@@ -37,7 +37,7 @@
 - 웹: UTF-8·모바일 viewport·목차·대체 텍스트·외부 의존성 없음·교정 스크립트 구문 확인
 - PDF: v0.3에서 전 페이지 이미지 렌더링, 한글 글꼴 임베딩·텍스트 추출·메타데이터 확인 완료. 이후 생성 일시 중단
 
-세 형식의 제작 검사는 통과했지만, 현재 독자 교정은 웹판에 집중한다. PDF는 전체 원고의 구조와 문장이 완성 단계에 들어가고 고정 지면 검토가 실제로 필요해질 때 재개한다.
+세 형식의 제작 검사는 통과했지만, 현재 용어 검토는 웹판에 집중한다. PDF는 용어 체계화를 마치고 고정 지면 검토가 실제로 필요해질 때 재개한다.
 
 ## 다시 만들기
 

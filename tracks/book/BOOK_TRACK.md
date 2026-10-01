@@ -1,7 +1,7 @@
 # ORBIT Book Track
 
-> Version: DISCOVERY v0.7
-> Status: EXTERNAL REVIEW v0.10 + WEB-FIRST REVIEW
+> Version: FIRST AUTHORING SET v1.0
+> Status: PHASE 1 COMPLETE / PHASE 2 TERMINOLOGY SYSTEMATIZATION
 > Source baseline: `Genesis Document Set v1.0`
 
 ## 이 트랙이 만드는 것
@@ -76,7 +76,7 @@
 
 ## 전체 원고 초안
 
-현재 전체 원고는 서문과 열 장, 작업 안내를 함께 다듬은 외부 검토본 v0.10이다. 제1~3장은 첫 결과물·과잉 친절·의미의 어긋남을 다룬다. [제4장](drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md)은 실제 설명회 준비 조건에서 재구성한 사례로 확인과 교정을 보여 준다. 제5~7장은 차이·판단권·선택을, 제8~10장은 기록과 완결을 다룬다. [수정 기록](../../reviews/Book_v0.10_LLM_Naming_Revision_Record.md)에 이번 용어 변경과 검증 범위를 남겼다.
+현재 전체 원고는 서문과 열 장, 작업 안내를 함께 다듬은 [1차 저작 완성본 v1.0](BOOK_FIRST_AUTHORING_SET_v1.0.md)이다. 제1~3장은 첫 결과물·과잉 친절·의미의 어긋남을 다룬다. [제4장](drafts/Chapter_04_Check_Four_Lines_Before_Creating_v0.3.md)은 실제 설명회 준비 조건에서 재구성한 사례로 확인과 교정을 보여 준다. 제5~7장은 차이·판단권·선택을, 제8~10장은 기록과 완결을 다룬다. v1.0은 1차 저작의 승인 기준점이며, 출간·유통·최종 조판까지 마쳤다는 뜻은 아니다. 이후 변경은 [2단계 용어 체계화](TERMINOLOGY_SYSTEMATIZATION.md)의 근거와 함께 남긴다.
 
 전체 초안의 검증 질문은 다음과 같다.
 
@@ -89,7 +89,7 @@
 
 ## EPUB 시제품
 
-책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 3부 10장 전체 초안을 [EPUB v0.10](epub/dist/First_Output_Is_Not_Completion_v0.10.epub)로 묶었다. 이 결과는 출간본이 아니라 실제 전자책의 가독성, 목차 흐름과 시각 언어를 확인하기 위한 시험용 첫 결과물다.
+책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 3부 10장 원고를 [EPUB v1.0](epub/dist/First_Output_Is_Not_Completion_v1.0.epub)으로 묶었다. 이 판본은 1차 저작의 완료 상태를 보존하며, 전자책 환경에서 가독성과 목차 흐름을 계속 확인하는 기준본이다.
 
 - 제작 원칙과 남은 결정: [`EPUB_PRODUCTION.md`](EPUB_PRODUCTION.md)
 - 다시 만드는 방법: [`epub/README.md`](epub/README.md)
@@ -99,10 +99,10 @@
 
 ## 웹 중심 교정
 
-현재 원고를 빠르게 읽고 고치는 단계에서는 웹판을 기본 검토본으로 사용한다.
+2단계 용어 체계화에서도 웹판을 기본 검토본으로 사용한다.
 
-- [반응형 웹북 v0.10](web/dist/First_Output_Is_Not_Completion_v0.10.html): 전체 10장과 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
-- [EPUB v0.10](epub/dist/First_Output_Is_Not_Completion_v0.10.epub): 전체 10장을 전자책 앱에서 읽기 위한 보조 판본
+- [반응형 웹북 v1.0](web/dist/First_Output_Is_Not_Completion_v1.0.html): 전체 10장과 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
+- [EPUB v1.0](epub/dist/First_Output_Is_Not_Completion_v1.0.epub): 전체 10장을 전자책 앱에서 읽기 위한 보조 판본
 - [A5 PDF v0.3](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf): 기존 제작 검증을 보존하는 참고용 체크포인트. 원고가 완성 단계에 들어갈 때까지 갱신하지 않음
 
 형식별 파일을 따로 집필하지 않고 열 장의 마크다운을 공통 원고로 유지한다. 현재 운용 우선순위와 PDF 재개 조건은 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 정리한다.
