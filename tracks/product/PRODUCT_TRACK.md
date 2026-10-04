@@ -2,10 +2,10 @@
 
 > Version: DISCOVERY v0.1
 > Status: ORIGINAL PROGRAM INTENT TO RECOVER
-> Working name: ORBIT Dialogue Funnel (당시 임시 이름)
+> Working name: ORBIT Dialogue Funnel (과거 AI 제안, 원안 아님)
 > Source baseline: `Genesis Document Set v1.0`
 
-> 2026-10-04 교정: 아래의 ‘대화 조율 레이어’와 다섯 화면은 철학을 소프트웨어로 옮긴 당시의 **제안**이다. 사용자는 입력·정리 화면이 원래 만들려던 프로그램이 아니라고 명시했다. 구체적 작동 방식은 사용자에게 확인하기 전까지 확정하지 않는다. [교정 기록](../../decisions/CR-0030_Withdraw_Input_Form_Prototype.md).
+> 2026-10-04 후속: 공개 Genesis에서 **Life OS** 원안의 큰 구조를 확인했다. 아래 내용 전체는 그와 별개의, 철학을 입력 화면으로 옮긴 당시 AI 제안 이력이다. 현재 제품 설계의 시작점은 [Life OS 재개 기록](LIFE_OS_HANDOFF.md)과 [공개 Genesis](../../genesis/GENESIS_PUBLIC_TRANSCRIPT.md)다. [시험본 철회와 후속 발견](../../decisions/CR-0030_Withdraw_Input_Form_Prototype.md).
 
 ## 이 트랙이 만드는 것
 

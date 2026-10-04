@@ -1,0 +1,43 @@
+# Life OS — 2단계 재개 기록
+
+> 작성: 2026-10-04
+> 상태: 원안 복원 / 제품 설계 시작 전
+> 범위: 공개 Genesis와 이번 교정에서 확인한 것만 기록. 기능 승인이나 구현 지시가 아님.
+
+## 먼저 읽을 자료
+
+1. [`genesis/GENESIS_PUBLIC_TRANSCRIPT.md`](../../genesis/GENESIS_PUBLIC_TRANSCRIPT.md) — 2026-09-21 밤~22일 새벽의 공개용 정리본. 개인 정보가 포함될 수 있는 RAW 대화는 공개 저장소에 올리지 않기로 했다.
+2. [`genesis/C0000_GENESIS.md`](../../genesis/C0000_GENESIS.md) — Shopping OS에서 Life OS로 옮겨 간 전환의 요약.
+3. [`decisions/CR-0030_Withdraw_Input_Form_Prototype.md`](../../decisions/CR-0030_Withdraw_Input_Form_Prototype.md) — 원안을 잘못 구현한 일과 철회 이유.
+4. [`tracks/product/PRODUCT_TRACK.md`](PRODUCT_TRACK.md), [`MVP_SPEC.md`](MVP_SPEC.md) — 과거 AI가 제안한 대화 깔때기 제품 가설. Life OS 요구사항으로 사용하지 않는다.
+
+## 공개 Genesis에서 확인되는 원안
+
+- 출발점은 목적별 장바구니와 Shopping OS였다. 질문이 상품 추천에서 **사용자의 상태와 판단 기준**으로 이동했고, 쇼핑은 Life OS의 여러 행동·영역 중 하나가 되었다.
+- 사용자는 반복해서 항목을 채우는 기록 앱보다 사진·PDF·스크린샷·영수증·링크 같은 **증거를 올리면 AI가 해석하는 방식**을 원했다.
+- 설계 흐름은 `Evidence → Parser → Life State Engine → Avoidance / Constraint → Decision Engine → Workflow / Action → Domain Agents → Chronicle`로 정리되어 있다. 원문에는 상태 갱신·비교, 목표·제약 비교, 결정·행동·학습의 더 자세한 순서도 나온다.
+- 건강·쇼핑·재정·교사 일·여행·자동차·집 등은 서로 영향을 주는 영역의 예시다. 모두를 첫 버전에 넣기로 했다는 뜻은 아니다.
+- “어떤 삶을 살고 싶니?”보다 “어떤 삶을 피하고 싶니?”라는 질문이 설계를 바꾸었다. 피할 상태와 현실 제약을 먼저 검토하고, 추천보다 **왜 그런 판단을 했는지** 남긴다.
+- 판단의 최종 주체는 사용자다. AI는 근거와 반론을 제시하고 결정의 이력을 남겨 다음 판단을 돕는다. 철학과 설계를 먼저 확인한 뒤 구현한다.
+
+이 자료는 공개를 위해 편집·정리된 Genesis다. 일부 따옴표와 기술 구조가 실제 RAW 대화의 어느 발화에서 확정됐는지는 별도 대조가 필요하다. RAW의 개인 정보는 GitHub로 옮기지 않는다.
+
+## 이번 작업에서 발견하고 교정한 오류
+
+2026-10-04 AI는 ORBIT Philosophy 책의 ‘대화 깔때기·통역’을 제품의 원안으로 읽고, `Brief → Mirror → Funnel → Decision → Checkpoint` 입력 화면을 만들었다. 사용자는 “이 내용은 글로도 충분함”이라며 원래 만들려던 프로그램이 무엇인지 다시 물었다. 클릭 시험본은 철회됐지만, 당시 `STATUS.md`에는 원래 프로그램을 찾지 못했다고 적혔다. 이후 GitHub의 두 Genesis 파일을 확인해 **Life OS 원안의 핵심 구조가 이미 공개 저장소에 있음을 발견했다.**
+
+ORBIT Philosophy는 협업 철학과 기록의 흐름이다. Life OS는 사람의 상태와 제약을 바탕으로 판단과 행동을 돕는 제품 구상이다. 둘은 연결되지만 같은 소프트웨어 요구사항은 아니다. 책과 용어 v1.1은 완료 상태를 유지하고, 제품을 교육보다 먼저 진행한다. 출판은 전체 작업이 끝난 뒤 판단한다.
+
+## 아직 설계해야 할 것
+
+- 첫 실제 사용 장면과 한 번의 판단 대상. 과거 대화에서 **Health + Shopping 초기 범위**가 언급됐지만, 이 두 공개 Genesis 파일만으로는 승인된 첫 버전의 범위·수용 기준까지 확인되지 않는다. 원자료와 다시 대조한다.
+- 증거에서 사실을 추출하고 현재 상태에 반영할 때, 출처·시점·추론·사용자 정정을 어떻게 구별할지.
+- 영역 사이 영향을 어디까지 연결하고, 어떤 제안은 사용자의 확인 뒤에만 행동으로 옮길지.
+- 민감한 생활·건강·재정 자료의 저장 범위, 사용자 통제, 삭제와 정정 방식.
+- Chronicle에 무엇을 남겨야 다음 판단에 도움이 되는지, 과도한 기록을 피하는 기준.
+
+첫 단계에서는 공개 Genesis를 요구사항으로 바로 변환하지 않는다. 실제 사용 사례 하나로 `증거 → 상태 → 피할 조건·제약 → 판단 근거 → 제안/행동 → 기록`의 이동을 그려 보고, 근거가 있는 설계와 새로운 제안을 분리한다. 사용자가 핵심 동작을 확인하면 구현 경계를 정한다.
+
+## 새 채팅 시작 메시지
+
+> ORBIT Philosophy의 2단계 Life OS 설계를 이어가자. GitHub 저장소 `boundaryx01-uniquelife/orbit-philosophy`의 `genesis/GENESIS_PUBLIC_TRANSCRIPT.md`, `genesis/C0000_GENESIS.md`, `tracks/product/LIFE_OS_HANDOFF.md`, `decisions/CR-0030_Withdraw_Input_Form_Prototype.md`를 먼저 읽어라. 공개 Genesis는 편집본이고 RAW는 비공개다. 과거 `PRODUCT_TRACK.md`와 `MVP_SPEC.md`의 대화 깔때기 입력형 제품은 철회된 AI 가설이므로 원안으로 구현하지 마라. Life OS의 증거·상태·회피 조건/제약·판단·행동·기록 구조에서 확인된 것과 미확정 설계를 나누고, 실제 사용 사례 하나로 첫 제품 범위를 함께 설계하자. 책 v1.1 내용은 동결하고, 제품을 교육보다 먼저 진행한다. 구현 전에 무엇을 만들려는지 사용자 뜻을 확인하자.

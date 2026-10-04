@@ -2,12 +2,12 @@
 
 > Updated: 2026-10-04
 > Current phase: **9C — 원래 제품 구상 복원**
-> Overall state: 🟡 `BOOK v1.1 COMPLETE / PRODUCT INTENT UNCONFIRMED`
-> Remote checkpoint: **책 v1.1을 보존. 입력형 클릭 시험본은 사용자 교정으로 철회하고 원래 프로그램의 핵심 작동을 확인할 차례**
+> Overall state: 🟡 `BOOK v1.1 COMPLETE / LIFE OS SOURCE RECOVERED / PRODUCT DESIGN PENDING`
+> Remote checkpoint: **공개 Genesis에서 Life OS 원안의 핵심을 복원. 제품 설계는 `tracks/product/LIFE_OS_HANDOFF.md`에서 재개**
 
 ## 지금 어디에 있는가
 
-책의 내용과 용어는 v1.1에서 닫았다. 다음은 제품, 그 뒤 교육이다. 다만 `tracks/product/MVP_SPEC.md`의 입력형 명세를 구현한 클릭 시험본에 사용자가 “이 내용은 글로도 충분하다”고 교정했다. 시험본을 현재 산출물에서 내렸고, 초기 기록에서 **사용자가 직접 확정한 원래 프로그램의 기능 목록은 찾지 못했다**. 기존 명세를 원안으로 간주하지 않고 핵심 작동 방식을 다시 확인한다. [근거와 교정](decisions/CR-0030_Withdraw_Input_Form_Prototype.md).
+책의 내용과 용어는 v1.1에서 닫았다. 다음은 제품, 그 뒤 교육이다. 다만 `tracks/product/MVP_SPEC.md`의 입력형 명세를 구현한 클릭 시험본에 사용자가 “이 내용은 글로도 충분하다”고 교정했다. 시험본을 현재 산출물에서 내렸고, 이후 추가된 공개 Genesis 두 파일에서 **Shopping OS에서 Life OS로 이동한 제품 구상**을 확인했다. 증거에서 상태를 읽고, 피하고 싶은 조건과 제약을 고려해 판단·행동·기록으로 이어가는 구조다. 공개 편집본만으로 세부 기능과 MVP 범위는 확정하지 않는다. 기존 입력형 명세는 원안이 아니며, [2단계 재개 기록](tracks/product/LIFE_OS_HANDOFF.md)과 [교정 기록](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)을 함께 읽는다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -270,14 +270,14 @@
 용어 단계는 [최종 검증 기록](reviews/Book_Terminology_v1.1_Final_Review.md)으로 종료했다. 사용자가 3명 이상의 내용 검토를 마쳤다고 알렸으므로 추가 내용 수정을 진행하지 않는다.
 
 1. 기존 제품 문서가 AI의 제안이었으며 사용자 원안을 입증하지 않는다는 점을 확인했다.
-2. 사용자가 원래 만들려던 프로그램의 실제 작동을 확인한다. 입력형 명세는 승인된 요구사항으로 사용하지 않는다.
+2. 공개 Genesis의 Life OS 구조를 복원했다. 실제 사용 사례와 첫 제품 범위는 원자료·사용자 판단으로 설계한다. 입력형 명세는 승인된 요구사항으로 사용하지 않는다.
 3. 의미 있는 교정과 선택은 `tracks/AFTER_ORBIT.md`에서 근거 기록으로 연결한다.
 4. 교육은 제품 이후, 출판과 PDF 최종 조판은 전체 작업 이후에 판단한다.
 
 ## 남은 확인
 
-제품의 핵심 작동 방식은 현재 기록만으로 확정되지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원은 아직 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
+Life OS의 큰 구조는 공개 Genesis에서 확인됐지만 첫 버전의 구체 작동 방식은 확정되지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원은 아직 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
 
 ## 재개 체크포인트
 
-책 v1.1을 유지한다. 제품은 [철회 기록](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)을 먼저 읽고, 사용자에게 원래 프로그램이 대화 중 실제로 **무엇을 수행해야 했는지** 확인한다. 그 확인 전에는 새 기능·화면·검증 과제를 만들지 않는다.
+책 v1.1을 유지한다. 제품은 [Life OS 재개 기록](tracks/product/LIFE_OS_HANDOFF.md)과 공개 Genesis 두 파일을 먼저 읽는다. 사용자와 한 가지 실제 사용 장면의 증거→상태→판단→행동 흐름을 확인한 뒤 기능·화면·검증 과제를 정한다.

@@ -27,3 +27,7 @@ AI가 `MVP_SPEC.md`의 Brief → Mirror → Funnel → Decision → Checkpoint�
 - 직전 클릭 시험본·시험 안내를 현재 파일에서 제거한다. 책 v1.1과 교육 보류 결정은 그대로 둔다.
 - 다음에는 사용자에게 원래 프로그램이 대화 중 실제로 **무엇을 해야 하는지**, 예를 들어 입력 후 어떤 일이 자동으로 일어나는지부터 확인한다.
 - 새 기능 설계나 구현은 그 확인 뒤에 진행한다. 이 기록은 이후 사용자가 설명한 원안을 대신하지 않는다.
+
+## 후속 근거 발견 (2026-10-04)
+
+이 기록 작성 뒤 원격 저장소에 공개 Genesis 두 파일이 추가됐다. [`GENESIS_PUBLIC_TRANSCRIPT.md`](../genesis/GENESIS_PUBLIC_TRANSCRIPT.md)와 [`C0000_GENESIS.md`](../genesis/C0000_GENESIS.md)는 목적별 장바구니 → Shopping OS → Life OS의 변화, 증거 해석 → 상태 관리 → 회피 조건·제약 → 판단 → 행동 → Chronicle의 흐름을 기록한다. 따라서 위 표의 ‘정확한 원안 설명이 없다’는 문장은 **당시 접근 가능한 자료를 기준으로 한 판단**이었으며, 현재는 Life OS 원안의 큰 구조를 확인할 수 있다. 입력형 시험본 철회는 유지한다. 세부 구현과 MVP 범위는 [Life OS 재개 기록](../tracks/product/LIFE_OS_HANDOFF.md)에 구분해 놓았다.
