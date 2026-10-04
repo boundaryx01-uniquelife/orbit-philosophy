@@ -69,7 +69,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 
 ## 확장 트랙
 
-Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 책의 1차 저작 기준점은 [v1.0](tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md)이고, [용어 정리본 v1.1](tracks/book/web/dist/First_Output_Is_Not_Completion_v1.1.html)까지 마쳤다. 책 내용은 동결했다. 현재 제품의 [두 시작 경로 클릭 시험본](tracks/product/prototype/index.html)과 [실제 사용 안내](tracks/product/prototype/TRIAL_GUIDE.md)를 만들었으며, 세 작업에서 확인할 차례다. 교육은 제품 뒤에, 출판과 PDF 최종 제작은 전체 작업 이후에 판단한다.
+Genesis v1.0 이후 ORBIT는 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 책은 [1차 저작 v1.0](tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md)을 보존하고 [용어 정리본 v1.1](tracks/book/web/dist/First_Output_Is_Not_Completion_v1.1.html)에서 내용·용어 편집을 닫았다. 다음 우선순위는 제품, 그 뒤 교육이다. 제품의 입력형 클릭 시험본은 사용자의 [방향 교정](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)으로 철회했다. 원래 만들려던 프로그램의 작동 방식을 먼저 확인한다. 출판과 PDF 최종 제작은 전체 작업 이후에 판단한다.
 
 ## 이 프로젝트의 경계
 

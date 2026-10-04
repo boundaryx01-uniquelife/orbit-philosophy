@@ -45,7 +45,7 @@
 |---|---|---|:---:|
 | 책 | [`book/BOOK_TRACK.md`](book/BOOK_TRACK.md) | [EPUB·웹·PDF v0.1](book/FORMAT_MATRIX.md) | THREE FORMAT PROTOTYPES |
 | 교육 | [`education/EDUCATION_TRACK.md`](education/EDUCATION_TRACK.md) | [`education/modules/M01_First_Output_Is_Not_The_End.md`](education/modules/M01_First_Output_Is_Not_The_End.md) | MVP READY |
-| 제품 | [`product/PRODUCT_TRACK.md`](product/PRODUCT_TRACK.md) | [`product/MVP_SPEC.md`](product/MVP_SPEC.md) | SPEC READY |
+| 제품 | [`product/PRODUCT_TRACK.md`](product/PRODUCT_TRACK.md) | [`product/MVP_SPEC.md`](product/MVP_SPEC.md), 당시 AI 제안 | 원래 프로그램 의도 확인 전 |
 
 세 MVP를 만든 뒤 사용자는 책을 먼저 진행하기로 선택했다. 책은 공통 원고에서 [EPUB·웹·PDF v0.1](book/FORMAT_MATRIX.md)까지 진전시키며, 교육과 제품은 비교 가능한 첫 결과를 보존한 채 보류한다. 이는 병렬 탐색의 폐기가 아니라 `CR-0021`과 `CR-0022`에 기록한 현재 우선순위다.
 
@@ -69,4 +69,4 @@
 
 ## 현재 우선순위 — 2026-10-04
 
-위 병렬 탐색과 책 우선 검증은 이전 단계의 기록이다. `CR-0029`에 따라 책 내용·용어 편집을 닫고 제품을 먼저 진행한다. 제품은 [두 시작 경로의 클릭 시험본](product/prototype/index.html)을 만들었으며 실제 작업 3회에서 검증할 차례다. 교육은 제품 이후, 출판·PDF 최종 제작은 전체 작업이 완성된 뒤 판단한다. 실제 제작 과정은 [ORBIT 그 이후](AFTER_ORBIT.md)에 기록한다.
+위 병렬 탐색과 책 우선 검증은 이전 단계의 기록이다. `CR-0029`에 따라 책 내용·용어 편집을 닫고 제품을 먼저 진행한다. 입력형 클릭 시험본은 사용자 교정으로 철회했으며, [원래 프로그램의 의도](../decisions/CR-0030_Withdraw_Input_Form_Prototype.md)를 다시 확인할 차례다. 교육은 제품 이후, 출판·PDF 최종 제작은 전체 작업이 완성된 뒤 판단한다. 실제 제작 과정은 [ORBIT 그 이후](AFTER_ORBIT.md)에 기록한다.

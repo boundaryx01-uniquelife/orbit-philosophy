@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-10-04
-> Current phase: **9C — 제품 흐름 실제 검증 대기**
-> Overall state: 🔵 `BOOK CONTENT FROZEN / PRODUCT CLICK TEST READY`
-> Remote checkpoint: **책 용어본 v1.1은 c0ffb49에 보존. 제품 첫 클릭 시험본은 실제 작업 3회 관찰이 필요함**
+> Current phase: **9C — 원래 제품 구상 복원**
+> Overall state: 🟡 `BOOK v1.1 COMPLETE / PRODUCT INTENT UNCONFIRMED`
+> Remote checkpoint: **책 v1.1을 보존. 입력형 클릭 시험본은 사용자 교정으로 철회하고 원래 프로그램의 핵심 작동을 확인할 차례**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책의 내용과 용어를 v1.1에서 닫았다. 제품 트랙에서 명세의 고정된 확인 순서와 책 제4장의 작은 초안 경로를 대조했다. 두 시작 경로를 시험하는 [클릭 시험본](tracks/product/prototype/index.html)과 [실제 사용 안내](tracks/product/prototype/TRIAL_GUIDE.md)를 만들었으며 아직 사용 효과는 관찰하지 않았다. 교육은 제품 다음이고 제작 과정은 `tracks/AFTER_ORBIT.md`에 남긴다.
+책의 내용과 용어는 v1.1에서 닫았다. 다음은 제품, 그 뒤 교육이다. 다만 `tracks/product/MVP_SPEC.md`의 입력형 명세를 구현한 클릭 시험본에 사용자가 “이 내용은 글로도 충분하다”고 교정했다. 시험본을 현재 산출물에서 내렸고, 초기 기록에서 **사용자가 직접 확정한 원래 프로그램의 기능 목록은 찾지 못했다**. 기존 명세를 원안으로 간주하지 않고 핵심 작동 방식을 다시 확인한다. [근거와 교정](decisions/CR-0030_Withdraw_Input_Form_Prototype.md).
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -260,8 +260,8 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 | `reviews/Book_Phase_1_Archive_20261001.md` | ✅ ARCHIVED | 1차 저작 재개·복원 기준 |
 | `tracks/education/EDUCATION_TRACK.md` | 🟡 DISCOVERY v0.1 | 대상 학년·교과 검증 |
 | `tracks/education/modules/M01_First_Output_Is_Not_The_End.md` | 🟡 MODULE MVP v0.1 | 1차시 소규모 적용 |
-| `tracks/product/PRODUCT_TRACK.md` | 🟡 DISCOVERY v0.1 | 제품 흐름 프로토타입 검증 |
-| `tracks/product/MVP_SPEC.md` | 🟡 SPEC v0.1 | 종이·클릭 프로토타입 3회 수행 |
+| `tracks/product/PRODUCT_TRACK.md` | 🟡 당시 AI 제안 / 방향 미확정 | 사용자 원안 복원 뒤 대조 |
+| `tracks/product/MVP_SPEC.md` | ⏸️ 입력형 가설 / 현 구현 기준 아님 | 원래 프로그램 확인 뒤 유지 여부 판단 |
 | `templates/Expansion_Validation_Record.md` | ✅ v0.1 | 각 트랙 실제 검증에 사용 |
 | `reviews/Expansion_Tracks_v0.1_Cross_Review.md` | ✅ COMPLETE | 실제 검증 결과와 대조 |
 
@@ -269,15 +269,15 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 
 용어 단계는 [최종 검증 기록](reviews/Book_Terminology_v1.1_Final_Review.md)으로 종료했다. 사용자가 3명 이상의 내용 검토를 마쳤다고 알렸으므로 추가 내용 수정을 진행하지 않는다.
 
-1. `tracks/product/PRODUCT_TRACK.md`와 `MVP_SPEC.md`를 대조해 두 시작 경로의 클릭 시험본을 만들었다. 변경 이유는 `CR-0030`에 기록했다.
-2. 실제 문서·교육·개발 작업 3회에서 흐름, 빈칸과 기록 부담을 관찰한다. [관찰 안내](tracks/product/prototype/TRIAL_GUIDE.md)를 사용한다.
+1. 기존 제품 문서가 AI의 제안이었으며 사용자 원안을 입증하지 않는다는 점을 확인했다.
+2. 사용자가 원래 만들려던 프로그램의 실제 작동을 확인한다. 입력형 명세는 승인된 요구사항으로 사용하지 않는다.
 3. 의미 있는 교정과 선택은 `tracks/AFTER_ORBIT.md`에서 근거 기록으로 연결한다.
 4. 교육은 제품 이후, 출판과 PDF 최종 조판은 전체 작업 이후에 판단한다.
 
 ## 남은 확인
 
-제품은 클릭 시험본 제작 상태다. 실제 사용자 검증과 정식 제품 구현을 마치지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원도 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
+제품의 핵심 작동 방식은 현재 기록만으로 확정되지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원은 아직 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
 
 ## 재개 체크포인트
 
-현재 책은 `web/dist/First_Output_Is_Not_Completion_v1.1.html`과 `epub/dist/First_Output_Is_Not_Completion_v1.1.epub`이다. v1.0은 1차 저작 기준점으로 보존한다. 제품은 `CR-0030`과 클릭 시험본을 열고 실제 작업 3회의 관찰부터 시작한다. 검증 전에는 사용자 효과나 정식 MVP 완료를 주장하지 않는다.
+책 v1.1을 유지한다. 제품은 [철회 기록](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)을 먼저 읽고, 사용자에게 원래 프로그램이 대화 중 실제로 **무엇을 수행해야 했는지** 확인한다. 그 확인 전에는 새 기능·화면·검증 과제를 만들지 않는다.
