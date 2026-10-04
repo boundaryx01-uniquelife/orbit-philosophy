@@ -1,6 +1,6 @@
 # 책 2단계 — 용어 체계화
 
-> Status: IN PROGRESS
+> Status: COMPLETE / APPLIED v1.1
 > Started: 2026-10-01
 > Baseline: `BOOK_FIRST_AUTHORING_SET_v1.0.md`
 > Decision baseline: `CR-0027`, `CR-0028`
@@ -59,7 +59,11 @@
 - 본문 첫 설명과 부록의 자세한 설명이 충돌하지 않는다.
 - 웹·EPUB·Markdown에서 같은 용어 체계가 유지된다.
 
-## 현재 시작점
+## 종료 기록
+
+2026-10-04 전체 원고 대조와 8개 본문 용어 수정, 25항목 용어집 정리를 마쳤다. [최종 검증 기록](../../reviews/Book_Terminology_v1.1_Final_Review.md)과 `CR-0029`를 기준으로 이 단계를 닫는다. 다음은 제품 트랙이다.
+
+## 당시 시작점
 
 첫 묶음은 이미 방향을 정한 `LLM·대화형 AI·AI`와 `MVP·시험용 첫 결과물·첫 결과물`을 다시 확인한다. 이어서 책의 결말과 직접 연결되는 `완성·완료·완결`을 정리한다. 이 단계에서는 문장을 새로 쓰기보다, v1.0에서 실제로 사용된 뜻과 위치를 먼저 표로 드러낸다.
 

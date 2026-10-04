@@ -1,7 +1,7 @@
 # ORBIT Expansion Tracks
 
 > Version: DISCOVERY v0.2
-> Status: BOOK PRIORITY / OTHER MVPs PRESERVED
+> Status: BOOK CONTENT FROZEN / TERMINOLOGY COMPLETE / PRODUCT NEXT
 > Started: 2026-09-28
 > Source baseline: `Genesis Document Set v1.0`
 > Decision: `CR-0020`
@@ -66,3 +66,7 @@
 - 제품: 책 우선 검증 뒤 재개하며, 종이 또는 클릭 프로토타입으로 전체 흐름을 3회 이상 수행한다.
 
 검증 전까지 세 트랙은 `DISCOVERY / MVP` 상태이며, 출판·정규 교육과정·소프트웨어 개발 착수는 각각 별도의 다음 결정으로 남긴다.
+
+## 현재 우선순위 — 2026-10-04
+
+위 병렬 탐색과 책 우선 검증은 이전 단계의 기록이다. `CR-0029`에 따라 책 내용·용어 편집을 닫고 제품을 먼저 진행한다. 교육은 제품 이후, 출판·PDF 최종 제작은 전체 작업이 완성된 뒤 판단한다. 실제 제작 과정은 [ORBIT 그 이후](AFTER_ORBIT.md)에 기록한다.

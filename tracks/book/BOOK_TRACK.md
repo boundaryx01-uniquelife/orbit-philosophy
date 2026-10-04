@@ -1,7 +1,7 @@
 # ORBIT Book Track
 
 > Version: FIRST AUTHORING SET v1.0
-> Status: PHASE 1 COMPLETE / PHASE 2 TERMINOLOGY SYSTEMATIZATION
+> Status: CONTENT FROZEN / TERMINOLOGY COMPLETE v1.1
 > Source baseline: `Genesis Document Set v1.0`
 
 ## 이 트랙이 만드는 것
@@ -38,7 +38,7 @@
 
 **《첫 결과물이 곧 완성은 아니다》**
 
-부제: 첫 프롬프트와 MVP 이후, 인간과 LLM이 함께 완성해 가는 법
+부제: 첫 프롬프트와 시험용 첫 결과물 이후, 인간과 AI가 함께 완성해 가는 법
 
 ‘첫 결과물’은 첫 응답 하나만을 뜻하지 않는다. 첫 프롬프트에서 시작해 초기 대화를 거쳐 처음으로 형태를 갖춘 문서·코드·디자인·계획·MVP를 함께 가리킨다. 제목과 부제는 전체 초안의 독자 교정 뒤에 다시 판단한다.
 
@@ -89,7 +89,7 @@
 
 ## EPUB 시제품
 
-책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 3부 10장 원고를 [EPUB v1.0](epub/dist/First_Output_Is_Not_Completion_v1.0.epub)으로 묶었다. 이 판본은 1차 저작의 완료 상태를 보존하며, 전자책 환경에서 가독성과 목차 흐름을 계속 확인하는 기준본이다.
+책 트랙을 먼저 진행한다는 사용자의 선택에 따라, 3부 10장 원고를 [EPUB v1.1](epub/dist/First_Output_Is_Not_Completion_v1.1.epub)으로 묶었다. 이 판본은 1차 저작의 완료 상태를 보존하며, 전자책 환경에서 가독성과 목차 흐름을 계속 확인하는 기준본이다.
 
 - 제작 원칙과 남은 결정: [`EPUB_PRODUCTION.md`](EPUB_PRODUCTION.md)
 - 다시 만드는 방법: [`epub/README.md`](epub/README.md)
@@ -99,11 +99,11 @@
 
 ## 웹 중심 교정
 
-2단계 용어 체계화에서도 웹판을 기본 검토본으로 사용한다.
+용어 정리를 마친 현재 기본 읽기 판본은 웹판이다.
 
-- [반응형 웹북 v1.0](web/dist/First_Output_Is_Not_Completion_v1.0.html): 전체 10장과 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
-- [EPUB v1.0](epub/dist/First_Output_Is_Not_Completion_v1.0.epub): 전체 10장을 전자책 앱에서 읽기 위한 보조 판본
-- [A5 PDF v0.3](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf): 기존 제작 검증을 보존하는 참고용 체크포인트. 원고가 완성 단계에 들어갈 때까지 갱신하지 않음
+- [반응형 웹북 v1.1](web/dist/First_Output_Is_Not_Completion_v1.1.html): 전체 10장과 표지·글꼴·삽화를 포함하고 읽으며 직접 교정할 수 있는 단일 HTML
+- [EPUB v1.1](epub/dist/First_Output_Is_Not_Completion_v1.1.epub): 전체 10장을 전자책 앱에서 읽기 위한 보조 판본
+- [A5 PDF v0.3](../../output/pdf/First_Output_Is_Not_Completion_v0.3.pdf): 기존 제작 검증을 보존하는 참고용 체크포인트. 전체 작업이 완성된 뒤 갱신 판단
 
 형식별 파일을 따로 집필하지 않고 열 장의 마크다운을 공통 원고로 유지한다. 현재 운용 우선순위와 PDF 재개 조건은 [`FORMAT_MATRIX.md`](FORMAT_MATRIX.md)에 정리한다.
 
@@ -134,3 +134,7 @@
 - 실습 워크북을 본문에 넣을지 별책으로 분리할지
 
 이 결정은 샘플 독자 검증 뒤에 내린다.
+
+## 현재 종료 상태 — 2026-10-04
+
+위 제작 흐름과 첫 검증 계획은 이전 단계의 기록이다. 사용자 보고에 따라 내용은 3명 이상의 검토를 마친 상태로 동결했다. [용어 검증](../../reviews/Book_Terminology_v1.1_Final_Review.md)까지 마친 현재 판본은 웹·EPUB·Markdown v1.1이다. 본문 내용 재편집이나 추가 독자 검증을 다음 작업의 필수 관문으로 반복하지 않는다. 다음은 제품, 그 뒤 교육이며 출판과 PDF 최종 제작은 전체 작업 이후다.
