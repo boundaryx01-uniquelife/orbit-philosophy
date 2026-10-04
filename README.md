@@ -69,7 +69,7 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 
 ## 확장 트랙
 
-Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 세 트랙의 시험용 첫 결과물을 비교한 뒤 책을 우선했고, 《첫 결과물이 곧 완성은 아니다》의 서문과 3부 10장을 [1차 저작 완성본 v1.0](tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md)으로 묶었다. [웹판 v1.0](tracks/book/web/dist/First_Output_Is_Not_Completion_v1.0.html)과 [EPUB v1.0](tracks/book/epub/dist/First_Output_Is_Not_Completion_v1.0.epub)을 같은 원고에서 만들었다. [용어 최종 검증](reviews/Book_Terminology_v1.1_Final_Review.md)을 마쳐 [웹판 v1.1](tracks/book/web/dist/First_Output_Is_Not_Completion_v1.1.html)을 제작했다. 책 내용은 동결하고 다음은 제품 트랙을 먼저 진행한다. 교육은 그 뒤, 출판과 PDF 최종 제작은 전체 작업 이후에 판단한다. 책 파일을 main에 푸시하면 기존 GitHub Pages 자동 배포가 시작된다.
+Genesis v1.0 이후 ORBIT는 같은 철학을 서로 다른 매체에서 검증하기 위해 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 책의 1차 저작 기준점은 [v1.0](tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md)이고, [용어 정리본 v1.1](tracks/book/web/dist/First_Output_Is_Not_Completion_v1.1.html)까지 마쳤다. 책 내용은 동결했다. 현재 제품의 [두 시작 경로 클릭 시험본](tracks/product/prototype/index.html)과 [실제 사용 안내](tracks/product/prototype/TRIAL_GUIDE.md)를 만들었으며, 세 작업에서 확인할 차례다. 교육은 제품 뒤에, 출판과 PDF 최종 제작은 전체 작업 이후에 판단한다.
 
 ## 이 프로젝트의 경계
 

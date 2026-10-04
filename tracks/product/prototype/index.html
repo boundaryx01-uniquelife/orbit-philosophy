@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ORBIT 제품 흐름 시험본</title>
+  <style>
+    :root{color-scheme:light;--ink:#1c2931;--soft:#52616c;--line:#d6ddd9;--paper:#fbfaf6;--accent:#b75531;--accent2:#154e53}
+    *{box-sizing:border-box}body{margin:0;background:#f2f1eb;color:var(--ink);font-family:system-ui,"Malgun Gothic",sans-serif;line-height:1.65}
+    .shell{max-width:980px;margin:auto;padding:24px 20px 64px}header{border-bottom:1px solid var(--line);padding:12px 0 26px;margin-bottom:22px}
+    .eyebrow{font-size:.79rem;letter-spacing:.12em;font-weight:700;color:var(--accent2);margin:0 0 10px}
+    h1{font-size:clamp(1.8rem,4vw,2.75rem);line-height:1.3;margin:0}h2{font-size:1.35rem;margin:0 0 16px}h3{font-size:1rem;margin:22px 0 8px}
+    p{margin:8px 0 15px}.lede{max-width:690px;color:var(--soft)}.note{border-left:3px solid var(--accent);padding:10px 14px;background:#fff7ee;color:#453a31;font-size:.94rem}
+    .steps{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:20px 0;list-style:none}.steps li{border:1px solid var(--line);padding:5px 12px;border-radius:999px;font-size:.85rem;background:white;color:var(--soft)}.steps li.active{background:var(--accent2);color:white;border-color:var(--accent2)}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:clamp(18px,4vw,32px);box-shadow:0 9px 23px #273a3610}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.wide{grid-column:1/-1}label{display:block;font-weight:650;margin:0 0 5px}
+    input,textarea,select{display:block;width:100%;border:1px solid #b9c4c1;border-radius:8px;padding:10px 11px;font:inherit;background:white;color:var(--ink)}
+    textarea{resize:vertical;min-height:80px}textarea.large{min-height:150px}input:focus,textarea:focus,select:focus,button:focus-visible{outline:3px solid #e9a877;outline-offset:2px}
+    .hint{font-size:.86rem;color:var(--soft);font-weight:400;margin:2px 0 0}.choice{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+    .choice label{border:1px solid var(--line);padding:14px;border-radius:9px;background:#fff;cursor:pointer;font-weight:500}.choice label:has(input:checked){border-color:var(--accent2);box-shadow:inset 0 0 0 1px var(--accent2)}
+    .choice input{display:inline;width:auto;margin-right:8px;accent-color:var(--accent2)}.choice strong{display:block;margin-left:25px}
+    .row{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:22px}button{border:1px solid var(--accent2);background:var(--accent2);color:white;border-radius:8px;padding:9px 16px;font:inherit;font-weight:650;cursor:pointer}button.secondary{background:transparent;color:var(--accent2)}button.tertiary{background:transparent;border:0;color:var(--soft);padding:8px}
+    .card{padding:12px 15px;border:1px solid var(--line);background:white;border-radius:8px;margin:10px 0}.card strong{display:block;color:var(--accent2)}.card p{white-space:pre-wrap;margin:3px 0}
+    .summary{white-space:pre-wrap;background:white;border:1px solid var(--line);border-radius:8px;padding:18px;max-height:500px;overflow:auto;font:inherit}
+    .help{color:var(--soft);font-size:.9rem}footer{margin-top:30px;color:var(--soft);font-size:.86rem}
+    [hidden]{display:none!important}@media(max-width:640px){.grid,.choice{grid-template-columns:1fr}.shell{padding:12px 12px 40px}.panel{padding:18px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><p class="eyebrow">ORBIT · PRODUCT FLOW TEST 0.1</p><h1>첫 결과 이후의 판단을 남기기</h1>
+      <p class="lede">대화형 AI와 하던 일 하나를 가져와 보세요. 중요한 조건을 먼저 확인하거나, 작은 결과를 먼저 살펴보는 두 경로를 시험합니다.</p>
+      <p class="note">이 페이지는 사용 흐름을 시험하는 단일 파일입니다. AI를 호출하거나 입력을 자동 저장하지 않습니다. 기록은 마지막에 파일로 직접 내려받을 수 있습니다.</p></header>
+    <ol class="steps" aria-label="진행 단계"><li class="active">1 작업과 시작 방식</li><li>2 AI의 답과 확인</li><li>3 선택과 남은 차이</li><li>4 다음 시작점</li></ol>
+    <main>
+      <section class="panel" id="step1" aria-labelledby="title1">
+        <h2 id="title1">지금 어떤 작업을 하시나요?</h2>
+        <label for="scenario">시험 과제 또는 내 작업</label><select id="scenario">
+          <option value="">내 실제 작업을 직접 적기</option><option value="document">한 장짜리 제안서의 방향 정하기</option><option value="education">3차시 활동안에서 필수 요소 고르기</option><option value="development">작은 기능의 범위와 완료 조건 정하기</option>
+        </select>
+        <p class="hint">위 세 과제는 시험용 주제입니다. 실제 결과나 사용자 반응을 미리 채워 두지 않았습니다.</p>
+        <div class="grid" style="margin-top:18px">
+          <div><label for="task">작업 이름</label><input id="task" placeholder="예: 학부모 안내문"></div>
+          <div><label for="goal">해결하려는 문제</label><input id="goal" placeholder="결과물 이름보다 해결할 문제를 적어도 좋습니다"></div>
+          <div><label for="keep">지켜야 할 기준</label><textarea id="keep" placeholder="아직 모르면 비워 둡니다"></textarea></div>
+          <div><label for="avoid">하지 않을 것·넘지 않을 선</label><textarea id="avoid" placeholder="아직 모르면 비워 둡니다"></textarea></div>
+          <div><label for="done">지금 단계의 완료 조건</label><textarea id="done" placeholder="결과를 본 뒤 정해도 됩니다"></textarea></div>
+          <div><label for="unknown">아직 모르는 것</label><textarea id="unknown" placeholder="예: 실제 사용자의 반응"></textarea></div>
+        </div>
+        <h3>어떻게 시작할까요?</h3>
+        <div class="choice" role="radiogroup" aria-label="시작 방식">
+          <label><input type="radio" name="mode" value="confirm" checked><strong>먼저 뜻 확인</strong><span class="hint">잘못 만들면 되돌리기 어렵거나 중요한 조건이 많을 때</span></label>
+          <label><input type="radio" name="mode" value="draft"><strong>작은 결과 먼저</strong><span class="hint">다시 만들기 쉽고 결과를 봐야 기준이 드러날 때</span></label>
+        </div>
+        <div class="row"><button type="button" id="next1">다음 단계</button></div>
+      </section>
+
+      <section class="panel" id="step2" aria-labelledby="title2" hidden>
+        <h2 id="title2">AI의 답을 가져와 살펴봅니다</h2>
+        <p id="mode-help" class="note"></p>
+        <div class="grid">
+          <div class="wide"><label for="ai-text">AI의 답 또는 작은 초안</label><textarea class="large" id="ai-text" placeholder="실제 답을 붙여넣으세요. AI를 사용하지 않았다면 비워 두고 무엇을 확인할지 적어도 됩니다."></textarea></div>
+          <div><label for="ai-right">AI가 제대로 이해한 부분</label><textarea id="ai-right" placeholder="뜻이 맞은 부분을 적습니다"></textarea></div>
+          <div><label for="ai-correct">어긋난 부분과 교정</label><textarea id="ai-correct" placeholder="내 뜻과 다른 점을 구체적으로 적습니다"></textarea></div>
+          <div class="wide"><label for="new-rule">결과를 보고 새로 알게 된 기준</label><textarea id="new-rule" placeholder="새로 드러난 기준이 없다면 비워 둡니다"></textarea></div>
+          <div class="wide"><label for="ai-trim">이번에는 덜어낼 제안</label><textarea id="ai-trim" placeholder="도움이 될 수 있지만 지금 목표에는 필요 없는 내용"></textarea></div>
+        </div>
+        <fieldset style="border:0;padding:14px 0 0;margin:0"><legend>요청의 뜻은 얼마나 확인했나요?</legend>
+          <div class="choice"><label><input type="radio" name="alignment" value="confirmed">서로의 이해를 확인함</label><label><input type="radio" name="alignment" value="open" checked>아직 확인하지 못했거나 차이가 남음</label></div>
+        </fieldset>
+        <p class="help">뜻을 확인했다고 사실·계산·작동까지 검증된 것은 아닙니다. 비어 있는 항목은 다음 기록에서 미확인으로 표시합니다.</p>
+        <div class="row"><button type="button" class="secondary" id="back2">이전</button><button type="button" id="next2">선택 정리</button></div>
+      </section>
+
+      <section class="panel" id="step3" aria-labelledby="title3" hidden>
+        <h2 id="title3">무엇을 선택하고 왜 선택하나요?</h2>
+        <div id="recap" aria-live="polite"></div>
+        <div class="grid">
+          <div class="wide"><label for="selected">현재 선택</label><textarea id="selected" placeholder="결정을 미뤘다면 '아직 선택하지 않음'이라고 적어도 됩니다"></textarea></div>
+          <div><label for="reason">선택 이유</label><textarea id="reason" placeholder="근거가 없으면 미확인으로 남깁니다"></textarea></div>
+          <div><label for="reason-type">이유의 근거 종류</label><select id="reason-type"><option value="UNKNOWN">미확인</option><option value="FACT">확인된 사실</option><option value="CONSTRAINT">제약</option><option value="PREFERENCE">선호·가치</option><option value="EXPERIENCE">경험</option><option value="INFERENCE">추론</option></select></div>
+          <div><label for="alternative">중요한 다른 선택지</label><textarea id="alternative" placeholder="실제로 고려했던 안만 적습니다"></textarea></div>
+          <div><label for="difference">남은 차이·반론</label><textarea id="difference" placeholder="상대의 반론을 지우지 말고 적습니다"></textarea></div>
+          <div><label for="risk">따로 확인할 사실·작동·위험</label><textarea id="risk" placeholder="확인하지 않았으면 그대로 남깁니다"></textarea></div>
+          <div><label for="revisit">다시 열 조건</label><textarea id="revisit" placeholder="무엇이 바뀌면 결정을 다시 볼까요?"></textarea></div>
+          <div class="wide"><label for="next-action">다음 행동</label><textarea id="next-action" placeholder="다음 번에 어디서 다시 시작할까요?"></textarea></div>
+        </div>
+        <div class="row"><button type="button" class="secondary" id="back3">이전</button><button type="button" id="next3">다음 시작점 보기</button></div>
+      </section>
+
+      <section class="panel" id="step4" aria-labelledby="title4" hidden>
+        <h2 id="title4">여기서 다시 시작할 수 있을까요?</h2>
+        <p class="help">비어 있는 내용은 ‘미확인’으로 남깁니다. ‘한 단계 닫기’는 현재 판단의 기록이며 작업의 사실 정확성을 보증하지 않습니다.</p>
+        <div id="checkpoint" class="summary" aria-live="polite"></div>
+        <div class="row"><button type="button" class="secondary" id="back4">기록 고치기</button><button type="button" id="download">Markdown 내려받기</button><button type="button" class="tertiary" id="reset">새 시험 시작</button></div>
+        <p class="help" id="elapsed"></p>
+      </section>
+    </main>
+    <footer>ORBIT Philosophy · 실제 사용자 검증 전 제품 흐름 시험본. 입력 내용은 이 탭을 닫거나 새로고침하면 사라집니다.</footer>
+  </div>
+  <script>
+    'use strict';
+    const $ = id => document.getElementById(id);
+    let startedAt = Date.now();
+    let step = 1;
+    const fields = ['task','goal','keep','avoid','done','unknown','ai-text','ai-right','ai-correct','new-rule','ai-trim','selected','reason','reason-type','alternative','difference','risk','revisit','next-action'];
+    const value = id => ($(id).value || '').trim();
+    const fallback = id => value(id) || '미확인';
+    const mode = () => document.querySelector('input[name="mode"]:checked').value;
+    const alignment = () => document.querySelector('input[name="alignment"]:checked').value;
+    const line = (title, val) => `${title}: ${val || '미확인'}`;
+    function display(n) {
+      step = n;
+      for (let i = 1; i <= 4; i++) { $(`step${i}`).hidden = i !== n; document.querySelectorAll('.steps li')[i-1].classList.toggle('active',i===n); }
+      if (n===2) $('mode-help').textContent = mode()==='confirm'
+        ? '선택한 경로: 먼저 뜻 확인. 실제 AI가 이해한 내용이 있으면 붙여넣고, 어긋난 점을 교정한 뒤 작은 결과로 이어 가세요.'
+        : '선택한 경로: 작은 결과 먼저. 실제 초안을 붙여넣고, 그제야 보이는 기준과 어긋난 점을 확인해 보세요.';
+      if (n===3) {
+        $('recap').replaceChildren();
+        for (const [label,id] of [['해결할 문제','goal'],['지킬 기준','keep'],['넘지 않을 선','avoid'],['완료 조건','done']]) {
+          const box=document.createElement('div'), strong=document.createElement('strong'), p=document.createElement('p');
+          box.className='card';strong.textContent=label;p.textContent=fallback(id);box.append(strong,p);$('recap').append(box);
+        }
+      }
+      if (n===4) { $('checkpoint').textContent=makeRecord();$('elapsed').textContent=`첫 화면부터 ${Math.ceil((Date.now()-startedAt)/60000)}분 경과 · 실제 사용 시간은 관찰자가 따로 기록해 주세요.`; }
+      window.scrollTo({top:0});
+    }
+    function makeRecord() {
+      const path=mode()==='confirm'?'먼저 뜻 확인':'작은 결과 먼저';
+      const meaning=alignment()==='confirmed'?'서로의 이해를 확인함':'확인하지 못했거나 차이 남음';
+      return [
+        '# ORBIT 작업 재개 기록',
+        line('작업 이름',fallback('task')),line('시작 방식',path),line('해결하려는 문제',fallback('goal')),
+        line('지킬 기준',fallback('keep')),line('하지 않을 것',fallback('avoid')),
+        line('완료 조건',fallback('done')),line('처음부터 미확인',fallback('unknown')),
+        line('요청의 뜻',meaning),line('AI 답 또는 초안',fallback('ai-text')),
+        line('AI가 맞게 이해한 점',fallback('ai-right')),
+        line('교정한 점',fallback('ai-correct')),line('새로 발견한 기준',fallback('new-rule')),
+        line('이번에는 덜어낼 제안',fallback('ai-trim')),
+        line('현재 선택',fallback('selected')),line('선택 이유',fallback('reason')),
+        line('근거 종류',value('reason-type')),line('다른 선택지',fallback('alternative')),
+        line('남은 차이·반론',fallback('difference')),line('검증할 사실·작동·위험',fallback('risk')),
+        line('다시 열 조건',fallback('revisit')),line('다음 행동',fallback('next-action')),
+        '', '※ 이 기록은 뜻의 확인과 사실·작동의 검증을 구분합니다. 비어 있는 필드는 미확인입니다.'
+      ].join('\n');
+    }
+    $('scenario').addEventListener('change',()=>{const s=$('scenario').value;if(s&&!value('task'))$('task').value=$('scenario').selectedOptions[0].textContent;});
+    $('next1').onclick=()=>display(2);$('back2').onclick=()=>display(1);$('next2').onclick=()=>display(3);
+    $('back3').onclick=()=>display(2);$('next3').onclick=()=>display(4);$('back4').onclick=()=>display(3);
+    $('download').onclick=()=>{
+      const blob=new Blob([makeRecord()],{type:'text/markdown;charset=utf-8'}),a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);a.download=`orbit-checkpoint-${new Date().toISOString().slice(0,10)}.md`;
+      document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+    };
+    $('reset').onclick=()=>{
+      if(!window.confirm('현재 탭의 입력을 지우고 새 시험을 시작할까요? 필요한 기록은 먼저 내려받으세요.'))return;
+      for(const id of fields)$(id).value='';$('scenario').value='';$('reason-type').value='UNKNOWN';
+      document.querySelector('input[name="mode"][value="confirm"]').checked=true;
+      document.querySelector('input[name="alignment"][value="open"]').checked=true;startedAt=Date.now();display(1);
+    };
+  </script>
+</body>
+</html>

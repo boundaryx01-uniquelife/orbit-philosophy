@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-10-04
-> Current phase: **9C — 제품 트랙 준비**
-> Overall state: 🔵 `BOOK TERMINOLOGY COMPLETE v1.1 / PRODUCT NEXT`
-> Remote checkpoint: **v1.0을 보존하고 용어 완료본 v1.1 제작. main 푸시 시 기존 Pages 자동 배포가 시작되며 성공 여부는 실행 결과로 확인**
+> Current phase: **9C — 제품 흐름 실제 검증 대기**
+> Overall state: 🔵 `BOOK CONTENT FROZEN / PRODUCT CLICK TEST READY`
+> Remote checkpoint: **책 용어본 v1.1은 c0ffb49에 보존. 제품 첫 클릭 시험본은 실제 작업 3회 관찰이 필요함**
 
 ## 지금 어디에 있는가
 
-Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책 트랙을 먼저 진전시켰다. 《첫 결과물이 곧 완성은 아니다》의 서문·3부 10장·작업 안내를 다듬어 1차 저작 완성본 v1.0으로 고정했다. 이 버전은 현재까지의 내용과 문장을 승인한 기준점이며 출간·유통·최종 조판의 완료 선언은 아니다. 내용은 사용자 지시에 따라 동결했다. 전체 용어 검증을 마친 v1.1을 만들었으며 다음은 제품, 그 뒤 교육이다. 제품·교육의 제작 과정은 `tracks/AFTER_ORBIT.md`에 남긴다.
+Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물을 만든 뒤, 책의 내용과 용어를 v1.1에서 닫았다. 제품 트랙에서 명세의 고정된 확인 순서와 책 제4장의 작은 초안 경로를 대조했다. 두 시작 경로를 시험하는 [클릭 시험본](tracks/product/prototype/index.html)과 [실제 사용 안내](tracks/product/prototype/TRIAL_GUIDE.md)를 만들었으며 아직 사용 효과는 관찰하지 않았다. 교육은 제품 다음이고 제작 과정은 `tracks/AFTER_ORBIT.md`에 남긴다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -269,15 +269,15 @@ Genesis v1.0을 공통 근거로 책·교육·제품의 세 시험용 결과물�
 
 용어 단계는 [최종 검증 기록](reviews/Book_Terminology_v1.1_Final_Review.md)으로 종료했다. 사용자가 3명 이상의 내용 검토를 마쳤다고 알렸으므로 추가 내용 수정을 진행하지 않는다.
 
-1. `tracks/product/PRODUCT_TRACK.md`와 `MVP_SPEC.md`를 대조해 첫 제품의 문제·흐름·완료 조건을 정한다.
-2. 종이·클릭 시험용 결과물에서 흐름을 실제로 검증한 뒤 구현한다.
+1. `tracks/product/PRODUCT_TRACK.md`와 `MVP_SPEC.md`를 대조해 두 시작 경로의 클릭 시험본을 만들었다. 변경 이유는 `CR-0030`에 기록했다.
+2. 실제 문서·교육·개발 작업 3회에서 흐름, 빈칸과 기록 부담을 관찰한다. [관찰 안내](tracks/product/prototype/TRIAL_GUIDE.md)를 사용한다.
 3. 의미 있는 교정과 선택은 `tracks/AFTER_ORBIT.md`에서 근거 기록으로 연결한다.
 4. 교육은 제품 이후, 출판과 PDF 최종 조판은 전체 작업 이후에 판단한다.
 
 ## 남은 확인
 
-제품은 명세 준비 상태이며 구현·사용 검증을 마치지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원은 아직 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
+제품은 클릭 시험본 제작 상태다. 실제 사용자 검증과 정식 제품 구현을 마치지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원도 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
 
 ## 재개 체크포인트
 
-현재 책은 `web/dist/First_Output_Is_Not_Completion_v1.1.html`과 `epub/dist/First_Output_Is_Not_Completion_v1.1.epub`이다. v1.0은 1차 저작 기준점으로 보존한다. `CR-0029`의 범위를 확인하고 제품의 기존 명세 검토부터 시작한다. 기존 제품 흐름에서 모든 작업에 사전 되말하기를 강제하는 부분이 책의 ‘작은 초안으로 확인할 수도 있다’는 원칙과 맞는지는 제품 검토에서 살핀다.
+현재 책은 `web/dist/First_Output_Is_Not_Completion_v1.1.html`과 `epub/dist/First_Output_Is_Not_Completion_v1.1.epub`이다. v1.0은 1차 저작 기준점으로 보존한다. 제품은 `CR-0030`과 클릭 시험본을 열고 실제 작업 3회의 관찰부터 시작한다. 검증 전에는 사용자 효과나 정식 MVP 완료를 주장하지 않는다.
