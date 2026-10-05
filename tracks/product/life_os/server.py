@@ -124,7 +124,7 @@ def create_proposal(connection, case_id):
     if not evidence:
         observation = "아직 질문 이외의 근거가 없습니다."
         unknown = "언제, 어떤 상황에서 반복되는지 알지 못합니다."
-        suggestion = "최근 떠오르는 구체적인 한 장면을 알려주실래요? 자료가 없어도 괜찮습니다."
+        suggestion = "언제 그런 느낌이 드는지 떠오르면 알려주실래요? 자료가 없어도 괜찮습니다."
         rationale = "상황을 먼저 알면 필요하지 않은 자료나 행동을 요구하지 않을 수 있습니다."
     elif len(evidence) >= 2 and any("측정" in e["source"] or "InBody" in e["source"] for e in evidence):
         observation = "서로 다른 시점의 자료가 있습니다. 기록된 값의 차이는 확인할 수 있습니다."
