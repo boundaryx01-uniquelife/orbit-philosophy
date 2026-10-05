@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parent
 DB_PATH = Path(os.environ.get("LIFE_OS_DB", ROOT / "data" / "life_os.sqlite3"))
 HOST = os.environ.get("LIFE_OS_HOST", "127.0.0.1")
 PORT = int(os.environ.get("LIFE_OS_PORT", "8765"))
+MODE = os.environ.get("LIFE_OS_MODE", "demo")
 PUBLIC_ORIGIN = os.environ.get("LIFE_OS_ORIGIN", f"http://127.0.0.1:{PORT}")
 HTTPS = PUBLIC_ORIGIN.startswith("https://")
 MAX_BODY = 3_000_000
@@ -47,6 +48,7 @@ def db():
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY, name TEXT NOT NULL UNIQUE, salt BLOB NOT NULL, password_hash BLOB NOT NULL);
+CREATE TABLE IF NOT EXISTS settings(key TEXT PRIMARY KEY, value TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, csrf TEXT NOT NULL, expires TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS cases(id TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, question TEXT NOT NULL, created TEXT NOT NULL, updated TEXT NOT NULL, revision INTEGER NOT NULL DEFAULT 1);
 CREATE TABLE IF NOT EXISTS evidence(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, source TEXT NOT NULL, observed_at TEXT NOT NULL, note TEXT NOT NULL, category TEXT NOT NULL, filename TEXT, mime TEXT, file_data BLOB, created TEXT NOT NULL);
@@ -62,6 +64,17 @@ CREATE INDEX IF NOT EXISTS cases_owner ON cases(user_id, updated);
 def init_db():
     with db() as connection:
         connection.executescript(SCHEMA)
+        if MODE == "demo" and not connection.execute("SELECT 1 FROM settings WHERE key='demo_seeded'").fetchone():
+            salt = secrets.token_bytes(16)
+            connection.execute("INSERT OR IGNORE INTO users VALUES(?,?,?,?)", ("demo", "체험용 합성 사례", salt, password_hash(secrets.token_urlsafe(24), salt)))
+            fixture = json.loads((ROOT / "fixtures" / "synthetic_scenarios.json").read_text())
+            for scenario in (fixture["two_measurements"], fixture["without_inbody"]):
+                case_id = uid()
+                connection.execute("INSERT INTO cases VALUES(?,?,?,?,?,1)", (case_id, "demo", scenario["question"], now(), now()))
+                for item in scenario.get("evidence", []):
+                    connection.execute("INSERT INTO evidence VALUES(?,?,?,?,?,?,?,?,?,?)", (uid(), case_id, item["source"], item["observed_at"], item["note"], item["category"], None, None, None, now()))
+                create_proposal(connection, case_id)
+            connection.execute("INSERT INTO settings VALUES('demo_seeded','1')")
 
 
 def uid():
@@ -207,13 +220,20 @@ class Handler(BaseHTTPRequestHandler):
             return self.serve_static(path)
         with db() as connection:
             session = self.session(connection)
+            if path == "/api/me" and not session and MODE == "demo":
+                token, csrf = uid(), uid()
+                expires = (datetime.now(timezone.utc) + timedelta(days=7)).isoformat(timespec="microseconds")
+                connection.execute("INSERT INTO sessions VALUES(?,?,?,?)", (hashlib.sha256(token.encode()).hexdigest(), "demo", csrf, expires))
+                connection.commit()
+                cookie = f"life_os_session={token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=604800" + ("; Secure" if HTTPS else "")
+                return self.reply(200, {"name":"체험용 합성 사례","csrf":csrf,"mode":"demo"}, cookie)
             if not session:
                 return self.fail(401, "로그인이 필요합니다.")
             user_id = session["user_id"]
             parts = path.strip("/").split("/")
             if path == "/api/me":
                 name = connection.execute("SELECT name FROM users WHERE id=?", (user_id,)).fetchone()[0]
-                return self.reply(200, {"name": name, "csrf": session["csrf"]})
+                return self.reply(200, {"name": name, "csrf": session["csrf"], "mode": MODE})
             if path == "/api/cases":
                 ids = connection.execute("SELECT id FROM cases WHERE user_id=? ORDER BY updated DESC", (user_id,))
                 return self.reply(200, {"cases": [case_data(connection, row[0], user_id) for row in ids]})
@@ -255,6 +275,8 @@ class Handler(BaseHTTPRequestHandler):
             if not self.check_write(session):
                 return
             if path in ("/api/register", "/api/login") and method == "POST":
+                if MODE != "accounts":
+                    return self.fail(404, "체험 모드에서는 계정을 만들지 않습니다.")
                 try:
                     data = self.payload()
                     name = text(data.get("name"), 40)
@@ -401,6 +423,10 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
+    if MODE not in ("demo", "accounts"):
+        raise SystemExit("LIFE_OS_MODE must be demo or accounts")
+    if MODE == "demo" and HOST not in ("127.0.0.1", "localhost", "::1"):
+        raise SystemExit("Demo mode only binds to loopback; use accounts mode for a shared server")
     init_db()
     print(f"Life OS local server: {PUBLIC_ORIGIN}", flush=True)
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()

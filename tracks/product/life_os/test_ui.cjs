@@ -6,13 +6,11 @@ const { tmpdir } = require('node:os');
 const { join } = require('node:path');
 const net = require('node:net');
 const assert = require('node:assert/strict');
-const { randomBytes } = require('node:crypto');
 const root = __dirname;
 const temp = mkdtempSync(join(tmpdir(), 'life-os-ui-'));
 function freePort(){return new Promise(resolve=>{const s=net.createServer();s.listen(0,'127.0.0.1',()=>{const port=s.address().port;s.close(()=>resolve(port));});});}
 async function main(){
   const port=await freePort(), origin=`http://127.0.0.1:${port}`;
-  const password=randomBytes(18).toString('base64url');
   const server=spawn('python3',[join(root,'server.py')],{env:{...process.env,LIFE_OS_DB:join(temp,'db.sqlite3'),LIFE_OS_PORT:String(port)},stdio:'ignore'});
   let browser;
   try{
@@ -21,10 +19,11 @@ async function main(){
     for(const [label,width] of [['phone',390],['tablet',768],['pc',1280]]){
       const context=await browser.newContext({viewport:{width,height:850}}),page=await context.newPage();
       await page.goto(origin);
-      await page.locator('#auth input[name=name]').fill('synthetic-browser');
-      await page.locator('#auth input[name=password]').fill(password);
-      await page.getByRole('button',{name:label==='phone'?'새 계정 만들기':'로그인'}).click();
       await page.locator('#workspace').waitFor({state:'visible'});
+      assert.equal(await page.locator('#auth').isVisible(),false);
+      assert.ok(await page.getByText('합성 사례 체험',{exact:false}).isVisible());
+      assert.ok(await page.locator('#case-list').getByText('오후에 자주 지치는데',{exact:false}).isVisible());
+      assert.ok(await page.locator('#case-list').getByText('두 번의 신체 구성 기록',{exact:false}).isVisible());
       if(label==='phone'){
         await page.locator('#case-form textarea').fill('오후에 지칠 때 무엇을 살펴볼까요?');
         await page.locator('#case-form button').click();

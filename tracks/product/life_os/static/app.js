@@ -13,7 +13,7 @@ async function api(path, method="GET", body) {
   let response;
   try { response=await fetch(path,options); } catch { throw new Error("서버에 연결할 수 없습니다. 입력은 아직 저장되지 않았습니다."); }
   const data=await response.json();
-  if(!response.ok)throw new Error(data.error||"저장하지 못했습니다.");
+  if(!response.ok){const error=new Error(data.error||"저장하지 못했습니다.");error.status=response.status;throw error;}
   return data;
 }
 async function refresh(force=false) {
@@ -85,5 +85,5 @@ function renderDetail() {
 $("#auth-form").addEventListener("submit",async event=>{event.preventDefault();const mode=event.submitter?.value||"login";try{const data=await api(`/api/${mode}`,"POST",formData(event.target));csrf=data.csrf;$("#account").textContent=data.name;$("#auth").hidden=true;$("#workspace").hidden=false;$("#logout").hidden=false;await refresh(true);show("이야기를 이어갈 수 있습니다.");}catch(e){show(e.message);}});
 $("#case-form").addEventListener("submit",async event=>{event.preventDefault();try{const c=await api("/api/cases","POST",formData(event.target));current=c;event.target.reset();await refresh(true);show("질문을 기록했습니다.");}catch(e){show(e.message);}});
 $("#logout").onclick=async()=>{try{await api("/api/logout","POST",{});}finally{location.reload();}};
-async function start(){try{const data=await api("/api/me");csrf=data.csrf;$("#account").textContent=data.name;$("#auth").hidden=true;$("#workspace").hidden=false;$("#logout").hidden=false;await refresh(true);}catch(e){if(!e.message.includes("로그인"))show(e.message);}}
+async function start(){try{const data=await api("/api/me");csrf=data.csrf;$("#account").textContent=data.mode==="demo"?"합성 사례 체험 · 입력은 이 로컬 서버에 저장됩니다.":data.name;$("#auth").hidden=true;$("#workspace").hidden=false;$("#logout").hidden=data.mode==="demo";await refresh(true);}catch(e){if(e.status===401){$("#auth").hidden=false;}else show(e.message);}}
 start();setInterval(()=>{if(!$("#workspace").hidden)refresh().catch(e=>show(e.message));},5000);

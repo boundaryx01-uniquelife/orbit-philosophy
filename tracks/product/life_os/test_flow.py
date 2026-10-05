@@ -49,7 +49,7 @@ class FlowTest(unittest.TestCase):
             sock.bind(("127.0.0.1", 0))
             cls.port = sock.getsockname()[1]
         cls.origin = f"http://127.0.0.1:{cls.port}"
-        cls.env = dict(os.environ, LIFE_OS_DB=str(Path(cls.tmp.name) / "data.sqlite3"), LIFE_OS_PORT=str(cls.port))
+        cls.env = dict(os.environ, LIFE_OS_DB=str(Path(cls.tmp.name) / "data.sqlite3"), LIFE_OS_PORT=str(cls.port), LIFE_OS_MODE="accounts")
         cls.start_server()
 
     @classmethod
