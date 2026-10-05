@@ -1,0 +1,15 @@
+{
+  "note": "모든 인물과 값은 합성이며 실제 건강 자료가 아닙니다.",
+  "without_inbody": {
+    "question": "오후에 자주 지치는데, 무엇부터 살펴보면 좋을까요?",
+    "context": "어떤 시간과 상황에서 반복되는지 아직 모름"
+  },
+  "two_measurements": {
+    "question": "두 번의 신체 구성 기록이 달라졌어요. 어떻게 읽어야 할까요?",
+    "evidence": [
+      {"source": "합성 측정 A", "observed_at": "2026-01-10", "note": "기록된 수치 50 (임의 단위); 측정 조건 미기록", "category": "useful"},
+      {"source": "합성 측정 B", "observed_at": "2026-03-10", "note": "기록된 수치 52 (임의 단위); 다른 시간에 측정했을 수 있음", "category": "useful"},
+      {"source": "합성 운동 메모", "observed_at": "2026-02-15", "note": "일부 날짜만 기록됨; 빈 날짜의 활동은 모름", "category": "optional"}
+    ]
+  }
+}

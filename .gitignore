@@ -11,3 +11,8 @@ Thumbs.db
 *.log
 .env
 .env.*
+
+# Local Life OS account data and Python caches
+tracks/product/life_os/data/
+__pycache__/
+*.pyc

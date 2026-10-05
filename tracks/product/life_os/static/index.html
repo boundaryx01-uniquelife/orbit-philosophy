@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life OS · 첫 이야기</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><header><div><p class="eyebrow">ORBIT · Life OS 실험</p><h1>생활의 한 장면부터</h1><p>자료가 없어도 괜찮습니다. 근거와 모르는 점을 나누고, 다음 한 걸음을 함께 살펴봅니다.</p></div><button id="logout" hidden>로그아웃</button></header>
+<main><p id="message" role="status" aria-live="polite"></p>
+<section id="auth" class="panel"><h2>내 이야기 이어보기</h2><p>같은 계정으로 접속하면 다른 기기에서도 기록을 볼 수 있습니다.</p><form id="auth-form"><label>계정 이름<input name="name" autocomplete="username" required maxlength="40"></label><label>비밀번호<input name="password" type="password" autocomplete="current-password" required minlength="10"></label><div class="actions"><button type="submit" name="mode" value="login">로그인</button><button type="submit" name="mode" value="register" class="secondary">새 계정 만들기</button></div></form></section>
+<div id="workspace" hidden><div class="layout"><aside class="panel"><h2>이전 이야기</h2><p id="account"></p><div id="case-list"></div></aside><div class="content"><section class="panel"><h2>새 이야기</h2><form id="case-form"><label>지금 궁금한 점이나 생활의 한 장면<textarea name="question" required maxlength="2000" placeholder="예: 오후에 자주 지치는데, 무엇부터 살펴보면 좋을까요?"></textarea></label><button type="submit">질문으로 시작</button></form></section><div id="detail"></div></div></div></div></main>
+<footer>첫 작동 흐름 · 의학적 진단이나 자동 실행은 제공하지 않습니다. 실제 민감한 자료는 이 공개 실험에 입력하지 마세요.</footer></body></html>
