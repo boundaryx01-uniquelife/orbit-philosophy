@@ -7,13 +7,14 @@ import re
 import secrets
 import sqlite3
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
 from .engine import DOMAIN_RULES, ModelUnavailable, ask_model, infer_domain
+from .search import search_web, should_search
 
 ROOT = Path(__file__).resolve().parent
 DB_PATH = Path(os.environ.get("PHASE2_DB", ROOT.parent / "data" / "phase2.sqlite3"))
@@ -63,6 +64,11 @@ def init_db():
         CREATE TABLE IF NOT EXISTS memories(id TEXT PRIMARY KEY, workspace_id TEXT NOT NULL REFERENCES workspaces(id) ON DELETE CASCADE, thread_id TEXT REFERENCES threads(id) ON DELETE CASCADE, domain TEXT, source_turn_id TEXT REFERENCES turns(id) ON DELETE CASCADE, text TEXT NOT NULL, scope TEXT NOT NULL CHECK(scope IN ('thread','domain','global')), status TEXT NOT NULL CHECK(status IN ('proposed','confirmed','rejected')), created_at TEXT NOT NULL, updated_at TEXT NOT NULL);
         CREATE INDEX IF NOT EXISTS memories_owner ON memories(workspace_id, status, scope);
         CREATE TABLE IF NOT EXISTS feedback(thread_id TEXT PRIMARY KEY REFERENCES threads(id) ON DELETE CASCADE, reaction TEXT NOT NULL DEFAULT '', purchased TEXT NOT NULL DEFAULT 'unknown', outcome TEXT NOT NULL DEFAULT '', updated_at TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS telegram_links(workspace_id TEXT PRIMARY KEY REFERENCES workspaces(id) ON DELETE CASCADE, chat_id TEXT NOT NULL UNIQUE, thread_id TEXT REFERENCES threads(id) ON DELETE SET NULL, created_at TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS link_codes(code_hash TEXT PRIMARY KEY, workspace_id TEXT NOT NULL REFERENCES workspaces(id) ON DELETE CASCADE, expires_at TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS outreach_settings(workspace_id TEXT PRIMARY KEY REFERENCES workspaces(id) ON DELETE CASCADE, enabled INTEGER NOT NULL DEFAULT 0, last_evaluated_at TEXT, last_sent_at TEXT, last_source_turn_id TEXT);
+        CREATE TABLE IF NOT EXISTS outreach_decisions(id INTEGER PRIMARY KEY AUTOINCREMENT, workspace_id TEXT NOT NULL REFERENCES workspaces(id) ON DELETE CASCADE, thread_id TEXT REFERENCES threads(id) ON DELETE SET NULL, source_turn_id TEXT, sent INTEGER NOT NULL, reason TEXT NOT NULL, created_at TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS telegram_runtime(id INTEGER PRIMARY KEY CHECK(id=1), last_update_id INTEGER NOT NULL);
         """)
 
 
@@ -111,6 +117,55 @@ def thread_data(connection, thread_id, workspace_id):
         ORDER BY created_at,rowid
     """, (workspace_id, thread_id, thread["domain"]))]
     result["feedback"] = dict(connection.execute("SELECT * FROM feedback WHERE thread_id=?", (thread_id,)).fetchone())
+    result["outreach_decisions"] = [dict(row) for row in connection.execute(
+        "SELECT sent,reason,created_at FROM outreach_decisions WHERE thread_id=? AND workspace_id=? ORDER BY id DESC LIMIT 5", (thread_id, workspace_id))]
+    return result
+
+
+def record_chat(connection, workspace_id, message, thread_id=None, explicit_domain=None):
+    """Shared conversation path for the web app and a linked Telegram chat."""
+    message = clean_text(message)
+    if explicit_domain is not None and explicit_domain not in DOMAIN_RULES:
+        raise ValueError("분야를 확인해 주세요.")
+    existing = thread_owned(connection, thread_id, workspace_id) if thread_id else None
+    if thread_id and not existing:
+        raise LookupError("대화를 찾을 수 없습니다.")
+    domain = explicit_domain or (existing["domain"] if existing else infer_domain(message))
+    past = [dict(row) for row in connection.execute("SELECT role,body FROM turns WHERE thread_id=? ORDER BY created_at,rowid", (thread_id,))] if existing else []
+    upcoming_turn_id = uid()
+    links = links_from_message(message)
+    evidence = [dict(row) for row in connection.execute("SELECT id,url,verification FROM evidence WHERE thread_id=? ORDER BY created_at", (thread_id,))] if existing else []
+    new_evidence = [{"id": uid(), "url": url, "verification": "user_link_unverified"} for url in links]
+    search_status = "not_requested"
+    if should_search(message):
+        try:
+            for result in search_web(URL_PATTERN.sub("", message).strip() or message):
+                new_evidence.append({"id": uid(), **result})
+            search_status = "snippets_found" if any(item["verification"] == "search_snippet_unverified" for item in new_evidence) else "no_results"
+        except (OSError, ValueError, KeyError, TypeError):
+            search_status = "failed"
+    context_evidence = (evidence + new_evidence)[-12:]
+    facts = usable_memories(connection, workspace_id, domain, thread_id)
+    prior_feedback = dict(connection.execute("SELECT reaction,purchased,outcome FROM feedback WHERE thread_id=?", (thread_id,)).fetchone()) if existing else None
+    response = ask_model(domain, past + [{"role": "user", "body": message}], facts, context_evidence, prior_feedback)
+    stamp = now()
+    if not existing:
+        thread_id = uid()
+        connection.execute("INSERT INTO threads VALUES(?,?,?,?,?,?,1)", (thread_id, workspace_id, message[:60], domain, stamp, stamp))
+        connection.execute("INSERT INTO feedback VALUES(?,?,?,?,?)", (thread_id, "", "unknown", "", stamp))
+    else:
+        connection.execute("UPDATE threads SET domain=?,updated_at=?,revision=revision+1 WHERE id=?", (domain, stamp, thread_id))
+    connection.execute("INSERT INTO turns VALUES(?,?,?,?,?)", (upcoming_turn_id, thread_id, "user", message, stamp))
+    connection.execute("INSERT INTO turns VALUES(?,?,?,?,?)", (uid(), thread_id, "assistant", response["reply"], now()))
+    for item in new_evidence:
+        connection.execute("INSERT INTO evidence VALUES(?,?,?,?,?,?)", (item["id"], thread_id, upcoming_turn_id, item["url"], item["verification"], stamp))
+    for item in response["memory_candidates"]:
+        connection.execute("INSERT INTO memories VALUES(?,?,?,?,?,?,?,?,?,?)", (
+            uid(), workspace_id, thread_id, domain if item["scope"] == "domain" else None,
+            upcoming_turn_id, item["text"], item["scope"], "proposed", stamp, stamp))
+    connection.commit()
+    result = thread_data(connection, thread_id, workspace_id)
+    result["search_status"] = search_status
     return result
 
 
@@ -185,8 +240,10 @@ class Handler(BaseHTTPRequestHandler):
             with db() as connection:
                 workspace_id, cookie = self.workspace(connection, create=True)
                 threads = [dict(row) for row in connection.execute("SELECT id,title,domain,updated_at FROM threads WHERE workspace_id=? ORDER BY updated_at DESC LIMIT 50", (workspace_id,))]
+                linked = connection.execute("SELECT chat_id FROM telegram_links WHERE workspace_id=?", (workspace_id,)).fetchone()
+                settings = connection.execute("SELECT enabled FROM outreach_settings WHERE workspace_id=?", (workspace_id,)).fetchone()
                 connection.commit()
-                return self.reply(200, {"threads": threads, "model_ready": bool(os.environ.get("PHASE2_MODEL_API_KEY") and os.environ.get("PHASE2_MODEL_NAME")), "domains": list(DOMAIN_RULES)}, cookie)
+                return self.reply(200, {"threads": threads, "model_ready": bool(os.environ.get("PHASE2_MODEL_API_KEY") and os.environ.get("PHASE2_MODEL_NAME")), "domains": list(DOMAIN_RULES), "telegram_ready": bool(os.environ.get("PHASE2_TELEGRAM_BOT_TOKEN")), "telegram_bot_name": os.environ.get("PHASE2_TELEGRAM_BOT_NAME", ""), "telegram_linked": bool(linked), "outreach_enabled": bool(settings and settings["enabled"])}, cookie)
         if path.startswith("/api/threads/"):
             with db() as connection:
                 workspace_id, _ = self.workspace(connection)
@@ -204,6 +261,29 @@ class Handler(BaseHTTPRequestHandler):
                     return self.reply(401, {"error": "화면을 다시 열어 세션을 시작해 주세요."})
                 if path == "/api/chat" and method == "POST":
                     return self.chat(connection, workspace_id, data)
+                if path == "/api/telegram/link-code" and method == "POST":
+                    if not os.environ.get("PHASE2_TELEGRAM_BOT_TOKEN"):
+                        return self.reply(503, {"error": "Telegram 연결이 설정되지 않았습니다."})
+                    code = secrets.token_urlsafe(18)
+                    expiry = (datetime.now(timezone.utc) + timedelta(minutes=10)).isoformat()
+                    connection.execute("DELETE FROM link_codes WHERE workspace_id=? OR expires_at<?", (workspace_id, now()))
+                    connection.execute("INSERT INTO link_codes VALUES(?,?,?)", (hashlib.sha256(code.encode()).hexdigest(), workspace_id, expiry))
+                    connection.commit()
+                    return self.reply(200, {"code": code, "expires_at": expiry})
+                if path == "/api/telegram/unlink" and method == "POST":
+                    connection.execute("DELETE FROM telegram_links WHERE workspace_id=?", (workspace_id,))
+                    connection.execute("UPDATE outreach_settings SET enabled=0 WHERE workspace_id=?", (workspace_id,))
+                    connection.commit()
+                    return self.reply(200, {"telegram_linked": False, "outreach_enabled": False})
+                if path == "/api/outreach" and method == "PUT":
+                    enabled = data.get("enabled")
+                    if not isinstance(enabled, bool):
+                        raise ValueError("능동 메시지 설정을 확인해 주세요.")
+                    if enabled and not connection.execute("SELECT 1 FROM telegram_links WHERE workspace_id=?", (workspace_id,)).fetchone():
+                        raise ValueError("Telegram을 먼저 연결해 주세요.")
+                    connection.execute("INSERT INTO outreach_settings(workspace_id,enabled) VALUES(?,?) ON CONFLICT(workspace_id) DO UPDATE SET enabled=excluded.enabled", (workspace_id, int(enabled)))
+                    connection.commit()
+                    return self.reply(200, {"outreach_enabled": enabled})
                 if path.startswith("/api/memories/") and method in ("PUT", "DELETE"):
                     memory_id = path.removeprefix("/api/memories/")
                     item = connection.execute("SELECT * FROM memories WHERE id=? AND workspace_id=?", (memory_id, workspace_id)).fetchone()
@@ -250,45 +330,14 @@ class Handler(BaseHTTPRequestHandler):
             self.reply(500, {"error": "저장에 실패했습니다. 잠시 뒤 다시 시도해 주세요."})
 
     def chat(self, connection, workspace_id, data):
-        message = clean_text(data.get("message"))
         thread_id = data.get("thread_id")
-        explicit_domain = data.get("domain")
-        if explicit_domain is not None and explicit_domain not in DOMAIN_RULES:
-            raise ValueError("분야를 확인해 주세요.")
-        existing = None
-        if thread_id is not None:
-            if not isinstance(thread_id, str):
-                raise ValueError("대화 ID를 확인해 주세요.")
-            existing = thread_owned(connection, thread_id, workspace_id)
-            if not existing:
-                return self.reply(404, {"error": "대화를 찾을 수 없습니다."})
-        domain = explicit_domain or (existing["domain"] if existing else infer_domain(message))
-        past = [dict(row) for row in connection.execute("SELECT role,body FROM turns WHERE thread_id=? ORDER BY created_at,rowid", (thread_id,))] if existing else []
-        upcoming_turn_id = uid()
-        links = links_from_message(message)
-        evidence = [dict(row) for row in connection.execute("SELECT id,url,verification FROM evidence WHERE thread_id=? ORDER BY created_at", (thread_id,))] if existing else []
-        new_evidence = [{"id": uid(), "url": url, "verification": "user_link_unverified"} for url in links]
-        context_evidence = (evidence + new_evidence)[-12:]
-        facts = usable_memories(connection, workspace_id, domain, thread_id)
-        prior_feedback = dict(connection.execute("SELECT reaction,purchased,outcome FROM feedback WHERE thread_id=?", (thread_id,)).fetchone()) if existing else None
-        response = ask_model(domain, past + [{"role": "user", "body": message}], facts, context_evidence, prior_feedback)
-        stamp = now()
-        if not existing:
-            thread_id = uid()
-            connection.execute("INSERT INTO threads VALUES(?,?,?,?,?,?,1)", (thread_id, workspace_id, message[:60], domain, stamp, stamp))
-            connection.execute("INSERT INTO feedback VALUES(?,?,?,?,?)", (thread_id, "", "unknown", "", stamp))
-        else:
-            connection.execute("UPDATE threads SET domain=?,updated_at=?,revision=revision+1 WHERE id=?", (domain, stamp, thread_id))
-        connection.execute("INSERT INTO turns VALUES(?,?,?,?,?)", (upcoming_turn_id, thread_id, "user", message, stamp))
-        connection.execute("INSERT INTO turns VALUES(?,?,?,?,?)", (uid(), thread_id, "assistant", response["reply"], now()))
-        for item in new_evidence:
-            connection.execute("INSERT INTO evidence VALUES(?,?,?,?,?,?)", (item["id"], thread_id, upcoming_turn_id, item["url"], item["verification"], stamp))
-        for item in response["memory_candidates"]:
-            connection.execute("INSERT INTO memories VALUES(?,?,?,?,?,?,?,?,?,?)", (
-                uid(), workspace_id, thread_id, domain if item["scope"] == "domain" else None,
-                upcoming_turn_id, item["text"], item["scope"], "proposed", stamp, stamp))
-        connection.commit()
-        return self.reply(200, thread_data(connection, thread_id, workspace_id))
+        if thread_id is not None and not isinstance(thread_id, str):
+            raise ValueError("대화 ID를 확인해 주세요.")
+        try:
+            result = record_chat(connection, workspace_id, data.get("message"), thread_id, data.get("domain"))
+        except LookupError:
+            return self.reply(404, {"error": "대화를 찾을 수 없습니다."})
+        return self.reply(200, result)
 
     def do_POST(self):
         self.change("POST")

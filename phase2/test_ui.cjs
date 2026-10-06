@@ -23,14 +23,18 @@ async function main(){
     });
   });
   await new Promise(resolve=>model.listen(modelPort,'127.0.0.1',resolve));
-  const server=spawn('python3',['-m','phase2.app.server'],{cwd:root,env:{...process.env,PHASE2_DB:join(temp,'db.sqlite3'),PHASE2_PORT:String(appPort),PHASE2_MODEL_API_KEY:'synthetic-test-only',PHASE2_MODEL_NAME:'synthetic-test',PHASE2_MODEL_API_URL:`http://127.0.0.1:${modelPort}/chat/completions`},stdio:'ignore'});
+  const server=spawn('python3',['-m','phase2.app.server'],{cwd:root,env:{...process.env,PHASE2_DB:join(temp,'db.sqlite3'),PHASE2_PORT:String(appPort),PHASE2_MODEL_API_KEY:'synthetic-test-only',PHASE2_MODEL_NAME:'synthetic-test',PHASE2_MODEL_API_URL:`http://127.0.0.1:${modelPort}/chat/completions`,PHASE2_TELEGRAM_BOT_TOKEN:'synthetic-test-only',PHASE2_TELEGRAM_BOT_NAME:'synthetic_helper_bot'},stdio:'ignore'});
   let browser;
   try{
     for(let i=0;i<70;i++){try{if((await fetch(origin+'/api/bootstrap')).ok)break}catch{}await new Promise(resolve=>setTimeout(resolve,50))}
     browser=await chromium.launch({headless:true,executablePath:'/usr/bin/chromium',args:['--no-sandbox']});
     const context=await browser.newContext({viewport:{width:390,height:850}}),page=await context.newPage();
     await page.goto(origin);
-    await page.getByRole('heading',{name:'무엇을 고르고 계세요?'}).waitFor();
+    await page.getByRole('heading',{name:'무슨 이야기부터 할까요?'}).waitFor();
+    await page.screenshot({path:'/tmp/phase2-start-phone.png',fullPage:true});
+    await page.getByRole('button',{name:'먼저 말을 걸 수 있게 설정하기'}).click();
+    await page.locator('#mobile-context-body').getByRole('button',{name:'연결 코드 만들기'}).waitFor();
+    await page.getByRole('button',{name:'현재 맥락 보기'}).click();
     await page.locator('#message').fill('전자 기기 케이스를 고르고 싶어요.');
     await page.getByRole('button',{name:'보내기'}).click();
     await page.getByText('측면 보호가 우선인가요?',{exact:false}).waitFor();
@@ -39,6 +43,10 @@ async function main(){
     await page.screenshot({path:'/tmp/phase2-phone.png',fullPage:true});
     await page.getByRole('button',{name:'기억하기'}).click();
     await page.getByText('다음 판단에도 이 내용을 참고할까요?').waitFor({state:'hidden'});
+    await page.getByRole('button',{name:'현재 맥락 보기'}).click();
+    await page.getByRole('button',{name:'연결 코드 만들기'}).click();
+    await page.locator('#mobile-context-body').getByText('/start ',{exact:false}).waitFor();
+    await page.getByRole('button',{name:'현재 맥락 보기'}).click();
 
     for(const width of [390,820,1280]){
       await page.setViewportSize({width,height:850});
