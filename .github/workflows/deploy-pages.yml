@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/deploy-pages.yml"
       - "tracks/book/**"
+      - "tracks/product/shopping_agent/index.html"
       - "output/pdf/**"
   workflow_dispatch:
 

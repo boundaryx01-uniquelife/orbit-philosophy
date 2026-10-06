@@ -50,6 +50,16 @@ async function main(){
       console.log(`${width}px: detail, conversation source, feedback, no horizontal overflow`);
       await context.close();
     }
+    const standalone=await browser.newContext({viewport:{width:390,height:850}}),standalonePage=await standalone.newPage();
+    await standalonePage.goto(origin+'/?standalone=1');
+    await standalonePage.getByText('합성 사례 · 브라우저 미리보기').waitFor();
+    await standalonePage.getByRole('button',{name:'측면·모서리까지 보호'}).click();
+    await standalonePage.getByRole('heading',{name:'케이스형 후보를 먼저 확인하세요'}).waitFor();
+    await standalonePage.reload();
+    await standalonePage.getByRole('heading',{name:'케이스형 후보를 먼저 확인하세요'}).waitFor();
+    assert.ok(await standalonePage.getByText('현재 조건 · 이 구매 건').isVisible());
+    console.log('standalone HTML: mobile choice and refresh work without Python');
+    await standalone.close();
   }finally{if(browser)await browser.close();server.kill('SIGTERM');rmSync(temp,{recursive:true,force:true});}
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

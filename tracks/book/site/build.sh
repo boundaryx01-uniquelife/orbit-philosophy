@@ -5,7 +5,7 @@ repo_root="$(git rev-parse --show-toplevel)"
 site_dir="$repo_root/tracks/book/site"
 dist="$site_dir/dist"
 
-mkdir -p "$dist/assets" "$dist/book" "$dist/downloads"
+mkdir -p "$dist/assets" "$dist/book" "$dist/downloads" "$dist/shopping-preview"
 find "$dist/downloads" -maxdepth 1 -type f -name '*.pdf' -delete
 
 cp "$site_dir/src/index.html" "$dist/index.html"
@@ -16,9 +16,11 @@ cp "$repo_root/tracks/book/assets/fonts/NotoSansKR-Book-Regular.ttf" "$dist/asse
 cp "$repo_root/tracks/book/assets/fonts/NotoSansKR-Book-Bold.ttf" "$dist/assets/NotoSansKR-Book-Bold.ttf"
 cp "$repo_root/tracks/book/web/dist/First_Output_Is_Not_Completion_v1.1.html" "$dist/book/index.html"
 cp "$repo_root/tracks/book/epub/dist/First_Output_Is_Not_Completion_v1.1.epub" "$dist/downloads/First_Output_Is_Not_Completion_v1.1.epub"
+cp "$repo_root/tracks/product/shopping_agent/index.html" "$dist/shopping-preview/index.html"
 
 test -s "$dist/index.html"
 test -s "$dist/book/index.html"
 test -s "$dist/downloads/First_Output_Is_Not_Completion_v1.1.epub"
+test -s "$dist/shopping-preview/index.html"
 
 echo "$dist"
