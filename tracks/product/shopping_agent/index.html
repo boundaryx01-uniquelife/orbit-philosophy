@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>쇼핑 판단 · 상세 시제품</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Noto Sans KR",sans-serif;color:#15251e;background:#f6f8f5}
+    *{box-sizing:border-box}body{margin:0}button,textarea,select{font:inherit}button{cursor:pointer}
+    .wrap{max-width:1120px;margin:auto;padding:20px 22px 60px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:4px 0 20px;border-bottom:1px solid #d8e1d8}
+    .brand{font-size:17px;font-weight:800;letter-spacing:-.03em}.tag{border:1px solid #bfd0c2;border-radius:100px;padding:5px 10px;color:#41614d;font-size:12px;font-weight:700}
+    .intro{padding:26px 0 22px}.eyebrow{color:#39745c;font-size:13px;font-weight:800;letter-spacing:.04em}.intro h1{font-size:clamp(25px,3.6vw,38px);line-height:1.2;letter-spacing:-.055em;margin:8px 0}.intro p{color:#586b60;margin:0;font-size:15px}
+    .grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(310px,.8fr);gap:18px;align-items:start}
+    .stack{display:grid;gap:18px}main.stack .panel:nth-child(2){order:3}main.stack .panel:nth-child(3){order:2}.panel{background:#fff;border:1px solid #dfe6de;border-radius:20px;padding:22px;box-shadow:0 6px 22px #1b44290a}
+    h2{font-size:18px;letter-spacing:-.04em;margin:0 0 16px}.judgment{background:#174d3d;color:white;border:0;padding:26px}
+    .judgment .label{font-size:13px;color:#c6e7d2;font-weight:800}.judgment h2{font-size:27px;line-height:1.25;margin:12px 0}.judgment p{color:#e0efe6;line-height:1.55;margin:0}.next{margin-top:18px;padding-top:15px;border-top:1px solid #558171;color:#eaf6ed;font-size:14px}
+    .source{margin-top:14px;padding:12px 14px;background:#eaf4ec;border-radius:12px;font-size:13px;color:#244833;line-height:1.5}.source strong{display:block;margin-bottom:3px}
+    .choices{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 10px}.choice{border:1px solid #b6cfbc;background:#f6fbf6;color:#174d3d;border-radius:12px;padding:11px 13px;font-weight:700;text-align:left}.choice:hover,.choice:focus-visible{background:#e5f2e8}.help{font-size:13px;color:#617267;line-height:1.5;margin:5px 0 0}
+    .candidate-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.candidate{border:1px solid #dde7dd;border-radius:15px;padding:16px;background:#fcfdfb}.candidate .name{font-size:17px;font-weight:800}.candidate .format{font-size:13px;color:#607367;margin-top:3px}.candidate .price{font-size:20px;font-weight:800;margin:17px 0 7px}.candidate .price small{font-size:13px;font-weight:500;color:#66786c}.candidate .fit{display:inline-block;background:#ebf2e9;color:#326046;padding:5px 8px;border-radius:8px;font-size:12px;font-weight:800}.candidate .unknown{font-size:13px;color:#5d6e61;line-height:1.5;margin:11px 0 0}
+    .evidence{font-size:13px;line-height:1.5;color:#5c6e61;margin:13px 0 0}
+    .turns{display:grid;gap:11px;max-height:360px;overflow:auto;padding:2px}.turn{border-radius:13px;padding:12px 13px;background:#f4f7f3;font-size:14px;line-height:1.5}.turn.user{background:#eaf3ed}.turn .meta{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:#667a6a;margin-bottom:5px}.turn p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.turn .tools{display:flex;gap:6px;margin-top:7px}.text-button{padding:2px 0;border:0;background:none;color:#2d7050;font-size:12px;font-weight:700}.text-button:hover{text-decoration:underline}
+    textarea{display:block;width:100%;min-height:72px;resize:vertical;border:1px solid #bbcabb;border-radius:11px;padding:11px;color:#172c20;background:white}.composer{margin-top:14px}.composer .row{display:flex;justify-content:flex-end;margin-top:8px}.primary{border:0;background:#19533f;color:white;border-radius:10px;padding:10px 17px;font-weight:800}.primary:hover{background:#0b3e2d}.secondary{border:1px solid #bfcebf;background:#fff;color:#23513a;border-radius:10px;padding:9px 13px;font-weight:700}
+    .edit{margin-top:10px}.edit select{max-width:100%;padding:8px;border:1px solid #bbcabb;border-radius:8px;background:white}.edit .row{display:flex;gap:8px;margin-top:8px}
+    .feedback-grid{display:grid;gap:12px}.feedback-panel summary{font-size:18px;font-weight:800;letter-spacing:-.04em;cursor:pointer}.feedback-panel[open] summary{margin-bottom:16px}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}.field select,.field textarea{width:100%;border:1px solid #bdcdbd;border-radius:10px;padding:9px;background:white}.field textarea{min-height:62px}.save-row{display:flex;align-items:center;gap:10px}.status:not(:empty){position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10;background:#184c3b;color:white;border-radius:10px;padding:10px 14px;box-shadow:0 8px 24px #0003;font-size:13px}.status.error{background:#963c3c}
+    .demo-note{font-size:12px;color:#6a786d;line-height:1.5;margin-top:18px}
+    @media(max-width:780px){.grid{grid-template-columns:1fr}.wrap{max-width:690px}.stack{gap:14px}}
+    @media(max-width:520px){.wrap{padding:14px 14px 42px}.intro{padding:16px 0}.intro p{font-size:13px}.panel{padding:15px;border-radius:16px}.judgment{padding:18px}.judgment h2{font-size:23px;margin:8px 0}.judgment p{font-size:14px}.next{margin-top:12px;padding-top:11px}.candidate-grid{grid-template-columns:1fr;gap:8px}.candidate{padding:11px 12px}.candidate .price{margin:6px 0;font-size:17px}.candidate .unknown{margin:6px 0 0}.choices{display:grid;grid-template-columns:1fr 1fr}.choice{padding:9px}.choice:last-child{grid-column:1/-1}.turns{max-height:190px}main.stack{gap:12px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="brand">쇼핑 판단</div><span class="tag">합성 사례 · 로그인 없는 체험</span></header>
+  <section class="intro"><div class="eyebrow">구매 판단 상세</div><h1>새로 산 손목 기기의 화면 보호</h1><p>조건을 이야기하면 비교 이유가 바뀝니다. 대화는 이 사례에 연결해 저장됩니다.</p></section>
+  <div class="grid">
+    <main class="stack">
+      <section class="panel judgment" aria-labelledby="judgment-title"><div class="label">현재 판단</div><h2 id="judgment-title">원하는 보호 범위를 알려주세요</h2><p id="judgment-reason">케이스와 필름은 보호하는 부위가 달라 가격만으로 선택할 수 없습니다.</p><div class="next" id="next-step">다음: 측면·모서리 보호와 얇은 착용감 중 우선 조건 하나 선택</div></section>
+      <section class="panel" aria-labelledby="candidates-title"><h2 id="candidates-title">두 후보, 무엇이 다른가요?</h2><div class="candidate-grid" id="candidates"><div class="candidate"><div class="name">케이스형 보호대</div><div class="format">화면·테두리 덮개</div><div class="price">6,200원 <small>/ 1개</small></div><span class="fit">조건 확인 필요</span><p class="unknown">확인할 점: 실제 덮임 범위·조작성</p></div><div class="candidate"><div class="name">부착형 보호 필름</div><div class="format">화면 부착</div><div class="price">8,500원 <small>/ 3장</small></div><span class="fit">조건 확인 필요</span><p class="unknown">확인할 점: 측면 덮임·두께</p></div></div><p class="evidence">모든 상품·가격은 합성 예시입니다. 실제 호환성·배송·반품은 확인되지 않았습니다.</p><div id="criterion" class="source" hidden></div></section>
+      <section class="panel" aria-labelledby="choice-title"><h2 id="choice-title">무엇을 더 중요하게 보세요?</h2><div class="choices"><button class="choice" type="button" data-priority="case">측면·모서리까지 보호</button><button class="choice" type="button" data-priority="film">얇은 착용감</button><button class="choice" type="button" data-priority="unsure">아직 모르겠어요</button></div><p class="help">선택한 조건은 이 구매 건에만 적용됩니다. 아래 대화에서 언제든 수정하거나 삭제할 수 있습니다.</p></section>
+    </main>
+    <aside class="stack">
+      <section class="panel" aria-labelledby="conversation-title"><h2 id="conversation-title">대화 이어가기</h2><div id="turns" class="turns" aria-live="polite"><div class="turn user"><div class="meta">사용자 · 예시</div><p>새로 산 손목 기기의 화면을 보호할 제품을 찾고 있어요.</p></div><div class="turn"><div class="meta">에이전트 · 예시</div><p>두 후보는 케이스형과 필름형입니다. 어떤 보호 방식을 우선하시나요?</p></div></div><form class="composer" id="composer"><label class="help" for="message">추가로 알려주고 싶은 조건</label><textarea id="message" maxlength="500" placeholder="예: 두꺼운 케이스는 피하고 싶어요"></textarea><div class="row"><button class="primary" type="submit">대화에 남기기</button></div></form><p class="help">자유 입력은 원문으로 저장됩니다. 판단 조건으로 쓰려면 위 선택지에서 명시해 주세요.</p></section>
+      <details class="panel feedback-panel"><summary>이 판단은 어땠나요?</summary><form id="feedback" class="feedback-grid"><div class="field"><label for="reaction">제안에 대한 반응</label><select id="reaction"><option value="">선택하지 않음</option><option value="helpful">도움이 됨</option><option value="consider">고려해 볼게</option><option value="not_fit">지금은 맞지 않음</option></select></div><div class="field"><label for="purchased">실제 구매</label><select id="purchased"><option value="unknown">아직 모름</option><option value="yes">구매함</option><option value="no">구매하지 않음</option></select></div><div class="field"><label for="outcome">사용 뒤 체감</label><textarea id="outcome" maxlength="500" placeholder="나중에 남겨도 됩니다"></textarea></div><div class="save-row"><button class="secondary" type="submit">반응 저장</button></div></form></details>
+    </aside>
+  </div>
+  <p class="demo-note">로컬 합성 시제품입니다. 서버를 켜지 않고 파일만 열었다면 위 예시는 볼 수 있지만 대화 저장은 작동하지 않습니다. 실제 개인 자료나 결제 정보는 입력하지 마세요.</p>
+  <div id="status" class="status" role="status"></div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+let snapshot;
+function node(tag, cls, value){const el=document.createElement(tag);if(cls)el.className=cls;if(value!==undefined)el.textContent=value;return el}
+function status(message, error=false){$('status').textContent=message;$('status').classList.toggle('error',error)}
+async function api(path, method='GET', body){
+  const response=await fetch(path,{method,headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined});
+  const data=await response.json();if(!response.ok)throw Error(data.error||'요청에 실패했습니다.');return data;
+}
+async function mutate(path,method,body){try{const result=await api(path,method,body);render(result);status('저장되었습니다.');return true}catch(error){status(error.message,true);return false}}
+function render(data){
+  snapshot=data;
+  $('judgment-title').textContent=data.evaluation.headline;
+  $('judgment-reason').textContent=data.evaluation.reason;
+  $('next-step').textContent='다음: '+data.evaluation.next_step;
+  $('candidates').replaceChildren(...data.candidates.map(candidate=>{
+    const card=node('div','candidate');card.append(node('div','name',candidate.name),node('div','format',candidate.format));
+    const price=node('div','price',candidate.price.toLocaleString('ko-KR')+'원 ');price.append(node('small','', '/ '+candidate.quantity));card.append(price,node('span','fit',candidate.fit),node('p','unknown','확인할 점: '+candidate.unknown));return card;
+  }));
+  const criterion=$('criterion');criterion.hidden=!data.criterion;
+  if(data.criterion)criterion.replaceChildren(node('strong','', '현재 조건 · '+data.criterion.scope),node('span','',`“${data.criterion.body}” · 사용자 발화에서 확인`));
+  const turns=$('turns');turns.replaceChildren(...data.turns.map(turn=>{
+    const box=node('div','turn '+turn.role);box.append(node('div','meta',turn.role==='user'?'사용자 · '+(turn.kind==='priority'?'판단 조건':'추가 설명'):'에이전트'),node('p','',turn.body));
+    if(turn.role==='user'){
+      const tools=node('div','tools'),edit=node('button','text-button','수정'),remove=node('button','text-button','삭제');
+      edit.type=remove.type='button';edit.onclick=()=>showEditor(box,turn);remove.onclick=()=>{if(confirm('이 발화를 삭제할까요? 연결된 조건도 판단에서 제거됩니다.'))mutate('/api/turns/'+encodeURIComponent(turn.id),'DELETE',{})};
+      tools.append(edit,remove);box.append(tools);
+      if(turn.revisions.length){const history=node('details'),summary=node('summary','help',`수정 이력 ${turn.revisions.length}개`);history.append(summary);for(const version of turn.revisions)history.append(node('p','help',version.body));box.append(history)}
+    }return box;
+  }));
+  $('reaction').value=data.feedback.reaction;$('purchased').value=data.feedback.purchased;$('outcome').value=data.feedback.outcome;
+}
+function showEditor(box,turn){
+  if(box.querySelector('.edit'))return;
+  const form=node('form','edit'),input=node('textarea');input.maxLength=500;input.value=turn.body;
+  const select=node('select');for(const [value,label] of [['','추가 설명으로 저장'],['case','측면·모서리 보호 우선'],['film','얇은 착용감 우선'],['unsure','우선 조건 미정']]){const option=node('option','',label);option.value=value;select.append(option)}select.value=turn.priority||'';
+  const row=node('div','row'),save=node('button','primary','수정 저장'),cancel=node('button','secondary','취소');save.type='submit';cancel.type='button';cancel.onclick=()=>form.remove();row.append(save,cancel);form.append(input,select,row);
+  form.onsubmit=event=>{event.preventDefault();mutate('/api/turns/'+encodeURIComponent(turn.id),'PATCH',{body:input.value,priority:select.value||null})};box.append(form);
+}
+document.querySelectorAll('[data-priority]').forEach(button=>button.addEventListener('click',()=>{
+  const priority=button.dataset.priority;
+  const body={case:'이번에는 측면·모서리까지 보호하는 방식을 우선해요.',film:'이번에는 얇은 착용감을 우선해요.',unsure:'아직 어느 보호 방식을 우선할지 모르겠어요.'}[priority];
+  mutate('/api/turns','POST',{body,priority});
+}));
+$('composer').onsubmit=event=>{event.preventDefault();const body=$('message').value.trim();if(!body)return status('내용을 입력해 주세요.',true);mutate('/api/turns','POST',{body}).then(saved=>{if(saved)$('message').value=''})};
+$('feedback').onsubmit=event=>{event.preventDefault();mutate('/api/feedback','PUT',{reaction:$('reaction').value,purchased:$('purchased').value,outcome:$('outcome').value})};
+api('/api/state').then(render).catch(()=>status('저장 서버에 연결되지 않았습니다. 실행 안내를 확인해 주세요.',true));
+</script>
+</body>
+</html>
