@@ -11,3 +11,14 @@ Thumbs.db
 *.log
 .env
 .env.*
+
+# Phase 2 local data and private source material
+phase2/.private/
+phase2/data/
+phase2/.env
+__pycache__/
+*.pyc
+
+# Local remnants from superseded prototypes
+tracks/product/life_os/data/
+tracks/product/shopping_agent/data/
