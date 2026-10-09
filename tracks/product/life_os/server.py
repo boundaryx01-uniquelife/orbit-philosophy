@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS cases(id TEXT PRIMARY KEY, user_id TEXT NOT NULL REFE
 CREATE TABLE IF NOT EXISTS evidence(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, source TEXT NOT NULL, source_type TEXT NOT NULL DEFAULT 'user_note', observed_at TEXT NOT NULL, note TEXT NOT NULL, category TEXT NOT NULL, filename TEXT, mime TEXT, file_data BLOB, created TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS claims(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, evidence_id TEXT REFERENCES evidence(id) ON DELETE SET NULL, kind TEXT NOT NULL, text TEXT NOT NULL, uncertainty TEXT NOT NULL DEFAULT '', created TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS preferences(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, kind TEXT NOT NULL, text TEXT NOT NULL, created TEXT NOT NULL);
-CREATE TABLE IF NOT EXISTS proposals(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, observation TEXT NOT NULL, unknown TEXT NOT NULL, suggestion TEXT NOT NULL, rationale TEXT NOT NULL, created TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS proposals(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, observation TEXT NOT NULL, unknown TEXT NOT NULL, suggestion TEXT NOT NULL, rationale TEXT NOT NULL, evidence_ids TEXT NOT NULL DEFAULT '[]', observation_claim_ids TEXT NOT NULL DEFAULT '[]', created TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS feedback(id TEXT PRIMARY KEY, proposal_id TEXT NOT NULL UNIQUE REFERENCES proposals(id) ON DELETE CASCADE, reaction TEXT NOT NULL, did_act TEXT NOT NULL DEFAULT 'unknown', execution_recorded_at TEXT, outcome_status TEXT NOT NULL DEFAULT 'unknown', outcome_recorded_at TEXT, felt_result TEXT NOT NULL DEFAULT '', updated TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS chronicle(id TEXT PRIMARY KEY, case_id TEXT NOT NULL REFERENCES cases(id) ON DELETE CASCADE, event TEXT NOT NULL, detail TEXT NOT NULL, created TEXT NOT NULL);
 CREATE INDEX IF NOT EXISTS cases_owner ON cases(user_id, updated);
@@ -74,6 +74,10 @@ def init_db():
         ):
             if column not in feedback_columns:
                 connection.execute(f"ALTER TABLE feedback ADD COLUMN {column} {definition}")
+        proposal_columns = {row[1] for row in connection.execute("PRAGMA table_info(proposals)")}
+        for column in ("evidence_ids", "observation_claim_ids"):
+            if column not in proposal_columns:
+                connection.execute(f"ALTER TABLE proposals ADD COLUMN {column} TEXT NOT NULL DEFAULT '[]'")
     os.chmod(DB_PATH, 0o600)
 
 
@@ -120,6 +124,8 @@ def case_data(connection, case_id, user_id):
     for table in ("claims", "preferences", "proposals", "chronicle"):
         result[table] = rows(connection, table, "case_id", case_id)
     for item in result["proposals"]:
+        item["evidence_ids"] = json.loads(item["evidence_ids"])
+        item["observation_claim_ids"] = json.loads(item["observation_claim_ids"])
         found = connection.execute("SELECT * FROM feedback WHERE proposal_id=?", (item["id"],)).fetchone()
         item["feedback"] = dict(found) if found else None
     return result
@@ -157,7 +163,10 @@ def create_proposal(connection, case_id):
         suggestion = "이전 제안이 맞지 않았던 이유를 한 가지 알려주실래요?"
         rationale += " 이전 반응을 현재 사례에만 참고하며 고정 성향으로 판단하지 않습니다."
     proposal_id = uid()
-    connection.execute("INSERT INTO proposals VALUES(?,?,?,?,?,?,?)", (proposal_id, case_id, observation, unknown, suggestion, rationale, now()))
+    observed_claim_ids = [row["id"] for row in rows(connection, "claims", "case_id", case_id) if row["kind"] == "observed"]
+    connection.execute("""INSERT INTO proposals(id,case_id,observation,unknown,suggestion,rationale,evidence_ids,observation_claim_ids,created)
+        VALUES(?,?,?,?,?,?,?,?,?)""", (proposal_id, case_id, observation, unknown, suggestion, rationale,
+        json.dumps([row["id"] for row in evidence]), json.dumps(observed_claim_ids), now()))
     connection.execute("INSERT INTO chronicle VALUES(?,?,?,?,?)", (uid(), case_id, "proposal", "근거와 모르는 점을 구분해 질문 또는 제안 하나를 생성", now()))
     return proposal_id
 
