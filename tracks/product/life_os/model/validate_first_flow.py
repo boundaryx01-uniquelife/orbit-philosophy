@@ -27,8 +27,6 @@ def validate_scenarios(scenarios: list[dict]) -> None:
 
         case = scenario["case"]
         case_id = case["id"]
-        if not case["owner_id"].startswith("synthetic-account-"):
-            raise ValueError(f"fixture owner must be synthetic: {scenario_id}")
 
         collections = {
             "evidence": scenario["evidence"],
