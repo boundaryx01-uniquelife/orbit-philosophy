@@ -11,3 +11,5 @@ Thumbs.db
 *.log
 .env
 .env.*
+__pycache__/
+*.pyc
