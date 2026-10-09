@@ -1,0 +1,173 @@
+[
+  {
+    "id": "question_without_measurement",
+    "synthetic": true,
+    "case": {
+      "id": "case-question-001",
+      "owner_id": "synthetic-account-a",
+      "question": "퇴근하면 저녁을 챙길 여유가 없어요. 무엇부터 살펴볼까요?",
+      "created_at": "2026-01-12T09:00:00Z",
+      "updated_at": "2026-01-12T09:05:00Z"
+    },
+    "evidence": [
+      {
+        "id": "evidence-note-001",
+        "case_id": "case-question-001",
+        "source_type": "user_note",
+        "source_label": "합성 사용자가 입력한 상황 설명",
+        "recorded_at": "2026-01-12T09:00:00Z",
+        "observed_at": "2026-01-12T09:00:00Z",
+        "summary": "퇴근 후 저녁을 챙길 여유가 없다고 말함",
+        "limitations": ["퇴근 시각, 저녁 일정과 최근 식사 내용은 아직 알 수 없음"]
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-note-001",
+        "case_id": "case-question-001",
+        "kind": "observation",
+        "text": "사용자는 퇴근 후 저녁을 챙길 여유가 없다고 설명했다.",
+        "evidence_ids": ["evidence-note-001"],
+        "uncertainty": "자기 보고이며 시간과 빈도는 확인되지 않았다."
+      }
+    ],
+    "preferences_constraints": [
+      {
+        "id": "constraint-time-001",
+        "case_id": "case-question-001",
+        "kind": "constraint",
+        "text": "퇴근 후 저녁 준비에 쓸 수 있는 여유가 부족하다고 말함",
+        "source_evidence_id": "evidence-note-001",
+        "recorded_at": "2026-01-12T09:00:00Z"
+      }
+    ],
+    "proposals": [
+      {
+        "id": "proposal-question-001",
+        "case_id": "case-question-001",
+        "created_at": "2026-01-12T09:02:00Z",
+        "observation_claim_ids": ["claim-note-001"],
+        "unknowns": ["최근 저녁 시간과 일정의 변동", "실제로 쓸 수 있는 시간"],
+        "suggestion": "최근 며칠 저녁 시간이 얼마나 들쭉날쭉했나요?",
+        "rationale": "실행 가능한 제안을 고르려면 저녁 일정과 여유 시간을 먼저 알아야 합니다.",
+        "evidence_ids": ["evidence-note-001"]
+      }
+    ],
+    "feedback": [
+      {
+        "id": "feedback-considering-001",
+        "case_id": "case-question-001",
+        "proposal_id": "proposal-question-001",
+        "expression": "considering",
+        "expressed_at": "2026-01-12T09:05:00Z",
+        "execution_status": "unknown",
+        "executed_at": null,
+        "outcome_status": "unknown",
+        "outcome_recorded_at": null
+      }
+    ],
+    "chronicle": [
+      {
+        "id": "event-case-001",
+        "case_id": "case-question-001",
+        "entity_type": "case",
+        "entity_id": "case-question-001",
+        "event": "created",
+        "occurred_at": "2026-01-12T09:00:00Z"
+      },
+      {
+        "id": "event-feedback-001",
+        "case_id": "case-question-001",
+        "entity_type": "feedback",
+        "entity_id": "feedback-considering-001",
+        "event": "created",
+        "occurred_at": "2026-01-12T09:05:00Z"
+      }
+    ]
+  },
+  {
+    "id": "measurements_with_incomplete_activity_log",
+    "synthetic": true,
+    "case": {
+      "id": "case-measurement-002",
+      "owner_id": "synthetic-account-b",
+      "question": "두 번의 측정 수치가 다른데 무엇을 확인해야 할까요?",
+      "created_at": "2026-02-15T09:00:00Z",
+      "updated_at": "2026-02-15T09:00:00Z"
+    },
+    "evidence": [
+      {
+        "id": "evidence-body-older-002",
+        "case_id": "case-measurement-002",
+        "source_type": "body_measurement",
+        "source_label": "합성 신체 구성 기록 A: 체중 70.0 kg, 체지방률 30.0%",
+        "recorded_at": "2026-01-15T08:00:00Z",
+        "observed_at": "2026-01-15T08:00:00Z",
+        "summary": "체중 70.0 kg, 체지방률 30.0%",
+        "limitations": ["측정 전 식사와 수분 섭취 조건을 모름"]
+      },
+      {
+        "id": "evidence-body-newer-002",
+        "case_id": "case-measurement-002",
+        "source_type": "body_measurement",
+        "source_label": "합성 신체 구성 기록 B: 체중 69.2 kg, 체지방률 29.5%",
+        "recorded_at": "2026-02-15T08:00:00Z",
+        "observed_at": "2026-02-15T08:00:00Z",
+        "summary": "체중 69.2 kg, 체지방률 29.5%",
+        "limitations": ["이전 측정과 같은 기기·조건인지 모름"]
+      },
+      {
+        "id": "evidence-activity-002",
+        "case_id": "case-measurement-002",
+        "source_type": "activity_log",
+        "source_label": "합성 운동 메모 일부",
+        "recorded_at": "2026-02-15T08:30:00Z",
+        "observed_at": "2026-02-01T08:00:00Z",
+        "summary": "2월 초 운동한 하루만 적혀 있음",
+        "limitations": ["기록하지 않은 날의 운동 여부는 알 수 없음", "측정치 변화의 원인을 판단할 수 없음"]
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-body-change-002",
+        "case_id": "case-measurement-002",
+        "kind": "observation",
+        "text": "두 기록의 체중은 70.0 kg과 69.2 kg, 체지방률은 30.0%와 29.5%로 적혀 있다.",
+        "evidence_ids": ["evidence-body-older-002", "evidence-body-newer-002"],
+        "uncertainty": "측정 조건과 오차 범위를 알 수 없다."
+      },
+      {
+        "id": "claim-comparison-limited-002",
+        "case_id": "case-measurement-002",
+        "kind": "inference",
+        "text": "측정 조건이 확인되기 전에는 차이의 의미를 조심스럽게 해석해야 한다.",
+        "evidence_ids": ["evidence-body-older-002", "evidence-body-newer-002"],
+        "uncertainty": "같은 기기·시간대·측정 조건인지 확인되지 않았다. 운동 기록도 불완전하다."
+      }
+    ],
+    "preferences_constraints": [],
+    "proposals": [
+      {
+        "id": "proposal-measurement-002",
+        "case_id": "case-measurement-002",
+        "created_at": "2026-02-15T09:00:00Z",
+        "observation_claim_ids": ["claim-body-change-002"],
+        "unknowns": ["두 측정의 기기와 측정 조건", "기록하지 않은 날의 운동 여부", "수치 차이의 원인"],
+        "suggestion": "두 번의 측정이 같은 기기와 비슷한 조건에서 이루어졌는지 먼저 확인해 볼까요?",
+        "rationale": "조건을 모르면 수치 차이를 운동의 효과나 다른 원인으로 단정할 수 없습니다.",
+        "evidence_ids": ["evidence-body-older-002", "evidence-body-newer-002", "evidence-activity-002"]
+      }
+    ],
+    "feedback": [],
+    "chronicle": [
+      {
+        "id": "event-case-002",
+        "case_id": "case-measurement-002",
+        "entity_type": "case",
+        "entity_id": "case-measurement-002",
+        "event": "created",
+        "occurred_at": "2026-02-15T09:00:00Z"
+      }
+    ]
+  }
+]
