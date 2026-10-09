@@ -1,13 +1,13 @@
 # ORBIT Philosophy — Status
 
 > Updated: 2026-10-09
-> Current phase: **9D — Life OS 첫 세로 흐름 로컬 검증**
-> Overall state: 🟡 `BOOK v1.1 COMPLETE / LIFE OS LOCAL FLOW VERIFIED / SERVICE REVIEW PENDING`
-> Remote checkpoint: **질문 → 근거 → 제안 → 반응 → 이전 이야기의 합성 데이터 흐름을 로컬에서 검증. 운영·실자료는 별도 검토**
+> Current phase: **9D — 로그인 없는 Life OS 챗 형태 검증**
+> Overall state: 🟡 `BOOK v1.1 COMPLETE / CHAT PREVIEW READY / USER EXPERIENCE REVIEW PENDING`
+> Remote checkpoint: **합성 사례의 질문 → 근거 → 제안 → 반응을 하나의 챗으로 검증. 로그인·저장·동기화는 이후 설계**
 
 ## 지금 어디에 있는가
 
-책의 내용과 용어는 v1.1에서 닫았다. 다음은 제품, 그 뒤 교육이다. 과거 입력형 클릭 시험본은 [교정 기록](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)에 따라 철회했다. 공개 Genesis와 [이슈 #1](https://github.com/boundaryx01-uniquelife/orbit-philosophy/issues/1)의 요구를 기준으로 [Life OS 첫 세로 흐름](tracks/product/life_os/README.md)을 합성 데이터만으로 구현했다. 질문만으로 시작하고 근거·모르는 점·제안 하나·분리된 반응을 보여 주며, 같은 계정의 두 세션에서 기록을 다시 읽고 수정·삭제한다. 이는 로컬 검증 단계이며 실제 서비스와 실자료 사용은 결정하지 않았다.
+책의 내용과 용어는 v1.1에서 닫았다. 다음은 제품, 그 뒤 교육이다. 과거 입력형 클릭 시험본은 [CR-0030](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)에 따라 철회했다. 첫 구현이 다시 설문식 UI와 로그인으로 돌아간 오류는 [CR-0031](decisions/CR-0031_Keep_Life_OS_Chat_First_Without_Login.md)에서 교정했다. 현재 [Life OS 첫 챗 화면](tracks/product/life_os/README.md)은 합성 데이터만 사용하며, 질문 하나로 시작해 근거·모르는 점·제안 하나·반응을 한 대화 안에서 보여 준다. 로그인과 서버 저장은 없다. 실제 서비스와 실자료 사용은 결정하지 않았다.
 
 공개 진입점은 `https://boundaryx01-uniquelife.github.io/orbit-philosophy/`이다. 공개 브라우저에서 교정 입력, 자동 저장, 새로고침 뒤 복원, 검증 문구 제거와 원문 복귀를 확인했다. Markdown 생성 동작은 실행됐으며 실제 내려받은 파일의 내용 확인은 사용자 기기 검증으로 남긴다.
 
@@ -263,7 +263,7 @@
 | `tracks/product/PRODUCT_TRACK.md` | 🟡 당시 AI 제안 / 방향 미확정 | 사용자 원안 복원 뒤 대조 |
 | `tracks/product/MVP_SPEC.md` | ⏸️ 입력형 가설 / 현 구현 기준 아님 | 원래 프로그램 확인 뒤 유지 여부 판단 |
 | `tracks/product/LIFE_OS_FIRST_SLICE.md` | 🟡 로컬 구현·검증 | 실제 서비스 범위 검토 |
-| `tracks/product/life_os/README.md` | 🟡 합성 데이터 로컬 흐름 | 계정 운영·실자료 경계 결정 전 배포 보류 |
+| `tracks/product/life_os/README.md` | 🟡 로그인 없는 합성 챗 시제품 | 사용자 챗 경험 확인 뒤 계정·자료 경계 설계 |
 | `templates/Expansion_Validation_Record.md` | ✅ v0.1 | 각 트랙 실제 검증에 사용 |
 | `reviews/Expansion_Tracks_v0.1_Cross_Review.md` | ✅ COMPLETE | 실제 검증 결과와 대조 |
 
@@ -271,15 +271,15 @@
 
 용어 단계는 [최종 검증 기록](reviews/Book_Terminology_v1.1_Final_Review.md)으로 종료했다. 사용자가 3명 이상의 내용 검토를 마쳤다고 알렸으므로 추가 내용 수정을 진행하지 않는다.
 
-1. 기존 입력형 제품 문서는 철회된 AI 가설로 유지한다. Life OS 첫 작동 흐름은 이슈 #1의 합성 사례를 기준으로 구현·검증했다.
-2. [draft PR #2](https://github.com/boundaryx01-uniquelife/orbit-philosophy/pull/2)의 실행 결과와 운영 한계를 검토한다. 실제 서비스 배포와 실자료 사용은 계정 운영·백업·보존·삭제 경계를 정한 뒤 별도로 판단한다.
+1. 기존 입력형 제품 문서는 철회된 AI 가설로 유지한다. Life OS 첫 화면은 로그인 없는 챗으로 교정했다.
+2. [draft PR #2](https://github.com/boundaryx01-uniquelife/orbit-philosophy/pull/2)의 **대화 경험**을 먼저 검토한다. 계정·동기화·파일 업로드·실제 AI 연결과 실자료 취급은 그다음 별도로 설계한다.
 3. 의미 있는 교정과 선택은 `tracks/AFTER_ORBIT.md`에서 근거 기록으로 연결한다.
 4. 교육은 제품 이후, 출판과 PDF 최종 조판은 전체 작업 이후에 판단한다.
 
 ## 남은 확인
 
-Life OS 첫 흐름은 로컬 합성 사례로 검증했지만 실제 서비스 운영 방식, 계정 복구·삭제, 백업·복구와 실자료 보존 정책은 아직 확정되지 않았다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원도 남아 있다. 이번 책 용어 종료를 다시 여는 필수 관문으로 삼지는 않는다.
+Life OS 챗 형태는 합성 사례로만 검증했다. 사용자에게 맞는 대화 경험인지, 실제 AI가 근거를 어떻게 읽고 모르는 점을 다룰지, 이후 계정·동기화·자료 보관·삭제를 어떻게 할지 남아 있다. 실제 휴대전화·복수 전자책 앱 표시, PDF 인쇄 검수, 초기 대화와 프로젝트 이름의 기원 복원도 남아 있다.
 
 ## 재개 체크포인트
 
-책 v1.1을 유지한다. 제품은 [Life OS 로컬 실행 문서](tracks/product/life_os/README.md), [첫 화면 기록](tracks/product/LIFE_OS_FIRST_SLICE.md), [ADR-0001](decisions/ADR-0001_Life_OS_First_Vertical_Slice.md)에서 재개한다. 다음 판단은 draft PR의 로컬 흐름을 검토하고, 실제 서비스 운영·자료 취급 범위를 정하는 것이다.
+책 v1.1을 유지한다. 제품은 [로그인 없는 챗 시제품](tracks/product/life_os/README.md), [교정 기록 CR-0031](decisions/CR-0031_Keep_Life_OS_Chat_First_Without_Login.md), [ADR-0001](decisions/ADR-0001_Life_OS_First_Vertical_Slice.md)에서 재개한다. 다음 판단은 이 챗 흐름이 사용자가 원한 Life OS 경험에 가까운지 확인하는 것이다.
