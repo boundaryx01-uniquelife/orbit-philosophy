@@ -4,7 +4,6 @@
     "synthetic": true,
     "case": {
       "id": "case-question-001",
-      "owner_id": "synthetic-account-a",
       "question": "퇴근하면 저녁을 챙길 여유가 없어요. 무엇부터 살펴볼까요?",
       "created_at": "2026-01-12T09:00:00Z",
       "updated_at": "2026-01-12T09:05:00Z"
@@ -90,7 +89,6 @@
     "synthetic": true,
     "case": {
       "id": "case-measurement-002",
-      "owner_id": "synthetic-account-b",
       "question": "두 번의 측정 수치가 다른데 무엇을 확인해야 할까요?",
       "created_at": "2026-02-15T09:00:00Z",
       "updated_at": "2026-02-15T09:00:00Z"
