@@ -71,6 +71,8 @@ ORBIT의 관계의 기억은 LLM 내부의 자동 기억이나 인간과 같은 
 
 Genesis v1.0 이후 ORBIT는 [책·교육·제품의 세 트랙](tracks/README.md)을 탐색했다. 책은 [1차 저작 v1.0](tracks/book/BOOK_FIRST_AUTHORING_SET_v1.0.md)을 보존하고 [용어 정리본 v1.1](tracks/book/web/dist/First_Output_Is_Not_Completion_v1.1.html)에서 내용·용어 편집을 닫았다. 다음 우선순위는 제품, 그 뒤 교육이다. 제품의 입력형 클릭 시험본은 사용자의 [방향 교정](decisions/CR-0030_Withdraw_Input_Form_Prototype.md)으로 철회했다. 원래 만들려던 프로그램의 작동 방식을 먼저 확인한다. 출판과 PDF 최종 제작은 전체 작업 이후에 판단한다.
 
+Life OS의 첫 세로 흐름은 [로컬 합성 데이터 실험](tracks/product/life_os/README.md)에서 실행하고 검증한다. 계정별 기록, 질문 우선 시작, 근거·제안·반응·이전 이야기의 범위와 현재 운영 경계는 해당 문서에 적었다.
+
 ## 이 프로젝트의 경계
 
 - ORBIT는 단순한 AI 생산성 안내서가 아니다.
