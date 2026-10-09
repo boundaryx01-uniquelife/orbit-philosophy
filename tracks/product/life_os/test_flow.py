@@ -81,6 +81,7 @@ class FlowTest(unittest.TestCase):
         self.assertEqual(code, 201)
         cid = case["id"]
         self.assertEqual(len(case["evidence"]), 0)
+        self.assertEqual(case["proposals"][-1]["evidence_ids"], [])
         self.assertIn("자료가 없어도", case["proposals"][-1]["suggestion"])
         proposal_id = case["proposals"][-1]["id"]
         self.assertEqual(other.call(f"/api/cases/{cid}")[0], 404)
@@ -147,6 +148,8 @@ class FlowTest(unittest.TestCase):
         self.assertEqual(code, 200)
         self.assertIn("측정", result["proposals"][-1]["unknown"])
         self.assertIn("원인을 단정할 수 없습니다", result["proposals"][-1]["rationale"])
+        self.assertEqual(len(result["proposals"][-1]["evidence_ids"]), 3)
+        self.assertEqual(result["proposals"][-1]["observation_claim_ids"], [result["claims"][0]["id"]])
         file = {"name":"synthetic.txt","mime":"text/plain","base64":base64.b64encode(b"synthetic only").decode()}
         result = first.call(f"/api/cases/{cid}/evidence", "POST", {"source":"합성 메모","observed_at":"2026-04-01","note":"검사용","file":file})[1]
         eid = result["evidence"][-1]["id"]
