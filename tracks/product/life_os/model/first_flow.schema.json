@@ -1,0 +1,120 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/boundaryx01-uniquelife/orbit-philosophy/tracks/product/life_os/model/first_flow.schema.json",
+  "title": "Life OS first flow synthetic scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "synthetic", "case", "evidence", "claims", "preferences_constraints", "proposals", "feedback", "chronicle"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "synthetic": {"const": true},
+    "case": {"$ref": "#/$defs/case"},
+    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+    "preferences_constraints": {"type": "array", "items": {"$ref": "#/$defs/preferenceConstraint"}},
+    "proposals": {"type": "array", "items": {"$ref": "#/$defs/proposal"}},
+    "feedback": {"type": "array", "items": {"$ref": "#/$defs/feedback"}},
+    "chronicle": {"type": "array", "items": {"$ref": "#/$defs/chronicle"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "minLength": 1},
+    "time": {"type": "string", "format": "date-time"},
+    "case": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "question", "created_at", "updated_at"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "question": {"type": "string", "minLength": 1},
+        "created_at": {"$ref": "#/$defs/time"},
+        "updated_at": {"$ref": "#/$defs/time"}
+      }
+    },
+    "evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "case_id", "source_type", "source_label", "recorded_at", "observed_at", "summary", "limitations"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "case_id": {"$ref": "#/$defs/id"},
+        "source_type": {"enum": ["user_note", "body_measurement", "activity_log"]},
+        "source_label": {"type": "string", "minLength": 1},
+        "recorded_at": {"$ref": "#/$defs/time"},
+        "observed_at": {"$ref": "#/$defs/time"},
+        "summary": {"type": "string", "minLength": 1},
+        "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "case_id", "kind", "text", "evidence_ids", "uncertainty"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "case_id": {"$ref": "#/$defs/id"},
+        "kind": {"enum": ["observation", "inference"]},
+        "text": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "uncertainty": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"const": "observation"}}}, "then": {"properties": {"evidence_ids": {"minItems": 1}}}},
+        {"if": {"properties": {"kind": {"const": "inference"}}}, "then": {"properties": {"uncertainty": {"minLength": 1}}}}
+      ]
+    },
+    "preferenceConstraint": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "case_id", "kind", "text", "source_evidence_id", "recorded_at"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "case_id": {"$ref": "#/$defs/id"},
+        "kind": {"enum": ["preference", "constraint"]},
+        "text": {"type": "string", "minLength": 1},
+        "source_evidence_id": {"$ref": "#/$defs/id"},
+        "recorded_at": {"$ref": "#/$defs/time"}
+      }
+    },
+    "proposal": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "case_id", "created_at", "observation_claim_ids", "unknowns", "suggestion", "rationale", "evidence_ids"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "case_id": {"$ref": "#/$defs/id"},
+        "created_at": {"$ref": "#/$defs/time"},
+        "observation_claim_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "unknowns": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "suggestion": {"type": "string", "minLength": 1},
+        "rationale": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}}
+      }
+    },
+    "feedback": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "case_id", "proposal_id", "expression", "expressed_at", "execution_status", "executed_at", "outcome_status", "outcome_recorded_at"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "case_id": {"$ref": "#/$defs/id"},
+        "proposal_id": {"$ref": "#/$defs/id"},
+        "expression": {"enum": ["good_suggestion", "considering", "not_for_now", "keep_as_is"]},
+        "expressed_at": {"$ref": "#/$defs/time"},
+        "execution_status": {"enum": ["unknown", "not_done", "done"]},
+        "executed_at": {"anyOf": [{"$ref": "#/$defs/time"}, {"type": "null"}]},
+        "outcome_status": {"enum": ["unknown", "helped", "no_change", "worse"]},
+        "outcome_recorded_at": {"anyOf": [{"$ref": "#/$defs/time"}, {"type": "null"}]}
+      },
+      "allOf": [
+        {"if": {"properties": {"execution_status": {"const": "done"}}}, "then": {"properties": {"executed_at": {"type": "string"}}}, "else": {"properties": {"executed_at": {"type": "null"}}}},
+        {"if": {"properties": {"outcome_status": {"const": "unknown"}}}, "then": {"properties": {"outcome_recorded_at": {"type": "null"}}}, "else": {"properties": {"outcome_recorded_at": {"type": "string"}}}}
+      ]
+    },
+    "chronicle": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "case_id", "entity_type", "entity_id", "event", "occurred_at"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "case_id": {"$ref": "#/$defs/id"},
+        "entity_type": {"enum": ["case", "evidence", "claim", "preference_constraint", "proposal", "feedback"]},
+        "entity_id": {"$ref": "#/$defs/id"},
+        "event": {"enum": ["created", "updated", "deleted"]},
+        "occurred_at": {"$ref": "#/$defs/time"}
+      }
+    }
+  }
+}
